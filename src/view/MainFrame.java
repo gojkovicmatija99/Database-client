@@ -1,10 +1,13 @@
 package view;
 
+import java.awt.BorderLayout;
+import java.awt.Color;
 import java.awt.Dimension;
 import java.awt.Toolkit;
 
 import javax.swing.JFrame;
 import javax.swing.JPanel;
+import javax.swing.JScrollBar;
 import javax.swing.JScrollPane;
 import javax.swing.JSplitPane;
 
@@ -28,17 +31,7 @@ public class MainFrame extends JFrame {
 		setLocationRelativeTo(null);
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		
-		JPanel leftPanel = new JPanel();
-		JPanel rightTopPanel = new JPanel();
-		JPanel rightBottomPanel = new JPanel();
 		
-		JScrollPane leftScroll = new JScrollPane(leftPanel);
-		JScrollPane rightTopScroll = new JScrollPane(rightTopPanel);
-		JScrollPane rightBottomScroll = new JScrollPane(rightBottomPanel);
-		
-		JSplitPane vertical = new JSplitPane(JSplitPane.VERTICAL_SPLIT, rightTopScroll, rightBottomScroll);
-		JSplitPane horizontal = new JSplitPane(JSplitPane.HORIZONTAL_SPLIT, leftScroll, vertical);
-		this.add(horizontal);
 		
 		setVisible(true);
 	}
