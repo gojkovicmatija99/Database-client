@@ -1,19 +1,22 @@
 package view;
 
-import java.awt.BorderLayout;
-import java.awt.Color;
+import database.settings.MSSQLrepository;
+import resource.DBtree;
+import resource.implementation.DBTreeNode;
+
 import java.awt.Dimension;
 import java.awt.Toolkit;
 
-import javax.swing.JFrame;
-import javax.swing.JPanel;
-import javax.swing.JScrollBar;
-import javax.swing.JScrollPane;
-import javax.swing.JSplitPane;
+import javax.swing.*;
+import javax.swing.tree.DefaultTreeModel;
 
 public class MainFrame extends JFrame {
-	
+
 	private static MainFrame instance = null;
+	private DBTreeNode dbTreeNode;
+	private DBtree dbTree;
+	private DBview dbView;
+	private MSSQLrepository mssqlRepository;
 	
 	public static MainFrame getInstance() {
 		if (instance == null) 
@@ -30,10 +33,19 @@ public class MainFrame extends JFrame {
 		setSize(screenWidth/2, screenHeight/2);
 		setLocationRelativeTo(null);
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		
-		
-		
+
+		mssqlRepository=new MSSQLrepository();
+		initDBtree();
+		JScrollPane scroll=new JScrollPane(dbTree);
+		this.add(scroll);
 		setVisible(true);
+	}
+
+	private void initDBtree() {
+		dbTree =new DBtree(dbView);
+		dbTreeNode = (DBTreeNode) mssqlRepository.getSchema();
+		dbTree.setModel(new DefaultTreeModel(dbTreeNode));
+		dbView =new DBview(dbTreeNode);
 	}
 
 }

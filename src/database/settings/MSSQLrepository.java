@@ -7,27 +7,25 @@ import resource.enums.AttributeType;
 import resource.implementation.Attribute;
 import resource.implementation.Entity;
 import resource.implementation.InformationResource;
+import utils.Constants;
 
 import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
 
-public class MSSQLrepository implements Repository {
-    private Settings settings;
-    private Connection connection;
+import static utils.Constants.*;
 
-    public MSSQLrepository(Settings settings) {
-        this.settings=settings;
-    }
+public class MSSQLrepository implements Repository {
+    private Connection connection;
 
     private void initConnection() throws SQLException, ClassNotFoundException {
         Class.forName("net.sourceforge.jtds.jdbc.Driver");
-        String ip = (String) settings.getParameter("mssql_ip");
+        /*String ip = (String) settings.getParameter("mssql_ip");
         String database = (String) settings.getParameter("mssql_database");
         String username = (String) settings.getParameter("mssql_username");
-        String password = (String) settings.getParameter("mssql_password");
+        String password = (String) settings.getParameter("mssql_password");*/
         Class.forName("net.sourceforge.jtds.jdbc.Driver");
-        connection = DriverManager.getConnection("jdbc:jtds:sqlserver://"+ip+"/"+database,username,password);
+        DriverManager.getConnection("jdbc:jtds:sqlserver://"+ MSSQL_IP +"/"+MSSQL_DATABASE+","+MSSQL_USERNAME+","+MSSQL_PASSWORD);
     }
 
     private void closeConnection(){
@@ -42,6 +40,7 @@ public class MSSQLrepository implements Repository {
         }
     }
 
+    // TODO: Ova metoda vraca root stabla
     @Override
     public DBNode getSchema() {
         try {

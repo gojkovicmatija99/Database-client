@@ -1,6 +1,5 @@
 package observer.implementation;
 
-import lombok.Data;
 import observer.Notification;
 import observer.Publisher;
 import observer.Subscriber;

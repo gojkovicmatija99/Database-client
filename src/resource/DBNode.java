@@ -1,5 +1,7 @@
 package resource;
 
+import javax.swing.tree.TreeNode;
+
 public abstract class DBNode {
     private String name;
     private DBNode parent;
@@ -8,13 +10,12 @@ public abstract class DBNode {
         return name;
     }
 
-    public DBNode getParent() {
-        return parent;
-    }
-
     public DBNode(String name, DBNode parent) {
         this.name=name;
         this.parent=parent;
     }
 
+    public DBNode getDBNodeParent() {
+        return parent;
+    }
 }
