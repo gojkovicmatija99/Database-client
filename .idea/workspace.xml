@@ -27,18 +27,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="8e2ebac5-987b-4976-824f-c90b8280c9ef" name="Default Changelist" comment="Dodate bibl">
-      <change afterPath="$PROJECT_DIR$/src/resource/DBtree.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/resource/implementation/DBTreeNode.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/utils/Constants.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/view/DBview.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/BazePodatakaProjekat/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/BazePodatakaProjekat/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/BazePodatakaProjekat/Main.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/database/settings/MSSQLrepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/database/settings/MSSQLrepository.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/observer/Notification.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/observer/Notification.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/observer/implementation/PublisherImplementation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/observer/implementation/PublisherImplementation.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/resource/DBNode.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/resource/DBNode.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/view/MainFrame.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/view/MainFrame.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -73,7 +64,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src" />
+    <property name="last_opened_file_path" value="$USER_HOME$/Downloads/UI_tabele_db" />
     <property name="project.structure.last.edited" value="Libraries" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.2" />
@@ -216,9 +207,10 @@
       <screen x="0" y="27" width="1680" height="1023" />
     </state>
     <state x="225" y="95" width="1220" height="894" key="CommitChangelistDialog2/0.27.1680.1023/1680.0.1920.1080@0.27.1680.1023" timestamp="1590510632590" />
-    <state x="626" y="435" width="745" height="520" key="FileChooserDialogImpl" timestamp="1590609717169">
-      <screen x="0" y="27" width="1680" height="1023" />
+    <state x="477" y="271" width="745" height="520" key="FileChooserDialogImpl" timestamp="1590663962432">
+      <screen x="0" y="0" width="1280" height="680" />
     </state>
+    <state x="477" y="271" key="FileChooserDialogImpl/0.0.1280.680@0.0.1280.680" timestamp="1590663962432" />
     <state x="626" y="435" width="745" height="520" key="FileChooserDialogImpl/0.27.1680.1023/1680.0.1920.1080@0.27.1680.1023" timestamp="1590609717169" />
     <state x="650" y="438" width="379" height="207" key="Github.ShareDialog" timestamp="1590431755390">
       <screen x="0" y="27" width="1680" height="1023" />
@@ -228,29 +220,38 @@
       <screen x="0" y="27" width="1680" height="1023" />
     </state>
     <state x="550" y="218" width="569" height="647" key="Github.UntrackedFilesDialog/0.27.1680.1023/1680.0.1920.1080@0.27.1680.1023" timestamp="1590431762348" />
-    <state width="1634" height="181" key="GridCell.Tab.0.bottom" timestamp="1590614368574">
-      <screen x="0" y="27" width="1680" height="1023" />
+    <state width="1237" height="98" key="GridCell.Tab.0.bottom" timestamp="1590673617779">
+      <screen x="0" y="0" width="1280" height="680" />
     </state>
+    <state width="1237" height="98" key="GridCell.Tab.0.bottom/0.0.1280.680/-1366.83.1366.728@0.0.1280.680" timestamp="1590673617779" />
+    <state width="1237" height="126" key="GridCell.Tab.0.bottom/0.0.1280.680@0.0.1280.680" timestamp="1590664475683" />
     <state width="1634" height="181" key="GridCell.Tab.0.bottom/0.27.1680.1023/1680.0.1920.1080@0.27.1680.1023" timestamp="1590614368574" />
-    <state width="1634" height="181" key="GridCell.Tab.0.center" timestamp="1590614368574">
-      <screen x="0" y="27" width="1680" height="1023" />
+    <state width="1237" height="98" key="GridCell.Tab.0.center" timestamp="1590673617779">
+      <screen x="0" y="0" width="1280" height="680" />
     </state>
+    <state width="1237" height="98" key="GridCell.Tab.0.center/0.0.1280.680/-1366.83.1366.728@0.0.1280.680" timestamp="1590673617779" />
+    <state width="1237" height="126" key="GridCell.Tab.0.center/0.0.1280.680@0.0.1280.680" timestamp="1590664475682" />
     <state width="1634" height="181" key="GridCell.Tab.0.center/0.27.1680.1023/1680.0.1920.1080@0.27.1680.1023" timestamp="1590614368574" />
-    <state width="1634" height="181" key="GridCell.Tab.0.left" timestamp="1590614368574">
-      <screen x="0" y="27" width="1680" height="1023" />
+    <state width="1237" height="98" key="GridCell.Tab.0.left" timestamp="1590673617779">
+      <screen x="0" y="0" width="1280" height="680" />
     </state>
+    <state width="1237" height="98" key="GridCell.Tab.0.left/0.0.1280.680/-1366.83.1366.728@0.0.1280.680" timestamp="1590673617779" />
+    <state width="1237" height="126" key="GridCell.Tab.0.left/0.0.1280.680@0.0.1280.680" timestamp="1590664475682" />
     <state width="1634" height="181" key="GridCell.Tab.0.left/0.27.1680.1023/1680.0.1920.1080@0.27.1680.1023" timestamp="1590614368574" />
-    <state width="1634" height="181" key="GridCell.Tab.0.right" timestamp="1590614368574">
-      <screen x="0" y="27" width="1680" height="1023" />
+    <state width="1237" height="98" key="GridCell.Tab.0.right" timestamp="1590673617779">
+      <screen x="0" y="0" width="1280" height="680" />
     </state>
+    <state width="1237" height="98" key="GridCell.Tab.0.right/0.0.1280.680/-1366.83.1366.728@0.0.1280.680" timestamp="1590673617779" />
+    <state width="1237" height="126" key="GridCell.Tab.0.right/0.0.1280.680@0.0.1280.680" timestamp="1590664475683" />
     <state width="1634" height="181" key="GridCell.Tab.0.right/0.27.1680.1023/1680.0.1920.1080@0.27.1680.1023" timestamp="1590614368574" />
     <state x="425" y="285" width="819" height="514" key="NewModule_or_Project.wizard" timestamp="1590508236072">
       <screen x="0" y="27" width="1680" height="1023" />
     </state>
     <state x="425" y="285" width="819" height="514" key="NewModule_or_Project.wizard/0.27.1680.1023/1680.0.1920.1080@0.27.1680.1023" timestamp="1590508236072" />
-    <state x="329" y="173" width="1022" height="737" key="SettingsEditor" timestamp="1590510286041">
-      <screen x="0" y="27" width="1680" height="1023" />
+    <state x="251" y="97" width="1022" height="737" key="SettingsEditor" timestamp="1590663753831">
+      <screen x="0" y="0" width="1280" height="680" />
     </state>
+    <state x="251" y="97" key="SettingsEditor/0.0.1280.680@0.0.1280.680" timestamp="1590663753831" />
     <state x="329" y="173" width="1022" height="737" key="SettingsEditor/0.27.1680.1023/1680.0.1920.1080@0.27.1680.1023" timestamp="1590510286041" />
     <state x="435" y="274" width="800" height="535" key="Vcs.Push.Dialog.v2" timestamp="1590510839829">
       <screen x="0" y="27" width="1680" height="1023" />

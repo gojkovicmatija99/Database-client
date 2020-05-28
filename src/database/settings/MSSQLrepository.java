@@ -17,15 +17,16 @@ import static utils.Constants.*;
 
 public class MSSQLrepository implements Repository {
     private Connection connection;
+    private Settings settings;
 
     private void initConnection() throws SQLException, ClassNotFoundException {
         Class.forName("net.sourceforge.jtds.jdbc.Driver");
-        /*String ip = (String) settings.getParameter("mssql_ip");
+        String ip = (String) settings.getParameter("mssql_ip");
         String database = (String) settings.getParameter("mssql_database");
         String username = (String) settings.getParameter("mssql_username");
-        String password = (String) settings.getParameter("mssql_password");*/
+        String password = (String) settings.getParameter("mssql_password");
         Class.forName("net.sourceforge.jtds.jdbc.Driver");
-        DriverManager.getConnection("jdbc:jtds:sqlserver://"+ MSSQL_IP +"/"+MSSQL_DATABASE+","+MSSQL_USERNAME+","+MSSQL_PASSWORD);
+        connection = DriverManager.getConnection("jdbc:jtds:sqlserver://"+ ip +"/"+ database, username, username);
     }
 
     private void closeConnection(){
@@ -61,7 +62,7 @@ public class MSSQLrepository implements Repository {
                 while(columns.next()) {
                     String columnsName=columns.getString("COLUMN_NAME");
                     String columnType=columns.getString("TYPE_NAME");
-                    int columnSize=Integer.parseInt(columns.getString("COLUMNS_SIZE"));
+                    int columnSize=Integer.parseInt(columns.getString("COLUMN_SIZE"));
                     Attribute attribute=new Attribute(columnsName, newTable, AttributeType.valueOf((columnType.toUpperCase())), columnSize);
                     newTable.addChild(attribute);
                 }
