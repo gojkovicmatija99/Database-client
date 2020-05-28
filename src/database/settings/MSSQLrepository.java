@@ -2,20 +2,15 @@ package database.settings;
 
 import database.Repository;
 import resource.DBNode;
-import resource.DBNodeComposite;
 import resource.data.Row;
 import resource.enums.AttributeType;
 import resource.implementation.Attribute;
-import resource.implementation.DBTreeNode;
 import resource.implementation.Entity;
 import resource.implementation.InformationResource;
-import utils.Constants;
 
 import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
-
-import static utils.Constants.*;
 
 public class MSSQLrepository implements Repository {
     private Connection connection;

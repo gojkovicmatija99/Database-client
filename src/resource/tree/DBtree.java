@@ -1,6 +1,4 @@
-package resource;
-
-import view.DBview;
+package resource.tree;
 
 import javax.swing.*;
 import javax.swing.event.TreeSelectionEvent;
@@ -12,6 +10,7 @@ public class DBtree extends JTree implements TreeSelectionListener {
     public DBtree(DBview dBview) {
         this.dBview=dBview;
         addTreeSelectionListener(this);
+        setCellRenderer(new DBtreeCellRenderer());
         setEditable(false);
     }
     @Override

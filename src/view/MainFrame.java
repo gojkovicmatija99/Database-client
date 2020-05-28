@@ -3,8 +3,10 @@ package view;
 import database.settings.MSSQLrepository;
 import database.settings.Settings;
 import database.settings.SettingsImplementation;
-import resource.DBtree;
-import resource.implementation.DBTreeNode;
+import resource.DBNodeComposite;
+import resource.tree.DBtree;
+import resource.tree.DBtreeNode;
+import resource.tree.DBview;
 import utils.Constants;
 
 import java.awt.Dimension;
@@ -16,7 +18,7 @@ import javax.swing.tree.DefaultTreeModel;
 public class MainFrame extends JFrame {
 
 	private static MainFrame instance = null;
-	private DBTreeNode dbTreeNode;
+	private DBtreeNode dbTreeNode;
 	private DBtree dbTree;
 	private DBview dbView;
 	private MSSQLrepository mssqlRepository;
@@ -48,7 +50,7 @@ public class MainFrame extends JFrame {
 
 	private void initDBtree() {
 		dbTree =new DBtree(dbView);
-		dbTreeNode = mssqlRepository.getSchema();
+		dbTreeNode = new DBtreeNode((DBNodeComposite) mssqlRepository.getSchema());
 		dbTree.setModel(new DefaultTreeModel(dbTreeNode));
 		dbView =new DBview(dbTreeNode);
 	}
