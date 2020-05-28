@@ -2,9 +2,11 @@ package database.settings;
 
 import database.Repository;
 import resource.DBNode;
+import resource.DBNodeComposite;
 import resource.data.Row;
 import resource.enums.AttributeType;
 import resource.implementation.Attribute;
+import resource.implementation.DBTreeNode;
 import resource.implementation.Entity;
 import resource.implementation.InformationResource;
 import utils.Constants;
@@ -19,6 +21,10 @@ public class MSSQLrepository implements Repository {
     private Connection connection;
     private Settings settings;
 
+    public MSSQLrepository(Settings settings) {
+        this.settings = settings;
+    }
+
     private void initConnection() throws SQLException, ClassNotFoundException {
         Class.forName("net.sourceforge.jtds.jdbc.Driver");
         String ip = (String) settings.getParameter("mssql_ip");
@@ -26,7 +32,7 @@ public class MSSQLrepository implements Repository {
         String username = (String) settings.getParameter("mssql_username");
         String password = (String) settings.getParameter("mssql_password");
         Class.forName("net.sourceforge.jtds.jdbc.Driver");
-        connection = DriverManager.getConnection("jdbc:jtds:sqlserver://"+ ip +"/"+ database, username, username);
+        connection = DriverManager.getConnection("jdbc:jtds:sqlserver://"+ ip +"/"+ database, username, password);
     }
 
     private void closeConnection(){

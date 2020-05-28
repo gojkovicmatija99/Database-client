@@ -1,8 +1,11 @@
 package view;
 
 import database.settings.MSSQLrepository;
+import database.settings.Settings;
+import database.settings.SettingsImplementation;
 import resource.DBtree;
 import resource.implementation.DBTreeNode;
+import utils.Constants;
 
 import java.awt.Dimension;
 import java.awt.Toolkit;
@@ -17,6 +20,7 @@ public class MainFrame extends JFrame {
 	private DBtree dbTree;
 	private DBview dbView;
 	private MSSQLrepository mssqlRepository;
+	private Settings settings;
 	
 	public static MainFrame getInstance() {
 		if (instance == null) 
@@ -34,7 +38,8 @@ public class MainFrame extends JFrame {
 		setLocationRelativeTo(null);
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
-		mssqlRepository=new MSSQLrepository();
+		settings=initSettings();
+		mssqlRepository=new MSSQLrepository(settings);
 		initDBtree();
 		JScrollPane scroll=new JScrollPane(dbTree);
 		this.add(scroll);
@@ -43,9 +48,18 @@ public class MainFrame extends JFrame {
 
 	private void initDBtree() {
 		dbTree =new DBtree(dbView);
-		dbTreeNode = (DBTreeNode) mssqlRepository.getSchema();
+		dbTreeNode = mssqlRepository.getSchema();
 		dbTree.setModel(new DefaultTreeModel(dbTreeNode));
 		dbView =new DBview(dbTreeNode);
+	}
+
+	private Settings initSettings() {
+		Settings settingsImplementation = new SettingsImplementation();
+		settingsImplementation.addParameter("mssql_ip", Constants.MSSQL_IP);
+		settingsImplementation.addParameter("mssql_database", Constants.MSSQL_DATABASE);
+		settingsImplementation.addParameter("mssql_username", Constants.MSSQL_USERNAME);
+		settingsImplementation.addParameter("mssql_password", Constants.MSSQL_PASSWORD);
+		return settingsImplementation;
 	}
 
 }
