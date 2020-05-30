@@ -40,6 +40,12 @@ public class DBtreeCellRenderer extends DefaultTreeCellRenderer {
                 if (imageURL != null)
                     icon = new ImageIcon(imageURL);
                 setIcon(icon);
+            } else if(dbNode instanceof AttributeConstraint) {
+                URL imageURL=getClass().getResource("images/constraint.png");
+                Icon icon = null;
+                if (imageURL != null)
+                    icon = new ImageIcon(imageURL);
+                setIcon(icon);
             }
         }
 

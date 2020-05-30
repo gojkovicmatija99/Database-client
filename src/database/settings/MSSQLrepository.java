@@ -74,9 +74,29 @@ public class MSSQLrepository implements Repository {
                         AttributeConstraint attributeConstraint=new AttributeConstraint("NOT NULL",attribute, ConstraintType.NOT_NULL);
                         attribute.addChild(attributeConstraint);
                     }
+
+                    String defaultValue=columns.getString("COLUMN_DEF");
+                    if(defaultValue!=null){
+                        AttributeConstraint attributeConstraint=new AttributeConstraint(defaultValue, attribute, ConstraintType.DEFAULT_VALUE);
+                        attribute.addChild(attributeConstraint);
+                    }
+
+                    ResultSet primaryKeys=metaData.getPrimaryKeys(connection.getCatalog(), null, tableName);
+                    while(primaryKeys.next()) {
+                        if(columnsName.equals(primaryKeys.getString("COLUMN_NAME"))) {
+                            AttributeConstraint attributeConstraint=new AttributeConstraint("PRIMARY KEY",attribute,ConstraintType.PRIMARY_KEY);
+                            attribute.addChild(attributeConstraint);
+                        }
+                    }
+
+                    ResultSet foreignKeys=metaData.getImportedKeys(connection.getCatalog(), null, tableName);
+                    while(foreignKeys.next()) {
+                        if(columnsName.equals(foreignKeys.getString("FKCOLUMN_NAME"))) {
+                            AttributeConstraint attributeConstraint=new AttributeConstraint("FOREIGN KEY",attribute,ConstraintType.FOREIGN_KEY);
+                            attribute.addChild(attributeConstraint);
+                        }
+                    }
                 }
-
-
             }
 
             return ir;
