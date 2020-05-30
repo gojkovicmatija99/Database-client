@@ -19,7 +19,7 @@ public class RightTopPanel extends JPanel{
 		jTable = new JTable();
 		scrollPane = new JScrollPane();
 		scrollPane.setViewportView(jTable);
-		this.add(scrollPane, BorderLayout.SOUTH);
+		this.add(scrollPane, BorderLayout.CENTER);
 
 		this.setVisible(true);
 	}

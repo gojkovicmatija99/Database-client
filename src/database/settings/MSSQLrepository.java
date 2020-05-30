@@ -115,9 +115,11 @@ public class MSSQLrepository implements Repository {
         List<Row> rows=new ArrayList<>();
 
         try {
-            String query="SELECT * FROM" + from;
-            PreparedStatement preparedStatement=connection.prepareStatement(query);
-            ResultSet rs=preparedStatement.executeQuery();
+            this.initConnection();
+
+            String query = "SELECT * FROM " + from;
+            PreparedStatement preparedStatement = connection.prepareStatement(query);
+            ResultSet rs = preparedStatement.executeQuery();
 
             while(rs.next()) {
                 Row row=new Row();

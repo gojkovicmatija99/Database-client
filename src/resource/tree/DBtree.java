@@ -21,12 +21,11 @@ public class DBtree implements TreeSelectionListener {
             DBtreeNode node = (DBtreeNode) path.getPathComponent(i);
             if (node.getDbNode() instanceof Entity) {
                 Entity entity = (Entity) node.getDbNode();
-                System.out.println(entity.getName());
-                //RightTopPanel topTableView = new RightTopPanel();
-                //JTable jTable = topTableView.getjTable();
-                //MainFrame.getInstance().readDataFromTable(entity.getName());
-                //jTable.setModel(MainFrame.getInstance().getTableModel());
-                MainFrame.getInstance().getTopTab().addTab(entity.getName(), new JPanel());
+                RightTopPanel topTableView = new RightTopPanel();
+                topTableView.getjTable().setModel(MainFrame.getInstance().getTableModel());
+                MainFrame.getInstance().readDataFromTable(entity.getName());
+                MainFrame.getInstance().getTopTab().addTab(entity.getName(), topTableView);
+                MainFrame.getInstance().getTopTab().setSelectedComponent(topTableView);
             }
         }
 

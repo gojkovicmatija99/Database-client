@@ -52,6 +52,10 @@ public class MainFrame extends JFrame {
 		initDBtree();
 		JScrollPane scroll1=new JScrollPane(jTree);
 		topTab = new JTabbedPane();
+		this.tableModel.setRows(this.database.readDataFromTable("COUNTRIES"));
+		RightTopPanel rtp = new RightTopPanel();
+		rtp.getjTable().setModel(this.tableModel);
+		topTab.addTab("abc", rtp);
 		bottomTab = new JTabbedPane();
 		JSplitPane splitPane1 = new JSplitPane(JSplitPane.VERTICAL_SPLIT, topTab, bottomTab);
 		splitPane1.setDividerLocation(screenHeight/2);
@@ -63,7 +67,7 @@ public class MainFrame extends JFrame {
 	}
 
 	public void readDataFromTable(String fromTable){
-		tableModel.setRows(this.database.readDataFromTable(fromTable));
+		this.tableModel.setRows(this.database.readDataFromTable(fromTable));
 	}
 
 	private void initDBtree() {
