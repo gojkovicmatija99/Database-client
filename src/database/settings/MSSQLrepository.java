@@ -4,7 +4,9 @@ import database.Repository;
 import resource.DBNode;
 import resource.data.Row;
 import resource.enums.AttributeType;
+import resource.enums.ConstraintType;
 import resource.implementation.Attribute;
+import resource.implementation.AttributeConstraint;
 import resource.implementation.Entity;
 import resource.implementation.InformationResource;
 
@@ -66,7 +68,15 @@ public class MSSQLrepository implements Repository {
                     int columnSize=Integer.parseInt(columns.getString("COLUMN_SIZE"));
                     Attribute attribute=new Attribute(columnsName, newTable, AttributeType.valueOf((columnType.toUpperCase())), columnSize);
                     newTable.addChild(attribute);
+
+                    String isNullable=columns.getString("IS_NULLABLE");
+                    if(isNullable.equals("NO")) {
+                        AttributeConstraint attributeConstraint=new AttributeConstraint("NOT NULL",attribute, ConstraintType.NOT_NULL);
+                        attribute.addChild(attributeConstraint);
+                    }
                 }
+
+
             }
 
             return ir;

@@ -19,8 +19,8 @@ public class DBtree implements TreeSelectionListener {
             return;
         for (int i = 0; i < path.getPathCount(); i++) {
             DBtreeNode node = (DBtreeNode) path.getPathComponent(i);
-            if (node.getDbNodeComposite() instanceof Entity) {
-                Entity entity = (Entity) node.getDbNodeComposite();
+            if (node.getDbNode() instanceof Entity) {
+                Entity entity = (Entity) node.getDbNode();
                 System.out.println(entity.getName());
                 //RightTopPanel topTableView = new RightTopPanel();
                 //JTable jTable = topTableView.getjTable();

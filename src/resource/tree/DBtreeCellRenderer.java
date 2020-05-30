@@ -19,22 +19,22 @@ public class DBtreeCellRenderer extends DefaultTreeCellRenderer {
 
         if(value instanceof DBtreeNode) {
             DBtreeNode currDBtreeNode=(DBtreeNode) value;
-            DBNodeComposite currDBNodeComposite =currDBtreeNode.getDbNodeComposite();
+            DBNode dbNode=currDBtreeNode.getDbNode();
 
-            if(currDBNodeComposite instanceof InformationResource) {
+            if(dbNode instanceof InformationResource) {
                 URL imageURL=getClass().getResource("images/database.png");
                 Icon icon = null;
                 if (imageURL != null)
                     icon = new ImageIcon(imageURL);
                 setIcon(icon);
 
-            } else if(currDBNodeComposite instanceof Entity) {
+            } else if(dbNode instanceof Entity) {
                 URL imageURL=getClass().getResource("images/entity.png");
                 Icon icon = null;
                 if (imageURL != null)
                     icon = new ImageIcon(imageURL);
                 setIcon(icon);
-            } else if(currDBNodeComposite instanceof Attribute) {
+            } else if(dbNode instanceof Attribute) {
                 URL imageURL=getClass().getResource("images/attribute.png");
                 Icon icon = null;
                 if (imageURL != null)

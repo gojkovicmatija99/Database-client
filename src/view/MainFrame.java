@@ -9,6 +9,7 @@ import resource.DBNodeComposite;
 import resource.tree.DBtree;
 import resource.tree.DBtreeCellRenderer;
 import resource.tree.DBtreeNode;
+import resource.tree.DBtreeNodeComposite;
 import utils.Constants;
 import model.TableModel;
 
@@ -72,7 +73,7 @@ public class MainFrame extends JFrame {
 		jTree.setCellRenderer(new DBtreeCellRenderer());
 		database = new DatabaseImplementation(new MSSQLrepository(settings));
 		DatabaseImplementation di = (DatabaseImplementation) database;
-		dbTreeNode = new DBtreeNode((DBNodeComposite) di.getRepository().getSchema());
+		dbTreeNode = new DBtreeNodeComposite(di.getRepository().getSchema());
 		jTree.setModel(new DefaultTreeModel(dbTreeNode));
 	}
 
