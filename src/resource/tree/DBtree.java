@@ -1,5 +1,7 @@
 package resource.tree;
 
+import view.DBview;
+
 import javax.swing.*;
 import javax.swing.event.TreeSelectionEvent;
 import javax.swing.event.TreeSelectionListener;

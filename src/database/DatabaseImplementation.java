@@ -8,6 +8,10 @@ import java.util.List;
 public class DatabaseImplementation implements Database {
     private Repository repository;
 
+    public DatabaseImplementation(Repository repository) {
+        this.repository = repository;
+    }
+
     @Override
     public DBNode loadResource() {
         return repository.getSchema();

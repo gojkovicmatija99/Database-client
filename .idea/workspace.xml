@@ -19,25 +19,27 @@
     <select>
       <path>
         <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
-        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
-        <item name="BRANCH:master" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="BRANCH:origin/master" type="e8cecc67:BranchNodeDescriptor" />
       </path>
     </select>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8e2ebac5-987b-4976-824f-c90b8280c9ef" name="Default Changelist" comment="Dodate bibl">
-      <change afterPath="$PROJECT_DIR$/src/resource/tree/DBtreeCellRenderer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/resource/tree/images/attribute.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/resource/tree/images/constraint.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/resource/tree/images/database.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/resource/tree/images/entity.png" afterDir="false" />
+    <list default="true" id="8e2ebac5-987b-4976-824f-c90b8280c9ef" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/actions/ActionManager.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/actions/AddAction.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/actions/DeleteAction.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/actions/UpdateAction.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/view/MyToolbar.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/view/table/TableModel.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/BazePodatakaProjekat/Main.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/database/settings/MSSQLrepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/database/settings/MSSQLrepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/resource/DBtree.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/resource/tree/DBtree.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/resource/implementation/DBTreeNode.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/resource/tree/DBtreeNode.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/view/DBview.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/resource/tree/DBview.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/database/DatabaseImplementation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/database/DatabaseImplementation.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/resource/tree/DBtree.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/resource/tree/DBtree.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/resource/tree/DBview.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/view/DBview.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/view/MainFrame.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/view/MainFrame.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/view/RightTopPanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/view/RightTopPanel.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -72,31 +74,31 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/resource/tree/images" />
+    <property name="last_opened_file_path" value="D:/My/JAVA vezbanje/RedRocket" />
     <property name="project.structure.last.edited" value="Libraries" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.2" />
+    <property name="restartRequiresConfirmation" value="false" />
     <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$" />
-    </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/src/resource/tree/images" />
-      <recent name="$PROJECT_DIR$/src" />
-      <recent name="$PROJECT_DIR$/src/resource" />
-      <recent name="$PROJECT_DIR$/src/resource/implementation" />
-    </key>
     <key name="CreateClassDialog.RecentsKey">
       <recent name="resource" />
       <recent name="view" />
       <recent name="database" />
     </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src" />
+      <recent name="$PROJECT_DIR$/src/resource" />
+      <recent name="$PROJECT_DIR$/src/resource/implementation" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$" />
+    </key>
   </component>
   <component name="RunManager">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Main" />
+      <option name="MAIN_CLASS_NAME" value="app.Main" />
       <module name="BazePodatakaProjekat" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -179,7 +181,7 @@
                   <entry key="branch">
                     <value>
                       <list>
-                        <option value="master" />
+                        <option value="origin/master" />
                       </list>
                     </value>
                   </entry>
@@ -204,10 +206,11 @@
     <option name="LAST_COMMIT_MESSAGE" value="Dodat resources paket" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="648" y="246" width="553" height="599" key="#com.intellij.ide.util.MemberChooser" timestamp="1590702534739">
-      <screen x="0" y="27" width="1680" height="1023" />
+    <state x="494" y="146" width="327" height="394" key="#com.intellij.ide.util.MemberChooser" timestamp="1590833051171">
+      <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state x="648" y="246" width="553" height="599" key="#com.intellij.ide.util.MemberChooser/0.27.1680.1023/1680.0.1920.1080@0.27.1680.1023" timestamp="1590702534739" />
+    <state x="494" y="146" width="327" height="394" key="#com.intellij.ide.util.MemberChooser/0.0.1280.680@0.0.1280.680" timestamp="1590833051171" />
+    <state x="648" y="246" width="374" height="592" key="#com.intellij.ide.util.MemberChooser/0.27.1680.1023/1680.0.1920.1080@0.27.1680.1023" timestamp="1590613942616" />
     <state x="573" y="287" width="524" height="509" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1590613752114">
       <screen x="0" y="27" width="1680" height="1023" />
     </state>
@@ -216,11 +219,11 @@
       <screen x="0" y="27" width="1680" height="1023" />
     </state>
     <state x="225" y="95" width="1220" height="894" key="CommitChangelistDialog2/0.27.1680.1023/1680.0.1920.1080@0.27.1680.1023" timestamp="1590510632590" />
-    <state x="626" y="435" width="745" height="520" key="FileChooserDialogImpl" timestamp="1590705263351">
-      <screen x="0" y="27" width="1680" height="1023" />
+    <state x="477" y="190" width="745" height="520" key="FileChooserDialogImpl" timestamp="1590827097458">
+      <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state x="477" y="271" key="FileChooserDialogImpl/0.0.1280.680@0.0.1280.680" timestamp="1590663962432" />
-    <state x="626" y="435" width="745" height="520" key="FileChooserDialogImpl/0.27.1680.1023/1680.0.1920.1080@0.27.1680.1023" timestamp="1590705263351" />
+    <state x="477" y="190" key="FileChooserDialogImpl/0.0.1280.680@0.0.1280.680" timestamp="1590827097458" />
+    <state x="626" y="435" width="745" height="520" key="FileChooserDialogImpl/0.27.1680.1023/1680.0.1920.1080@0.27.1680.1023" timestamp="1590609717169" />
     <state x="650" y="438" width="379" height="207" key="Github.ShareDialog" timestamp="1590431755390">
       <screen x="0" y="27" width="1680" height="1023" />
     </state>
@@ -229,46 +232,30 @@
       <screen x="0" y="27" width="1680" height="1023" />
     </state>
     <state x="550" y="218" width="569" height="647" key="Github.UntrackedFilesDialog/0.27.1680.1023/1680.0.1920.1080@0.27.1680.1023" timestamp="1590431762348" />
-    <state width="1634" height="181" key="GridCell.Tab.0.bottom" timestamp="1590706350234">
-      <screen x="0" y="27" width="1680" height="1023" />
+    <state width="1237" height="96" key="GridCell.Tab.0.bottom" timestamp="1590843663743">
+      <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state width="1237" height="98" key="GridCell.Tab.0.bottom/0.0.1280.680/-1366.83.1366.728@0.0.1280.680" timestamp="1590673617779" />
-    <state width="1237" height="126" key="GridCell.Tab.0.bottom/0.0.1280.680@0.0.1280.680" timestamp="1590664475683" />
-    <state width="1634" height="181" key="GridCell.Tab.0.bottom/0.27.1680.1023/1680.0.1920.1080@0.27.1680.1023" timestamp="1590706350234" />
-    <state width="1634" height="181" key="GridCell.Tab.0.center" timestamp="1590706350234">
-      <screen x="0" y="27" width="1680" height="1023" />
+    <state width="1237" height="96" key="GridCell.Tab.0.bottom/0.0.1280.680@0.0.1280.680" timestamp="1590843663743" />
+    <state width="1634" height="181" key="GridCell.Tab.0.bottom/0.27.1680.1023/1680.0.1920.1080@0.27.1680.1023" timestamp="1590614368574" />
+    <state width="1237" height="96" key="GridCell.Tab.0.center" timestamp="1590843663743">
+      <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state width="1237" height="98" key="GridCell.Tab.0.center/0.0.1280.680/-1366.83.1366.728@0.0.1280.680" timestamp="1590673617779" />
-    <state width="1237" height="126" key="GridCell.Tab.0.center/0.0.1280.680@0.0.1280.680" timestamp="1590664475682" />
-    <state width="1634" height="181" key="GridCell.Tab.0.center/0.27.1680.1023/1680.0.1920.1080@0.27.1680.1023" timestamp="1590706350234" />
-    <state width="1634" height="181" key="GridCell.Tab.0.left" timestamp="1590706350234">
-      <screen x="0" y="27" width="1680" height="1023" />
+    <state width="1237" height="96" key="GridCell.Tab.0.center/0.0.1280.680@0.0.1280.680" timestamp="1590843663743" />
+    <state width="1634" height="181" key="GridCell.Tab.0.center/0.27.1680.1023/1680.0.1920.1080@0.27.1680.1023" timestamp="1590614368574" />
+    <state width="1237" height="96" key="GridCell.Tab.0.left" timestamp="1590843663743">
+      <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state width="1237" height="98" key="GridCell.Tab.0.left/0.0.1280.680/-1366.83.1366.728@0.0.1280.680" timestamp="1590673617779" />
-    <state width="1237" height="126" key="GridCell.Tab.0.left/0.0.1280.680@0.0.1280.680" timestamp="1590664475682" />
-    <state width="1634" height="181" key="GridCell.Tab.0.left/0.27.1680.1023/1680.0.1920.1080@0.27.1680.1023" timestamp="1590706350234" />
-    <state width="1634" height="181" key="GridCell.Tab.0.right" timestamp="1590706350234">
-      <screen x="0" y="27" width="1680" height="1023" />
+    <state width="1237" height="96" key="GridCell.Tab.0.left/0.0.1280.680@0.0.1280.680" timestamp="1590843663743" />
+    <state width="1634" height="181" key="GridCell.Tab.0.left/0.27.1680.1023/1680.0.1920.1080@0.27.1680.1023" timestamp="1590614368574" />
+    <state width="1237" height="96" key="GridCell.Tab.0.right" timestamp="1590843663743">
+      <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state width="1237" height="98" key="GridCell.Tab.0.right/0.0.1280.680/-1366.83.1366.728@0.0.1280.680" timestamp="1590673617779" />
-    <state width="1237" height="126" key="GridCell.Tab.0.right/0.0.1280.680@0.0.1280.680" timestamp="1590664475683" />
-    <state width="1634" height="181" key="GridCell.Tab.0.right/0.27.1680.1023/1680.0.1920.1080@0.27.1680.1023" timestamp="1590706350234" />
-    <state width="1634" height="328" key="GridCell.Tab.1.bottom" timestamp="1590704416805">
-      <screen x="0" y="27" width="1680" height="1023" />
-    </state>
-    <state width="1634" height="328" key="GridCell.Tab.1.bottom/0.27.1680.1023/1680.0.1920.1080@0.27.1680.1023" timestamp="1590704416805" />
-    <state width="1634" height="328" key="GridCell.Tab.1.center" timestamp="1590704416805">
-      <screen x="0" y="27" width="1680" height="1023" />
-    </state>
-    <state width="1634" height="328" key="GridCell.Tab.1.center/0.27.1680.1023/1680.0.1920.1080@0.27.1680.1023" timestamp="1590704416805" />
-    <state width="1634" height="328" key="GridCell.Tab.1.left" timestamp="1590704416805">
-      <screen x="0" y="27" width="1680" height="1023" />
-    </state>
-    <state width="1634" height="328" key="GridCell.Tab.1.left/0.27.1680.1023/1680.0.1920.1080@0.27.1680.1023" timestamp="1590704416805" />
-    <state width="1634" height="328" key="GridCell.Tab.1.right" timestamp="1590704416805">
-      <screen x="0" y="27" width="1680" height="1023" />
-    </state>
-    <state width="1634" height="328" key="GridCell.Tab.1.right/0.27.1680.1023/1680.0.1920.1080@0.27.1680.1023" timestamp="1590704416805" />
+    <state width="1237" height="96" key="GridCell.Tab.0.right/0.0.1280.680@0.0.1280.680" timestamp="1590843663743" />
+    <state width="1634" height="181" key="GridCell.Tab.0.right/0.27.1680.1023/1680.0.1920.1080@0.27.1680.1023" timestamp="1590614368574" />
     <state x="425" y="285" width="819" height="514" key="NewModule_or_Project.wizard" timestamp="1590508236072">
       <screen x="0" y="27" width="1680" height="1023" />
     </state>
@@ -294,17 +281,23 @@
       <screen x="0" y="27" width="1680" height="1023" />
     </state>
     <state x="611" y="453" width="458" height="177" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.27.1680.1023/1680.0.1920.1080@0.27.1680.1023" timestamp="1590510959906" />
-    <state x="447" y="327" width="775" height="437" key="git4idea.merge.GitPullDialog" timestamp="1590510973272">
-      <screen x="0" y="27" width="1680" height="1023" />
+    <state x="341" y="199" width="635" height="291" key="git4idea.merge.GitPullDialog" timestamp="1590826765732">
+      <screen x="0" y="0" width="1280" height="680" />
     </state>
+    <state x="341" y="199" width="635" height="291" key="git4idea.merge.GitPullDialog/0.0.1280.680@0.0.1280.680" timestamp="1590826765732" />
     <state x="447" y="327" width="775" height="437" key="git4idea.merge.GitPullDialog/0.27.1680.1023/1680.0.1920.1080@0.27.1680.1023" timestamp="1590510973272" />
     <state x="149" y="140" width="1372" height="803" key="new project wizard" timestamp="1590508220376">
       <screen x="0" y="27" width="1680" height="1023" />
     </state>
     <state x="149" y="140" width="1372" height="803" key="new project wizard/0.27.1680.1023/1680.0.1920.1080@0.27.1680.1023" timestamp="1590508220376" />
-    <state x="503" y="251" width="672" height="678" key="search.everywhere.popup" timestamp="1590503666100">
-      <screen x="0" y="27" width="1680" height="1023" />
+    <state x="297" y="151" key="run.anything.popup" timestamp="1590842289090">
+      <screen x="0" y="0" width="1280" height="680" />
     </state>
+    <state x="297" y="151" key="run.anything.popup/0.0.1280.680@0.0.1280.680" timestamp="1590842289090" />
+    <state x="383" y="149" width="672" height="451" key="search.everywhere.popup" timestamp="1590840348982">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state x="383" y="149" width="672" height="451" key="search.everywhere.popup/0.0.1280.680@0.0.1280.680" timestamp="1590840348982" />
     <state x="503" y="251" width="672" height="678" key="search.everywhere.popup/0.27.1680.1023/1680.0.1920.1080@0.27.1680.1023" timestamp="1590503666100" />
   </component>
 </project>
