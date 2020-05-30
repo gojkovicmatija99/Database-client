@@ -1,8 +1,5 @@
 package view;
 
-import database.Database;
-import view.table.TableModel;
-
 import java.awt.*;
 
 import javax.swing.*;
@@ -11,7 +8,6 @@ public class RightTopPanel extends JPanel{
 
 	private MyToolbar toolbar;
 	private JTable jTable;
-	private TableModel tableModel;
 	private JScrollPane scrollPane;
 	
 	public RightTopPanel() {
@@ -20,15 +16,15 @@ public class RightTopPanel extends JPanel{
 		toolbar=new MyToolbar();
 		this.add(toolbar, BorderLayout.NORTH);
 
-		tableModel = new TableModel();
 		jTable = new JTable();
-		this.add(new JScrollPane(jTable), BorderLayout.SOUTH);
+		scrollPane = new JScrollPane();
+		scrollPane.setViewportView(jTable);
+		this.add(scrollPane, BorderLayout.SOUTH);
 
 		this.setVisible(true);
 	}
 
-	public void readDataFromTable(String fromTable){
-		tableModel.setRows(MainFrame.getInstance().getDatabase().readDataFromTable(fromTable));
+	public JTable getjTable() {
+		return jTable;
 	}
-
 }

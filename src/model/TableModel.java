@@ -1,4 +1,4 @@
-package view.table;
+package model;
 
 import resource.data.Row;
 

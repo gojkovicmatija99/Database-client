@@ -2,14 +2,15 @@ package view;
 
 import database.Database;
 import database.DatabaseImplementation;
-import database.Repository;
 import database.settings.MSSQLrepository;
 import database.settings.Settings;
 import database.settings.SettingsImplementation;
 import resource.DBNodeComposite;
 import resource.tree.DBtree;
+import resource.tree.DBtreeCellRenderer;
 import resource.tree.DBtreeNode;
 import utils.Constants;
+import model.TableModel;
 
 import java.awt.Dimension;
 import java.awt.Toolkit;
@@ -22,9 +23,12 @@ public class MainFrame extends JFrame {
 	private static MainFrame instance = null;
 	private DBtreeNode dbTreeNode;
 	private DBtree dbTree;
-	private DBview dbView;
+	private JTree jTree;
 	private Settings settings;
 	private Database database;
+	private JTabbedPane topTab;
+	private JTabbedPane bottomTab;
+	private TableModel tableModel;
 
 	public static MainFrame getInstance() {
 		if (instance == null)
@@ -42,24 +46,34 @@ public class MainFrame extends JFrame {
 		setLocationRelativeTo(null);
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
+		tableModel = new TableModel();
 		settings=initSettings();
 		initDBtree();
-		JScrollPane scroll1=new JScrollPane(dbTree);
-		JSplitPane splitPane = new JSplitPane(JSplitPane.HORIZONTAL_SPLIT, scroll1, dbView);
+		JScrollPane scroll1=new JScrollPane(jTree);
+		topTab = new JTabbedPane();
+		bottomTab = new JTabbedPane();
+		JSplitPane splitPane1 = new JSplitPane(JSplitPane.VERTICAL_SPLIT, topTab, bottomTab);
+		splitPane1.setDividerLocation(screenHeight/2);
+		JSplitPane splitPane = new JSplitPane(JSplitPane.HORIZONTAL_SPLIT, scroll1, splitPane1);
 		splitPane.setDividerLocation(165);
 		splitPane.setOneTouchExpandable(true);
 		this.add(splitPane);
 		setVisible(true);
 	}
 
+	public void readDataFromTable(String fromTable){
+		tableModel.setRows(this.database.readDataFromTable(fromTable));
+	}
+
 	private void initDBtree() {
-		dbTree =new DBtree(dbView);
+		jTree = new JTree();
+		dbTree =new DBtree();
+		jTree.addTreeSelectionListener(dbTree);
+		jTree.setCellRenderer(new DBtreeCellRenderer());
 		database = new DatabaseImplementation(new MSSQLrepository(settings));
 		DatabaseImplementation di = (DatabaseImplementation) database;
 		dbTreeNode = new DBtreeNode((DBNodeComposite) di.getRepository().getSchema());
-		dbTree.setModel(new DefaultTreeModel(dbTreeNode));
-		//dbView se inicijalizuje za selektovanu tabelu, ovo treba promeniti
-		dbView =new DBview(dbTreeNode);
+		jTree.setModel(new DefaultTreeModel(dbTreeNode));
 	}
 
 	private Settings initSettings() {
@@ -83,12 +97,16 @@ public class MainFrame extends JFrame {
 		return dbTreeNode;
 	}
 
-	public DBview getDbView() {
-		return dbView;
-	}
-
 	public Settings getSettings() {
 		return settings;
+	}
+
+	public TableModel getTableModel() {
+		return tableModel;
+	}
+
+	public JTabbedPane getTopTab() {
+		return topTab;
 	}
 
 	public void setDatabase(Database database) {
@@ -101,10 +119,6 @@ public class MainFrame extends JFrame {
 
 	public void setDbTreeNode(DBtreeNode dbTreeNode) {
 		this.dbTreeNode = dbTreeNode;
-	}
-
-	public void setDbView(DBview dbView) {
-		this.dbView = dbView;
 	}
 
 	public void setSettings(Settings settings) {
