@@ -1,5 +1,6 @@
 package resource.tree;
 
+import resource.DBNodeComposite;
 import resource.implementation.Entity;
 import view.MainFrame;
 import view.RightTopPanel;
@@ -16,21 +17,18 @@ public class DBtree implements TreeSelectionListener {
         TreePath path = e.getPath();
         if (path == null)
             return;
-        System.out.println(path.getPathComponent(i));
-        Entity entity = (Entity) path.getPathComponent(1);
-        System.out.println(entity.getName());
-        /*for (int i = 0; i < path.getPathCount(); i++) {
-        System.out.println(path.getPathComponent(i));
-            if (path.getPathComponent(i) instanceof Entity) {
-                Entity entity = (Entity) path.getPathComponent(i);
+        for (int i = 0; i < path.getPathCount(); i++) {
+            DBtreeNode node = (DBtreeNode) path.getPathComponent(i);
+            if (node.getDbNodeComposite() instanceof Entity) {
+                Entity entity = (Entity) node.getDbNodeComposite();
                 System.out.println(entity.getName());
-                RightTopPanel topTableView = new RightTopPanel();
-                JTable jTable = topTableView.getjTable();
-                MainFrame.getInstance().readDataFromTable(entity.getName());
-                jTable.setModel(MainFrame.getInstance().getTableModel());
-                MainFrame.getInstance().getTopTab().addTab(entity.getName(), topTableView);
+                //RightTopPanel topTableView = new RightTopPanel();
+                //JTable jTable = topTableView.getjTable();
+                //MainFrame.getInstance().readDataFromTable(entity.getName());
+                //jTable.setModel(MainFrame.getInstance().getTableModel());
+                MainFrame.getInstance().getTopTab().addTab(entity.getName(), new JPanel());
             }
-        }*/
+        }
 
     }
 }
