@@ -127,7 +127,7 @@ public class MSSQLrepository implements Repository {
 
                 ResultSetMetaData resultSetMetaData=rs.getMetaData();
                 for(int i=1;i<=resultSetMetaData.getColumnCount();i++) {
-                    row.addField(resultSetMetaData.getCatalogName(i), rs.getString(i));
+                    row.addField(resultSetMetaData.getColumnName(i), rs.getString(i));
                 }
                 rows.add(row);
             }

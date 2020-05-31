@@ -5,6 +5,7 @@ import observer.Notification;
 import observer.Subscriber;
 import observer.enums.NotificationCode;
 import resource.implementation.InformationResource;
+import resource.tree.DBNode;
 
 import java.awt.*;
 
@@ -12,12 +13,14 @@ import javax.swing.*;
 
 public class RightTopPanel extends JPanel implements Subscriber {
 
+	private DBNode entity;
 	private MyToolbar toolbar;
 	private JTable jTable;
 	private JScrollPane scrollPane;
 	
-	public RightTopPanel() {
+	public RightTopPanel(DBNode entity) {
 		super(new BorderLayout());
+		this.entity = entity;
 
 		toolbar=new MyToolbar();
 		this.add(toolbar, BorderLayout.NORTH);
@@ -32,6 +35,10 @@ public class RightTopPanel extends JPanel implements Subscriber {
 
 	public JTable getjTable() {
 		return jTable;
+	}
+
+	public DBNode getEntity() {
+		return entity;
 	}
 
 	@Override

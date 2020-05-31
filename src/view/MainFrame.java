@@ -12,6 +12,8 @@ import java.awt.Dimension;
 import java.awt.Toolkit;
 
 import javax.swing.*;
+import javax.swing.event.ChangeEvent;
+import javax.swing.event.ChangeListener;
 import javax.swing.tree.DefaultTreeModel;
 
 public class MainFrame extends JFrame implements Subscriber {
@@ -42,6 +44,15 @@ public class MainFrame extends JFrame implements Subscriber {
 		initDBtree();
 		JScrollPane scroll1=new JScrollPane(dbTree);
 		topTab = new JTabbedPane();
+		topTab.addChangeListener(new ChangeListener() {
+			@Override
+			public void stateChanged(ChangeEvent e) {
+				if (topTab.getTabCount() != 0) {
+					RightTopPanel selectedTab = (RightTopPanel)topTab.getSelectedComponent();
+					appCore.readDataFromTable(selectedTab.getEntity().getName());
+				}
+			}
+		});
 		bottomTab = new JTabbedPane();
 		JSplitPane splitPane1 = new JSplitPane(JSplitPane.VERTICAL_SPLIT, topTab, bottomTab);
 		splitPane1.setDividerLocation(screenHeight/2);

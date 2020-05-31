@@ -24,5 +24,6 @@ public class TableModel extends DefaultTableModel {
 
     public void setRows(List<Row> rows) {
         this.rows = rows;
+        updateModel();
     }
 }
