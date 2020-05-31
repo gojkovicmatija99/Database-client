@@ -1,6 +1,6 @@
 package database;
 
-import resource.DBNode;
+import resource.tree.DBNode;
 import resource.data.Row;
 
 import java.util.List;

@@ -1,8 +1,8 @@
-package resource;
+package resource.tree;
 
 import javax.swing.tree.TreeNode;
 
-public abstract class DBNode {
+public abstract class DBNode implements TreeNode {
     private String name;
     private DBNode parent;
 

@@ -1,7 +1,7 @@
-package database.settings;
+package database;
 
-import database.Repository;
-import resource.DBNode;
+import database.settings.Settings;
+import resource.tree.DBNode;
 import resource.data.Row;
 import resource.enums.AttributeType;
 import resource.enums.ConstraintType;

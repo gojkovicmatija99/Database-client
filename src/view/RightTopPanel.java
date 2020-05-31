@@ -1,10 +1,16 @@
 package view;
 
+import model.TableModel;
+import observer.Notification;
+import observer.Subscriber;
+import observer.enums.NotificationCode;
+import resource.implementation.InformationResource;
+
 import java.awt.*;
 
 import javax.swing.*;
 
-public class RightTopPanel extends JPanel{
+public class RightTopPanel extends JPanel implements Subscriber {
 
 	private MyToolbar toolbar;
 	private JTable jTable;
@@ -26,5 +32,15 @@ public class RightTopPanel extends JPanel{
 
 	public JTable getjTable() {
 		return jTable;
+	}
+
+	@Override
+	public void update(Notification notification) {
+		if (notification.getCode() == NotificationCode.RESOURCE_LOADED){
+			System.out.println((InformationResource)notification.getData());
+		}
+		else{
+			jTable.setModel((TableModel) notification.getData());
+		}
 	}
 }

@@ -1,4 +1,6 @@
-package resource;
+package resource.tree;
+
+import resource.tree.DBNode;
 
 import java.util.ArrayList;
 import java.util.List;
