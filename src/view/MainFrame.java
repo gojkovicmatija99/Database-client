@@ -24,6 +24,7 @@ public class MainFrame extends JFrame implements Subscriber {
 	private JTabbedPane topTab;
 	private JTabbedPane bottomTab;
 	private AppCore appCore;
+	private InformationResource ir;
 
 	public static MainFrame getInstance() {
 		if (instance == null)
@@ -46,17 +47,30 @@ public class MainFrame extends JFrame implements Subscriber {
 		appCore.loadResource();
 		JScrollPane scroll1=new JScrollPane(dbTree);
 		topTab = new JTabbedPane();
+		bottomTab = new JTabbedPane();
 		topTab.addChangeListener(new ChangeListener() {
 			@Override
 			public void stateChanged(ChangeEvent e) {
 				if (topTab.getTabCount() != 0) {
 					RightTopPanel selectedTab = (RightTopPanel)topTab.getSelectedComponent();
 					appCore.readDataFromTable(selectedTab.getEntity().getName());
+					while(bottomTab.getTabCount() > 0) {
+						bottomTab.removeTabAt(0);
+					}
+					initBottomPanel();
 				}
 			}
 		});
-		bottomTab = new JTabbedPane();
 		initBottomPanel();
+		bottomTab.addChangeListener(new ChangeListener() {
+			@Override
+			public void stateChanged(ChangeEvent e) {
+				if (bottomTab.getTabCount() != 0) {
+					RightBottomPanel selectedTab = (RightBottomPanel) bottomTab.getSelectedComponent();
+					appCore.readDataFromRelationTable(selectedTab.getEntity().getName());
+				}
+			}
+		});
 		JSplitPane splitPane1 = new JSplitPane(JSplitPane.VERTICAL_SPLIT, topTab, bottomTab);
 		splitPane1.setDividerLocation(screenHeight/2);
 		JSplitPane splitPane = new JSplitPane(JSplitPane.HORIZONTAL_SPLIT, scroll1, splitPane1);
@@ -67,9 +81,18 @@ public class MainFrame extends JFrame implements Subscriber {
 	}
 
 	public void initBottomPanel() {
-		RightTopPanel selectedTopTab = topTab.getSelectedComponent();
-		Entity entity = selectedTopTab.getEntity();
-		for (int i = 0; i < entity)
+		if (topTab.getTabCount() != 0) {
+			RightTopPanel topPanel = (RightTopPanel) topTab.getSelectedComponent();
+			Entity entity = (Entity) topPanel.getEntity();
+			for (int i = 0; i < entity.getInRelationWith().size(); i++) {
+				Entity relationEntity = (Entity) ir.getChildByName(entity.getInRelationWith().get(i));
+				RightBottomPanel bottomPanel = new RightBottomPanel(relationEntity);
+				bottomPanel.getjTable().setModel(appCore.getTableModel2());
+				appCore.readDataFromRelationTable(relationEntity.getName());
+				bottomTab.addTab(entity.getInRelationWith().get(i), bottomPanel);
+				bottomTab.setSelectedComponent(bottomPanel);
+			}
+		}
 	}
 
 	public JTabbedPane getTopTab() {
@@ -89,7 +112,8 @@ public class MainFrame extends JFrame implements Subscriber {
 		if (notification.getCode() == NotificationCode.RESOURCE_LOADED){
 			dbTree =new DBtree();
 			InformationResource root = (InformationResource)notification.getData();
-			dbTree.setModel(new DefaultTreeModel(root));
+			ir = root;
+			dbTree.setModel(new DefaultTreeModel(ir));
 		} else {
 			//jTable.setModel((TableModel) notification.getData());
 		}
