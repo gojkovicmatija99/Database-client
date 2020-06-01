@@ -9,6 +9,7 @@ import model.TableModel;
 import observer.Notification;
 import observer.enums.NotificationCode;
 import observer.implementation.PublisherImplementation;
+import resource.implementation.Entity;
 import resource.tree.DBNode;
 import resource.implementation.InformationResource;
 import utils.Constants;
@@ -36,10 +37,9 @@ public class AppCore extends PublisherImplementation {
     }
 
 
-    public DBNode loadResource(){
+    public void loadResource(){
         InformationResource ir = (InformationResource) this.database.loadResource();
         this.notifySubscribers(new Notification(NotificationCode.RESOURCE_LOADED,ir));
-        return ir;
     }
 
     public void readDataFromTable(String fromTable){

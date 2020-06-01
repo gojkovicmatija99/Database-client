@@ -4,6 +4,7 @@ import app.AppCore;
 import observer.Notification;
 import observer.Subscriber;
 import observer.enums.NotificationCode;
+import resource.implementation.Entity;
 import resource.implementation.InformationResource;
 import resource.tree.DBtree;
 import resource.tree.DBtreeCellRenderer;
@@ -41,7 +42,8 @@ public class MainFrame extends JFrame implements Subscriber {
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
 		appCore = new AppCore();
-		initDBtree();
+		appCore.addSubscriber(this);
+		appCore.loadResource();
 		JScrollPane scroll1=new JScrollPane(dbTree);
 		topTab = new JTabbedPane();
 		topTab.addChangeListener(new ChangeListener() {
@@ -54,6 +56,7 @@ public class MainFrame extends JFrame implements Subscriber {
 			}
 		});
 		bottomTab = new JTabbedPane();
+		initBottomPanel();
 		JSplitPane splitPane1 = new JSplitPane(JSplitPane.VERTICAL_SPLIT, topTab, bottomTab);
 		splitPane1.setDividerLocation(screenHeight/2);
 		JSplitPane splitPane = new JSplitPane(JSplitPane.HORIZONTAL_SPLIT, scroll1, splitPane1);
@@ -63,13 +66,11 @@ public class MainFrame extends JFrame implements Subscriber {
 		setVisible(true);
 	}
 
-	private void initDBtree() {
-		dbTree =new DBtree();
-		InformationResource root = (InformationResource)appCore.getDatabase().loadResource();
-		dbTree.setModel(new DefaultTreeModel(root));
+	public void initBottomPanel() {
+		RightTopPanel selectedTopTab = topTab.getSelectedComponent();
+		Entity entity = selectedTopTab.getEntity();
+		for (int i = 0; i < entity)
 	}
-
-
 
 	public JTabbedPane getTopTab() {
 		return topTab;
@@ -86,9 +87,10 @@ public class MainFrame extends JFrame implements Subscriber {
 	@Override
 	public void update(Notification notification) {
 		if (notification.getCode() == NotificationCode.RESOURCE_LOADED){
-			System.out.println((InformationResource)notification.getData());
-		}
-		else{
+			dbTree =new DBtree();
+			InformationResource root = (InformationResource)notification.getData();
+			dbTree.setModel(new DefaultTreeModel(root));
+		} else {
 			//jTable.setModel((TableModel) notification.getData());
 		}
 	}
