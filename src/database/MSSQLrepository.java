@@ -10,9 +10,12 @@ import resource.implementation.AttributeConstraint;
 import resource.implementation.Entity;
 import resource.implementation.InformationResource;
 
+import java.lang.reflect.MalformedParameterizedTypeException;
 import java.sql.*;
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 public class MSSQLrepository implements Repository {
     private Connection connection;
@@ -158,5 +161,41 @@ public class MSSQLrepository implements Repository {
         }
 
         return rows;
+    }
+
+    @Override
+    public void insertIntoQuery(Map<String, String> map, String tableName) {
+        try {
+            this.initConnection();
+
+            String query="INSERT INTO "+tableName+" (";
+            String values="";
+            String attributes="";
+            for(Map.Entry<String, String> entry : map.entrySet()) {
+                attributes+=entry.getKey()+",";
+                values+="?,";
+            }
+
+            attributes=attributes.substring(0, attributes.length()-1);
+            values=values.substring(0,values.length()-1);
+
+            query+=attributes+") VALUES ("+values+")";
+            PreparedStatement preparedStatement=connection.prepareStatement(query);
+            int i=1;
+            for (Map.Entry<String, String> entry : map.entrySet()) {
+                preparedStatement.setString(i++, entry.getValue());
+            }
+            preparedStatement.setString(3,"SR");
+            preparedStatement.setString(1,"test");
+            preparedStatement.setDouble(2,1.0);
+            preparedStatement.execute();
+
+        }
+        catch (Exception e) {
+            e.printStackTrace();
+        }
+        finally {
+            this.closeConnection();
+        }
     }
 }

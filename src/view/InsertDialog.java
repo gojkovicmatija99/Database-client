@@ -14,7 +14,6 @@ public class InsertDialog extends JDialog {
     private Entity entity;
     private List<JTextField> textFieldsList;
     private JButton insertButton;
-    private ArrayList<String> values;
 
     public InsertDialog(Entity entity) {
         this.entity=entity;

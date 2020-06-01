@@ -19,15 +19,24 @@
     <select>
       <path>
         <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
-        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
-        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
-        <item name="BRANCH:origin/master" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="BRANCH:master" type="e8cecc67:BranchNodeDescriptor" />
       </path>
     </select>
   </component>
   <component name="ChangeListManager">
     <list default="true" id="8e2ebac5-987b-4976-824f-c90b8280c9ef" name="Default Changelist" comment="Izmena seme u MSSQLrepository">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/BazePodatakaProjekat/app/AppCore.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/BazePodatakaProjekat/app/AppCore.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/BazePodatakaProjekat/resource/implementation/Entity.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/BazePodatakaProjekat/resource/implementation/Entity.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/BazePodatakaProjekat/view/MainFrame$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/BazePodatakaProjekat/view/MainFrame$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/BazePodatakaProjekat/view/MainFrame.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/BazePodatakaProjekat/view/MainFrame.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/actions/InsertAction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/actions/InsertAction.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/database/Database.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/database/Database.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/database/DatabaseImplementation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/database/DatabaseImplementation.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/database/MSSQLrepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/database/MSSQLrepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/database/Repository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/database/Repository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/view/InsertDialog.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/view/InsertDialog.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -70,18 +79,18 @@
     <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
   <component name="RecentsManager">
-    <key name="CreateClassDialog.RecentsKey">
-      <recent name="resource" />
-      <recent name="view" />
-      <recent name="database" />
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/src" />
       <recent name="$PROJECT_DIR$/src/resource" />
       <recent name="$PROJECT_DIR$/src/resource/implementation" />
     </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$" />
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="resource" />
+      <recent name="view" />
+      <recent name="database" />
     </key>
   </component>
   <component name="RunManager">
@@ -204,7 +213,7 @@
                   <entry key="branch">
                     <value>
                       <list>
-                        <option value="origin/master" />
+                        <option value="master" />
                       </list>
                     </value>
                   </entry>
@@ -234,11 +243,16 @@
     <option name="LAST_COMMIT_MESSAGE" value="Izmena seme u MSSQLrepository" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="494" y="146" width="460" height="394" key="#com.intellij.ide.util.MemberChooser" timestamp="1590932824863">
-      <screen x="0" y="0" width="1280" height="680" />
+    <state x="741" y="253" width="374" height="592" key="#com.intellij.ide.util.MemberChooser" timestamp="1591034396325">
+      <screen x="0" y="27" width="1920" height="1053" />
     </state>
     <state x="494" y="146" width="460" height="394" key="#com.intellij.ide.util.MemberChooser/0.0.1280.680@0.0.1280.680" timestamp="1590932824863" />
     <state x="648" y="246" width="374" height="592" key="#com.intellij.ide.util.MemberChooser/0.27.1680.1023/1680.0.1920.1080@0.27.1680.1023" timestamp="1590868971221" />
+    <state x="741" y="253" width="374" height="592" key="#com.intellij.ide.util.MemberChooser/0.27.1920.1053@0.27.1920.1053" timestamp="1591034396325" />
+    <state x="713" y="448" width="494" height="226" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes" timestamp="1591036887183">
+      <screen x="0" y="27" width="1920" height="1053" />
+    </state>
+    <state x="713" y="448" width="494" height="226" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes/0.27.1920.1053@0.27.1920.1053" timestamp="1591036887183" />
     <state x="437" y="173" width="524" height="509" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1590928890469">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
@@ -262,34 +276,34 @@
       <screen x="0" y="27" width="1680" height="1023" />
     </state>
     <state x="550" y="218" width="569" height="647" key="Github.UntrackedFilesDialog/0.27.1680.1023/1680.0.1920.1080@0.27.1680.1023" timestamp="1590431762348" />
-    <state width="937" height="187" key="GridCell.Tab.0.bottom" timestamp="1591022945293">
+    <state width="1874" height="187" key="GridCell.Tab.0.bottom" timestamp="1591037871602">
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
     <state width="1237" height="98" key="GridCell.Tab.0.bottom/0.0.1280.680/-1366.83.1366.728@0.0.1280.680" timestamp="1590673617779" />
     <state width="1237" height="115" key="GridCell.Tab.0.bottom/0.0.1280.680@0.0.1280.680" timestamp="1590942343083" />
     <state width="1634" height="180" key="GridCell.Tab.0.bottom/0.27.1680.1023/1680.0.1920.1080@0.27.1680.1023" timestamp="1590869788242" />
-    <state width="937" height="187" key="GridCell.Tab.0.bottom/0.27.1920.1053@0.27.1920.1053" timestamp="1591022945293" />
-    <state width="937" height="187" key="GridCell.Tab.0.center" timestamp="1591022945289">
+    <state width="1874" height="187" key="GridCell.Tab.0.bottom/0.27.1920.1053@0.27.1920.1053" timestamp="1591037871602" />
+    <state width="1874" height="187" key="GridCell.Tab.0.center" timestamp="1591037871601">
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
     <state width="1237" height="98" key="GridCell.Tab.0.center/0.0.1280.680/-1366.83.1366.728@0.0.1280.680" timestamp="1590673617779" />
     <state width="1237" height="115" key="GridCell.Tab.0.center/0.0.1280.680@0.0.1280.680" timestamp="1590942343083" />
     <state width="1634" height="180" key="GridCell.Tab.0.center/0.27.1680.1023/1680.0.1920.1080@0.27.1680.1023" timestamp="1590869788241" />
-    <state width="937" height="187" key="GridCell.Tab.0.center/0.27.1920.1053@0.27.1920.1053" timestamp="1591022945289" />
-    <state width="937" height="187" key="GridCell.Tab.0.left" timestamp="1591022945288">
+    <state width="1874" height="187" key="GridCell.Tab.0.center/0.27.1920.1053@0.27.1920.1053" timestamp="1591037871601" />
+    <state width="1874" height="187" key="GridCell.Tab.0.left" timestamp="1591037871601">
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
     <state width="1237" height="98" key="GridCell.Tab.0.left/0.0.1280.680/-1366.83.1366.728@0.0.1280.680" timestamp="1590673617779" />
     <state width="1237" height="115" key="GridCell.Tab.0.left/0.0.1280.680@0.0.1280.680" timestamp="1590942343082" />
     <state width="1634" height="180" key="GridCell.Tab.0.left/0.27.1680.1023/1680.0.1920.1080@0.27.1680.1023" timestamp="1590869788241" />
-    <state width="937" height="187" key="GridCell.Tab.0.left/0.27.1920.1053@0.27.1920.1053" timestamp="1591022945288" />
-    <state width="937" height="187" key="GridCell.Tab.0.right" timestamp="1591022945290">
+    <state width="1874" height="187" key="GridCell.Tab.0.left/0.27.1920.1053@0.27.1920.1053" timestamp="1591037871601" />
+    <state width="1874" height="187" key="GridCell.Tab.0.right" timestamp="1591037871602">
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
     <state width="1237" height="98" key="GridCell.Tab.0.right/0.0.1280.680/-1366.83.1366.728@0.0.1280.680" timestamp="1590673617779" />
     <state width="1237" height="115" key="GridCell.Tab.0.right/0.0.1280.680@0.0.1280.680" timestamp="1590942343083" />
     <state width="1634" height="180" key="GridCell.Tab.0.right/0.27.1680.1023/1680.0.1920.1080@0.27.1680.1023" timestamp="1590869788241" />
-    <state width="937" height="187" key="GridCell.Tab.0.right/0.27.1920.1053@0.27.1920.1053" timestamp="1591022945290" />
+    <state width="1874" height="187" key="GridCell.Tab.0.right/0.27.1920.1053@0.27.1920.1053" timestamp="1591037871602" />
     <state x="425" y="285" width="819" height="514" key="NewModule_or_Project.wizard" timestamp="1590508236072">
       <screen x="0" y="27" width="1680" height="1023" />
     </state>
@@ -299,12 +313,12 @@
     </state>
     <state x="251" y="97" key="SettingsEditor/0.0.1280.680@0.0.1280.680" timestamp="1590663753831" />
     <state x="329" y="173" width="1022" height="737" key="SettingsEditor/0.27.1680.1023/1680.0.1920.1080@0.27.1680.1023" timestamp="1590510286041" />
-    <state x="497" y="251" width="800" height="535" key="Vcs.Push.Dialog.v2" timestamp="1591023035667">
+    <state x="497" y="251" width="800" height="535" key="Vcs.Push.Dialog.v2" timestamp="1591032575115">
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
     <state x="331" y="146" key="Vcs.Push.Dialog.v2/0.0.1280.680@0.0.1280.680" timestamp="1590936284038" />
     <state x="435" y="274" width="800" height="535" key="Vcs.Push.Dialog.v2/0.27.1680.1023/1680.0.1920.1080@0.27.1680.1023" timestamp="1590510839829" />
-    <state x="497" y="251" width="800" height="535" key="Vcs.Push.Dialog.v2/0.27.1920.1053@0.27.1920.1053" timestamp="1591023035666" />
+    <state x="497" y="251" width="800" height="535" key="Vcs.Push.Dialog.v2/0.27.1920.1053@0.27.1920.1053" timestamp="1591032575115" />
     <state x="100" y="127" width="1480" height="823" key="com.intellij.history.integration.ui.views.DirectoryHistoryDialog" timestamp="1590868971591">
       <screen x="0" y="27" width="1680" height="1023" />
     </state>
@@ -313,16 +327,18 @@
       <screen x="0" y="27" width="1680" height="1023" />
     </state>
     <state x="100" y="127" width="1480" height="823" key="com.intellij.history.integration.ui.views.FileHistoryDialog/0.27.1680.1023/1680.0.1920.1080@0.27.1680.1023" timestamp="1590613920372" />
-    <state x="466" y="283" width="380" height="169" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1590936177095">
-      <screen x="0" y="0" width="1280" height="680" />
+    <state x="699" y="465" width="458" height="177" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1591032553662">
+      <screen x="0" y="27" width="1920" height="1053" />
     </state>
     <state x="466" y="283" width="380" height="169" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1280.680@0.0.1280.680" timestamp="1590936177095" />
     <state x="611" y="453" width="458" height="177" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.27.1680.1023/1680.0.1920.1080@0.27.1680.1023" timestamp="1590510959906" />
-    <state x="341" y="199" width="635" height="291" key="git4idea.merge.GitPullDialog" timestamp="1590929080740">
-      <screen x="0" y="0" width="1280" height="680" />
+    <state x="699" y="465" width="458" height="177" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.27.1920.1053@0.27.1920.1053" timestamp="1591032553662" />
+    <state x="512" y="335" width="635" height="291" key="git4idea.merge.GitPullDialog" timestamp="1591032656918">
+      <screen x="0" y="27" width="1920" height="1053" />
     </state>
     <state x="341" y="199" width="635" height="291" key="git4idea.merge.GitPullDialog/0.0.1280.680@0.0.1280.680" timestamp="1590929080740" />
     <state x="447" y="327" width="775" height="437" key="git4idea.merge.GitPullDialog/0.27.1680.1023/1680.0.1920.1080@0.27.1680.1023" timestamp="1590510973272" />
+    <state x="512" y="335" key="git4idea.merge.GitPullDialog/0.27.1920.1053@0.27.1920.1053" timestamp="1591032656918" />
     <state x="149" y="140" width="1372" height="803" key="new project wizard" timestamp="1590508220376">
       <screen x="0" y="27" width="1680" height="1023" />
     </state>
