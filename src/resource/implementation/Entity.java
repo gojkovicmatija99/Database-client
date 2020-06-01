@@ -4,12 +4,16 @@ import resource.tree.DBNode;
 import resource.tree.DBNodeComposite;
 
 import javax.swing.tree.TreeNode;
+import java.util.ArrayList;
 import java.util.Enumeration;
+import java.util.List;
 
 public class Entity extends DBNodeComposite {
+    private List<String> inRelationWith;
 
     public Entity(String name, DBNode parent) {
         super(name, parent);
+        inRelationWith=new ArrayList<>();
     }
 
     @Override
@@ -58,5 +62,13 @@ public class Entity extends DBNodeComposite {
     @Override
     public String toString() {
         return this.getName();
+    }
+
+    public void addRelationTable(String tableName) {
+        inRelationWith.add(tableName);
+    }
+
+    public List<String> getInRelationWith() {
+        return inRelationWith;
     }
 }

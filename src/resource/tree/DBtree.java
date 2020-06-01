@@ -37,6 +37,7 @@ public class DBtree extends JTree implements TreeSelectionListener {
                         break;
                     }
                 }
+                System.out.println(entity.getInRelationWith());
                 if (pozicijaIstog == -1) {
                     RightTopPanel topTableView = new RightTopPanel(entity);
                     topTableView.getjTable().setModel(appCore.getTableModel1());

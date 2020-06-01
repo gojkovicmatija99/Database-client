@@ -44,7 +44,6 @@ public class MSSQLrepository implements Repository {
         }
     }
 
-    // TODO: Ova metoda vraca root stabla
     @Override
     public DBNode getSchema() {
         try {
@@ -94,10 +93,32 @@ public class MSSQLrepository implements Repository {
                         if(columnsName.equals(foreignKeys.getString("FKCOLUMN_NAME"))) {
                             AttributeConstraint attributeConstraint=new AttributeConstraint("FOREIGN KEY",attribute,ConstraintType.FOREIGN_KEY);
                             attribute.addChild(attributeConstraint);
+                            newTable.addRelationTable(foreignKeys.getString("PKTABLE_NAME"));
+                            Entity entity=(Entity) ir.getChildByName(foreignKeys.getString("PKTABLE_NAME"));
+                            System.out.println(foreignKeys.getString("PKTABLE_NAME"));
+                            entity.addRelationTable(newTable.getName());
                         }
                     }
                 }
             }
+
+            /*tables=metaData.getTables(connection.getCatalog(), null, null, tableType);
+            while(tables.next()) {
+                String tableName=tables.getString("TABLE_NAME");
+                ResultSet columns= metaData.getColumns(connection.getCatalog(), null, tableName, null);
+                while(columns.next()) {
+                    String columnsName=columns.getString("COLUMN_NAME");
+                    ResultSet foreignKeys=metaData.getImportedKeys(connection.getCatalog(), null, tableName);
+                    while(foreignKeys.next()) {
+                        if(columnsName.equals(foreignKeys.getString("FKCOLUMN_NAME"))) {
+                            AttributeConstraint attributeConstraint=new AttributeConstraint("FOREIGN KEY",attribute,ConstraintType.FOREIGN_KEY);
+                            Entity entity=(Entity) ir.getChildByName(foreignKeys.getString("PKTABLE_NAME"));
+                            System.out.println(foreignKeys.getString("PKTABLE_NAME"));
+                            entity.addRelationTable(newTable.getName());
+                        }
+                    }
+                }
+            }*/
 
             return ir;
         } catch (Exception e) {
