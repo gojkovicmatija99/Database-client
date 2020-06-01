@@ -66,7 +66,7 @@ public class Entity extends DBNodeComposite {
     }
 
     public void addRelationTable(String tableName) {
-        if(!inRelationWith.contains(tableName))
+        if(!inRelationWith.contains(tableName) && !tableName.equals(this.getName()))
             inRelationWith.add(tableName);
     }
 

@@ -46,9 +46,16 @@ public class AppCore extends PublisherImplementation {
         tableModel1.setRows(this.database.readDataFromTable(fromTable));
     }
 
+    public void readDataFromRelationTable(String fromTable){
+        tableModel2.setRows(this.database.readDataFromTable(fromTable));
+    }
 
     public TableModel getTableModel1() {
         return tableModel1;
+    }
+
+    public TableModel getTableModel2() {
+        return tableModel2;
     }
 
     public void setTableModel1(TableModel tableModel) {
