@@ -30,7 +30,7 @@ public class InsertAction extends AbstractAction implements ActionListener {
         for(int i=0;i<textFields.size();i++) {
             map.put(textFields.get(i).getName(), textFields.get(i).getText());
         }
-        MainFrame.getInstance().getAppCore().getDatabase().addRow(map, entity.getName());
+        MainFrame.getInstance().getAppCore().getDatabase().addRow(map, entity);
         MainFrame.getInstance().getAppCore().readDataFromTable(entity.getName());
     }
 }

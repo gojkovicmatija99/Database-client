@@ -25,18 +25,17 @@
     </select>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8e2ebac5-987b-4976-824f-c90b8280c9ef" name="Default Changelist" comment="Izmena seme u MSSQLrepository">
+    <list default="true" id="8e2ebac5-987b-4976-824f-c90b8280c9ef" name="Default Changelist" comment="Zapocet rad sa akcijama.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/BazePodatakaProjekat/app/AppCore.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/BazePodatakaProjekat/app/AppCore.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/BazePodatakaProjekat/resource/implementation/Entity.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/BazePodatakaProjekat/resource/implementation/Entity.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/BazePodatakaProjekat/view/MainFrame$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/BazePodatakaProjekat/view/MainFrame$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/BazePodatakaProjekat/view/MainFrame.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/BazePodatakaProjekat/view/MainFrame.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/BazePodatakaProjekat/database/Database.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/BazePodatakaProjekat/database/Database.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/BazePodatakaProjekat/database/DatabaseImplementation.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/BazePodatakaProjekat/database/DatabaseImplementation.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/BazePodatakaProjekat/database/MSSQLrepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/BazePodatakaProjekat/database/MSSQLrepository.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/BazePodatakaProjekat/database/Repository.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/BazePodatakaProjekat/database/Repository.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/actions/InsertAction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/actions/InsertAction.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/database/Database.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/database/Database.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/database/DatabaseImplementation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/database/DatabaseImplementation.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/database/MSSQLrepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/database/MSSQLrepository.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/database/Repository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/database/Repository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/view/InsertDialog.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/view/InsertDialog.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -174,7 +173,14 @@
       <option name="project" value="LOCAL" />
       <updated>1591023030269</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="Zapocet rad sa akcijama.">
+      <created>1591038027674</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1591038027674</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -240,7 +246,8 @@
     <MESSAGE value="Ne radi citanje iz tabele" />
     <MESSAGE value="Izmenjeno stablo" />
     <MESSAGE value="Izmena seme u MSSQLrepository" />
-    <option name="LAST_COMMIT_MESSAGE" value="Izmena seme u MSSQLrepository" />
+    <MESSAGE value="Zapocet rad sa akcijama." />
+    <option name="LAST_COMMIT_MESSAGE" value="Zapocet rad sa akcijama." />
   </component>
   <component name="WindowStateProjectService">
     <state x="741" y="253" width="374" height="592" key="#com.intellij.ide.util.MemberChooser" timestamp="1591034396325">
@@ -276,34 +283,34 @@
       <screen x="0" y="27" width="1680" height="1023" />
     </state>
     <state x="550" y="218" width="569" height="647" key="Github.UntrackedFilesDialog/0.27.1680.1023/1680.0.1920.1080@0.27.1680.1023" timestamp="1590431762348" />
-    <state width="1874" height="187" key="GridCell.Tab.0.bottom" timestamp="1591037871602">
+    <state width="1874" height="187" key="GridCell.Tab.0.bottom" timestamp="1591040204335">
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
     <state width="1237" height="98" key="GridCell.Tab.0.bottom/0.0.1280.680/-1366.83.1366.728@0.0.1280.680" timestamp="1590673617779" />
     <state width="1237" height="115" key="GridCell.Tab.0.bottom/0.0.1280.680@0.0.1280.680" timestamp="1590942343083" />
     <state width="1634" height="180" key="GridCell.Tab.0.bottom/0.27.1680.1023/1680.0.1920.1080@0.27.1680.1023" timestamp="1590869788242" />
-    <state width="1874" height="187" key="GridCell.Tab.0.bottom/0.27.1920.1053@0.27.1920.1053" timestamp="1591037871602" />
-    <state width="1874" height="187" key="GridCell.Tab.0.center" timestamp="1591037871601">
+    <state width="1874" height="187" key="GridCell.Tab.0.bottom/0.27.1920.1053@0.27.1920.1053" timestamp="1591040204335" />
+    <state width="1874" height="187" key="GridCell.Tab.0.center" timestamp="1591040204334">
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
     <state width="1237" height="98" key="GridCell.Tab.0.center/0.0.1280.680/-1366.83.1366.728@0.0.1280.680" timestamp="1590673617779" />
     <state width="1237" height="115" key="GridCell.Tab.0.center/0.0.1280.680@0.0.1280.680" timestamp="1590942343083" />
     <state width="1634" height="180" key="GridCell.Tab.0.center/0.27.1680.1023/1680.0.1920.1080@0.27.1680.1023" timestamp="1590869788241" />
-    <state width="1874" height="187" key="GridCell.Tab.0.center/0.27.1920.1053@0.27.1920.1053" timestamp="1591037871601" />
-    <state width="1874" height="187" key="GridCell.Tab.0.left" timestamp="1591037871601">
+    <state width="1874" height="187" key="GridCell.Tab.0.center/0.27.1920.1053@0.27.1920.1053" timestamp="1591040204334" />
+    <state width="1874" height="187" key="GridCell.Tab.0.left" timestamp="1591040204334">
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
     <state width="1237" height="98" key="GridCell.Tab.0.left/0.0.1280.680/-1366.83.1366.728@0.0.1280.680" timestamp="1590673617779" />
     <state width="1237" height="115" key="GridCell.Tab.0.left/0.0.1280.680@0.0.1280.680" timestamp="1590942343082" />
     <state width="1634" height="180" key="GridCell.Tab.0.left/0.27.1680.1023/1680.0.1920.1080@0.27.1680.1023" timestamp="1590869788241" />
-    <state width="1874" height="187" key="GridCell.Tab.0.left/0.27.1920.1053@0.27.1920.1053" timestamp="1591037871601" />
-    <state width="1874" height="187" key="GridCell.Tab.0.right" timestamp="1591037871602">
+    <state width="1874" height="187" key="GridCell.Tab.0.left/0.27.1920.1053@0.27.1920.1053" timestamp="1591040204334" />
+    <state width="1874" height="187" key="GridCell.Tab.0.right" timestamp="1591040204334">
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
     <state width="1237" height="98" key="GridCell.Tab.0.right/0.0.1280.680/-1366.83.1366.728@0.0.1280.680" timestamp="1590673617779" />
     <state width="1237" height="115" key="GridCell.Tab.0.right/0.0.1280.680@0.0.1280.680" timestamp="1590942343083" />
     <state width="1634" height="180" key="GridCell.Tab.0.right/0.27.1680.1023/1680.0.1920.1080@0.27.1680.1023" timestamp="1590869788241" />
-    <state width="1874" height="187" key="GridCell.Tab.0.right/0.27.1920.1053@0.27.1920.1053" timestamp="1591037871602" />
+    <state width="1874" height="187" key="GridCell.Tab.0.right/0.27.1920.1053@0.27.1920.1053" timestamp="1591040204334" />
     <state x="425" y="285" width="819" height="514" key="NewModule_or_Project.wizard" timestamp="1590508236072">
       <screen x="0" y="27" width="1680" height="1023" />
     </state>
@@ -313,12 +320,12 @@
     </state>
     <state x="251" y="97" key="SettingsEditor/0.0.1280.680@0.0.1280.680" timestamp="1590663753831" />
     <state x="329" y="173" width="1022" height="737" key="SettingsEditor/0.27.1680.1023/1680.0.1920.1080@0.27.1680.1023" timestamp="1590510286041" />
-    <state x="497" y="251" width="800" height="535" key="Vcs.Push.Dialog.v2" timestamp="1591032575115">
+    <state x="497" y="251" width="800" height="535" key="Vcs.Push.Dialog.v2" timestamp="1591038032526">
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
     <state x="331" y="146" key="Vcs.Push.Dialog.v2/0.0.1280.680@0.0.1280.680" timestamp="1590936284038" />
     <state x="435" y="274" width="800" height="535" key="Vcs.Push.Dialog.v2/0.27.1680.1023/1680.0.1920.1080@0.27.1680.1023" timestamp="1590510839829" />
-    <state x="497" y="251" width="800" height="535" key="Vcs.Push.Dialog.v2/0.27.1920.1053@0.27.1920.1053" timestamp="1591032575115" />
+    <state x="497" y="251" width="800" height="535" key="Vcs.Push.Dialog.v2/0.27.1920.1053@0.27.1920.1053" timestamp="1591038032526" />
     <state x="100" y="127" width="1480" height="823" key="com.intellij.history.integration.ui.views.DirectoryHistoryDialog" timestamp="1590868971591">
       <screen x="0" y="27" width="1680" height="1023" />
     </state>
@@ -333,12 +340,12 @@
     <state x="466" y="283" width="380" height="169" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1280.680@0.0.1280.680" timestamp="1590936177095" />
     <state x="611" y="453" width="458" height="177" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.27.1680.1023/1680.0.1920.1080@0.27.1680.1023" timestamp="1590510959906" />
     <state x="699" y="465" width="458" height="177" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.27.1920.1053@0.27.1920.1053" timestamp="1591032553662" />
-    <state x="512" y="335" width="635" height="291" key="git4idea.merge.GitPullDialog" timestamp="1591032656918">
+    <state x="512" y="335" width="775" height="430" key="git4idea.merge.GitPullDialog" timestamp="1591037999121">
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
     <state x="341" y="199" width="635" height="291" key="git4idea.merge.GitPullDialog/0.0.1280.680@0.0.1280.680" timestamp="1590929080740" />
     <state x="447" y="327" width="775" height="437" key="git4idea.merge.GitPullDialog/0.27.1680.1023/1680.0.1920.1080@0.27.1680.1023" timestamp="1590510973272" />
-    <state x="512" y="335" key="git4idea.merge.GitPullDialog/0.27.1920.1053@0.27.1920.1053" timestamp="1591032656918" />
+    <state x="512" y="335" width="775" height="430" key="git4idea.merge.GitPullDialog/0.27.1920.1053@0.27.1920.1053" timestamp="1591037999121" />
     <state x="149" y="140" width="1372" height="803" key="new project wizard" timestamp="1590508220376">
       <screen x="0" y="27" width="1680" height="1023" />
     </state>

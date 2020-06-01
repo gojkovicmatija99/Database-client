@@ -1,5 +1,6 @@
 package database;
 
+import resource.implementation.Entity;
 import resource.tree.DBNode;
 import resource.data.Row;
 
@@ -25,8 +26,8 @@ public class DatabaseImplementation implements Database {
     }
 
     @Override
-    public void addRow(Map<String, String> map, String tableName) {
-        repository.insertIntoQuery(map, tableName);
+    public void addRow(Map<String, String> map, Entity entity) {
+        repository.insertIntoQuery(map, entity);
     }
 
     public Repository getRepository() {

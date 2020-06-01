@@ -164,11 +164,11 @@ public class MSSQLrepository implements Repository {
     }
 
     @Override
-    public void insertIntoQuery(Map<String, String> map, String tableName) {
+    public void insertIntoQuery(Map<String, String> map, Entity entity) {
         try {
             this.initConnection();
 
-            String query="INSERT INTO "+tableName+" (";
+            String query="INSERT INTO "+entity.getName()+" (";
             String values="";
             String attributes="";
             for(Map.Entry<String, String> entry : map.entrySet()) {
@@ -183,11 +183,8 @@ public class MSSQLrepository implements Repository {
             PreparedStatement preparedStatement=connection.prepareStatement(query);
             int i=1;
             for (Map.Entry<String, String> entry : map.entrySet()) {
-                preparedStatement.setString(i++, entry.getValue());
+                setValue(preparedStatement, entity, entry.getKey(), entry.getValue(), i++);
             }
-            preparedStatement.setString(3,"SR");
-            preparedStatement.setString(1,"test");
-            preparedStatement.setDouble(2,1.0);
             preparedStatement.execute();
 
         }
@@ -198,4 +195,29 @@ public class MSSQLrepository implements Repository {
             this.closeConnection();
         }
     }
+
+    public void setValue(PreparedStatement preparedStatement,Entity entity, String columnName, String columnValue, int i) throws SQLException {
+        Attribute attribute = (Attribute) entity.getChildByName(columnName);
+        if (attribute.getAttributeType() == AttributeType.CHAR || attribute.getAttributeType() == AttributeType.VARCHAR ||
+                attribute.getAttributeType() == AttributeType.TEXT || attribute.getAttributeType() == AttributeType.NVARCHAR) {
+            preparedStatement.setString(i, columnValue);
+        }
+        if (attribute.getAttributeType() == AttributeType.BIGINT || attribute.getAttributeType() == AttributeType.INT ||
+                attribute.getAttributeType() == AttributeType.SMALLINT || attribute.getAttributeType() == AttributeType.NUMERIC) {
+            preparedStatement.setInt(i, Integer.parseInt(columnValue));
+        }
+        if (attribute.getAttributeType() == AttributeType.FLOAT || attribute.getAttributeType() == AttributeType.REAL ||
+                attribute.getAttributeType() == AttributeType.DECIMAL) {
+            preparedStatement.setDouble(i, Double.parseDouble(columnValue));
+        }
+        if (attribute.getAttributeType() == AttributeType.DATE) {
+
+        }
+        if (attribute.getAttributeType() == AttributeType.DATETIME) {
+
+        }
+        if (attribute.getAttributeType() == AttributeType.TIME) {
+
+        }
+   }
 }
