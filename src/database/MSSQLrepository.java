@@ -58,6 +58,8 @@ public class MSSQLrepository implements Repository {
             while(tables.next()) {
                 String tableName=tables.getString("TABLE_NAME");
                 Entity newTable =new Entity(tableName, ir);
+                if(tableName.startsWith("trace"))
+                    continue;
                 ir.addChild(newTable);
 
                 ResultSet columns= metaData.getColumns(connection.getCatalog(), null, tableName, null);
@@ -94,15 +96,12 @@ public class MSSQLrepository implements Repository {
                             AttributeConstraint attributeConstraint=new AttributeConstraint("FOREIGN KEY",attribute,ConstraintType.FOREIGN_KEY);
                             attribute.addChild(attributeConstraint);
                             newTable.addRelationTable(foreignKeys.getString("PKTABLE_NAME"));
-                            Entity entity=(Entity) ir.getChildByName(foreignKeys.getString("PKTABLE_NAME"));
-                            System.out.println(foreignKeys.getString("PKTABLE_NAME"));
-                            entity.addRelationTable(newTable.getName());
                         }
                     }
                 }
             }
 
-            /*tables=metaData.getTables(connection.getCatalog(), null, null, tableType);
+            tables=metaData.getTables(connection.getCatalog(), null, null, tableType);
             while(tables.next()) {
                 String tableName=tables.getString("TABLE_NAME");
                 ResultSet columns= metaData.getColumns(connection.getCatalog(), null, tableName, null);
@@ -111,14 +110,12 @@ public class MSSQLrepository implements Repository {
                     ResultSet foreignKeys=metaData.getImportedKeys(connection.getCatalog(), null, tableName);
                     while(foreignKeys.next()) {
                         if(columnsName.equals(foreignKeys.getString("FKCOLUMN_NAME"))) {
-                            AttributeConstraint attributeConstraint=new AttributeConstraint("FOREIGN KEY",attribute,ConstraintType.FOREIGN_KEY);
                             Entity entity=(Entity) ir.getChildByName(foreignKeys.getString("PKTABLE_NAME"));
-                            System.out.println(foreignKeys.getString("PKTABLE_NAME"));
-                            entity.addRelationTable(newTable.getName());
+                            entity.addRelationTable(tableName);
                         }
                     }
                 }
-            }*/
+            }
 
             return ir;
         } catch (Exception e) {

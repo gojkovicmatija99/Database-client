@@ -30,6 +30,7 @@
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/database/MSSQLrepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/database/MSSQLrepository.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/model/TableModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/TableModel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/resource/implementation/Entity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/resource/implementation/Entity.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/resource/tree/DBtree.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/resource/tree/DBtree.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/view/MainFrame.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/view/MainFrame.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/view/RightTopPanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/view/RightTopPanel.java" afterDir="false" />
@@ -259,30 +260,34 @@
       <screen x="0" y="27" width="1680" height="1023" />
     </state>
     <state x="550" y="218" width="569" height="647" key="Github.UntrackedFilesDialog/0.27.1680.1023/1680.0.1920.1080@0.27.1680.1023" timestamp="1590431762348" />
-    <state width="1237" height="115" key="GridCell.Tab.0.bottom" timestamp="1590942343083">
-      <screen x="0" y="0" width="1280" height="680" />
+    <state width="1874" height="187" key="GridCell.Tab.0.bottom" timestamp="1591022776727">
+      <screen x="0" y="27" width="1920" height="1053" />
     </state>
     <state width="1237" height="98" key="GridCell.Tab.0.bottom/0.0.1280.680/-1366.83.1366.728@0.0.1280.680" timestamp="1590673617779" />
     <state width="1237" height="115" key="GridCell.Tab.0.bottom/0.0.1280.680@0.0.1280.680" timestamp="1590942343083" />
     <state width="1634" height="180" key="GridCell.Tab.0.bottom/0.27.1680.1023/1680.0.1920.1080@0.27.1680.1023" timestamp="1590869788242" />
-    <state width="1237" height="115" key="GridCell.Tab.0.center" timestamp="1590942343083">
-      <screen x="0" y="0" width="1280" height="680" />
+    <state width="1874" height="187" key="GridCell.Tab.0.bottom/0.27.1920.1053@0.27.1920.1053" timestamp="1591022776727" />
+    <state width="1874" height="187" key="GridCell.Tab.0.center" timestamp="1591022776726">
+      <screen x="0" y="27" width="1920" height="1053" />
     </state>
     <state width="1237" height="98" key="GridCell.Tab.0.center/0.0.1280.680/-1366.83.1366.728@0.0.1280.680" timestamp="1590673617779" />
     <state width="1237" height="115" key="GridCell.Tab.0.center/0.0.1280.680@0.0.1280.680" timestamp="1590942343083" />
     <state width="1634" height="180" key="GridCell.Tab.0.center/0.27.1680.1023/1680.0.1920.1080@0.27.1680.1023" timestamp="1590869788241" />
-    <state width="1237" height="115" key="GridCell.Tab.0.left" timestamp="1590942343082">
-      <screen x="0" y="0" width="1280" height="680" />
+    <state width="1874" height="187" key="GridCell.Tab.0.center/0.27.1920.1053@0.27.1920.1053" timestamp="1591022776726" />
+    <state width="1874" height="187" key="GridCell.Tab.0.left" timestamp="1591022776726">
+      <screen x="0" y="27" width="1920" height="1053" />
     </state>
     <state width="1237" height="98" key="GridCell.Tab.0.left/0.0.1280.680/-1366.83.1366.728@0.0.1280.680" timestamp="1590673617779" />
     <state width="1237" height="115" key="GridCell.Tab.0.left/0.0.1280.680@0.0.1280.680" timestamp="1590942343082" />
     <state width="1634" height="180" key="GridCell.Tab.0.left/0.27.1680.1023/1680.0.1920.1080@0.27.1680.1023" timestamp="1590869788241" />
-    <state width="1237" height="115" key="GridCell.Tab.0.right" timestamp="1590942343083">
-      <screen x="0" y="0" width="1280" height="680" />
+    <state width="1874" height="187" key="GridCell.Tab.0.left/0.27.1920.1053@0.27.1920.1053" timestamp="1591022776726" />
+    <state width="1874" height="187" key="GridCell.Tab.0.right" timestamp="1591022776727">
+      <screen x="0" y="27" width="1920" height="1053" />
     </state>
     <state width="1237" height="98" key="GridCell.Tab.0.right/0.0.1280.680/-1366.83.1366.728@0.0.1280.680" timestamp="1590673617779" />
     <state width="1237" height="115" key="GridCell.Tab.0.right/0.0.1280.680@0.0.1280.680" timestamp="1590942343083" />
     <state width="1634" height="180" key="GridCell.Tab.0.right/0.27.1680.1023/1680.0.1920.1080@0.27.1680.1023" timestamp="1590869788241" />
+    <state width="1874" height="187" key="GridCell.Tab.0.right/0.27.1920.1053@0.27.1920.1053" timestamp="1591022776727" />
     <state x="425" y="285" width="819" height="514" key="NewModule_or_Project.wizard" timestamp="1590508236072">
       <screen x="0" y="27" width="1680" height="1023" />
     </state>
@@ -292,11 +297,12 @@
     </state>
     <state x="251" y="97" key="SettingsEditor/0.0.1280.680@0.0.1280.680" timestamp="1590663753831" />
     <state x="329" y="173" width="1022" height="737" key="SettingsEditor/0.27.1680.1023/1680.0.1920.1080@0.27.1680.1023" timestamp="1590510286041" />
-    <state x="331" y="146" width="800" height="535" key="Vcs.Push.Dialog.v2" timestamp="1590936284038">
-      <screen x="0" y="0" width="1280" height="680" />
+    <state x="497" y="251" width="800" height="535" key="Vcs.Push.Dialog.v2" timestamp="1591022319638">
+      <screen x="0" y="27" width="1920" height="1053" />
     </state>
     <state x="331" y="146" key="Vcs.Push.Dialog.v2/0.0.1280.680@0.0.1280.680" timestamp="1590936284038" />
     <state x="435" y="274" width="800" height="535" key="Vcs.Push.Dialog.v2/0.27.1680.1023/1680.0.1920.1080@0.27.1680.1023" timestamp="1590510839829" />
+    <state x="497" y="251" key="Vcs.Push.Dialog.v2/0.27.1920.1053@0.27.1920.1053" timestamp="1591022319638" />
     <state x="100" y="127" width="1480" height="823" key="com.intellij.history.integration.ui.views.DirectoryHistoryDialog" timestamp="1590868971591">
       <screen x="0" y="27" width="1680" height="1023" />
     </state>

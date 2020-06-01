@@ -7,6 +7,7 @@ import javax.swing.tree.TreeNode;
 import java.util.ArrayList;
 import java.util.Enumeration;
 import java.util.List;
+import java.util.Objects;
 
 public class Entity extends DBNodeComposite {
     private List<String> inRelationWith;
@@ -65,10 +66,19 @@ public class Entity extends DBNodeComposite {
     }
 
     public void addRelationTable(String tableName) {
-        inRelationWith.add(tableName);
+        if(!inRelationWith.contains(tableName))
+            inRelationWith.add(tableName);
     }
 
     public List<String> getInRelationWith() {
         return inRelationWith;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Entity entity = (Entity) o;
+        return this.getName().equals(entity.getName());
     }
 }
