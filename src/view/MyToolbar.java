@@ -21,6 +21,10 @@ public class MyToolbar extends JToolBar {
 
         addSeparator();
 
+        add(ActionManager.getInstance().getFilterSortAction());
+
+        addSeparator();
+
         setFloatable(false);
 
     }

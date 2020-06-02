@@ -13,11 +13,13 @@ public class ActionManager {
     private AddAction addAction;
     private DeleteAction deleteAction;
     private UpdateAction updateAction;
+    private FilterSortAction filterSortAction;
 
     public ActionManager() {
         addAction = new AddAction();
         deleteAction = new DeleteAction();
         updateAction = new UpdateAction();
+        filterSortAction = new FilterSortAction();
     }
 
     public AddAction getAddAction() {
@@ -30,6 +32,10 @@ public class ActionManager {
 
     public UpdateAction getUpdateAction() {
         return updateAction;
+    }
+
+    public FilterSortAction getFilterSortAction() {
+        return filterSortAction;
     }
 
     public void setAddAction(AddAction addAction) {

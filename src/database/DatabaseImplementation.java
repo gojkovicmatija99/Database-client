@@ -40,6 +40,11 @@ public class DatabaseImplementation implements Database {
         repository.deleteQuery(map, entity);
     }
 
+    @Override
+    public List<Row> filterSortTable(String tableName, List<String> filterAttributes, Map<String, String> map) {
+        return repository.filterSort(tableName, filterAttributes, map);
+    }
+
     public Repository getRepository() {
         return repository;
     }

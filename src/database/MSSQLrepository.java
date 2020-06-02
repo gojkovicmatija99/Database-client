@@ -259,6 +259,47 @@ public class MSSQLrepository implements Repository {
         }
     }
 
+    @Override
+    public List<Row> filterSort(String from, List<String> filterAttributes, Map<String, String> map) {
+        List<Row> rows=new ArrayList<>();
+
+        try {
+            this.initConnection();
+
+            String query = "SELECT ";
+            for (int i = 0; i < filterAttributes.size()-1; i++) {
+                query += filterAttributes.get(i) + ", ";
+            }
+            query += filterAttributes.get(filterAttributes.size()-1) + " FROM " + from + " ORDER BY ";
+            for(Map.Entry<String, String> entry : map.entrySet()) {
+                query += entry.getKey() + " " + entry.getValue() + ", ";
+            }
+            query = query.substring(0, query.length()-2);
+            System.out.println(query);
+            PreparedStatement preparedStatement = connection.prepareStatement(query);
+            ResultSet rs = preparedStatement.executeQuery();
+
+            while(rs.next()) {
+                Row row=new Row();
+                row.setName(from);
+
+                ResultSetMetaData resultSetMetaData=rs.getMetaData();
+                for(int i=1;i<=resultSetMetaData.getColumnCount();i++) {
+                    row.addField(resultSetMetaData.getColumnName(i), rs.getString(i));
+                }
+                rows.add(row);
+            }
+        }
+        catch (Exception e) {
+            e.printStackTrace();
+        }
+        finally {
+            this.closeConnection();
+        }
+
+        return rows;
+    }
+
     private String getPrimaryKeyColumn(Entity entity) {
         List<DBNode> attributes=entity.getChildren();
         for(DBNode attributeNode:attributes) {
