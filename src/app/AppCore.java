@@ -14,6 +14,8 @@ import resource.tree.DBNode;
 import resource.implementation.InformationResource;
 import utils.Constants;
 
+import java.util.Map;
+
 public class AppCore extends PublisherImplementation {
     private Database database;
     private Settings settings;
@@ -40,6 +42,15 @@ public class AppCore extends PublisherImplementation {
     public void loadResource(){
         InformationResource ir = (InformationResource) this.database.loadResource();
         this.notifySubscribers(new Notification(NotificationCode.RESOURCE_LOADED,ir));
+    }
+
+    public void addRow(Map<String, String> map, Entity entity) {
+        this.database.addRow(map, entity);
+        this.notifySubscribers(new Notification((NotificationCode.DATA_UPDATED), entity));
+    }
+
+    public void addRightPanel(Entity entity) {
+        this.notifySubscribers(new Notification((NotificationCode.NEW_RIGHT_PANEL), entity));
     }
 
     public void readDataFromTable(String fromTable){

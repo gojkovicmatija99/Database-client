@@ -26,7 +26,8 @@ public class DBtree extends JTree implements TreeSelectionListener {
             DBNode node = (DBNode) path.getPathComponent(i);
             if (node instanceof Entity) {
                 Entity entity = (Entity) node;
-                AppCore appCore = MainFrame.getInstance().getAppCore();
+                MainFrame.getInstance().getAppCore().addRightPanel(entity);
+                /*AppCore appCore = MainFrame.getInstance().getAppCore();
                 JTabbedPane topTab = MainFrame.getInstance().getTopTab();
                 int pozicijaIstog = -1;
                 for (int j = 0; j < topTab.getTabCount(); j++) {
@@ -48,7 +49,7 @@ public class DBtree extends JTree implements TreeSelectionListener {
                 else {
                     RightTopPanel topTableView = (RightTopPanel)topTab.getComponentAt(pozicijaIstog);
                     topTab.setSelectedComponent(topTableView);
-                }
+                }*/
             }
         }
     }

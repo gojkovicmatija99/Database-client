@@ -7,7 +7,6 @@ import observer.enums.NotificationCode;
 import resource.implementation.Entity;
 import resource.implementation.InformationResource;
 import resource.tree.DBtree;
-import resource.tree.DBtreeCellRenderer;
 
 import java.awt.Dimension;
 import java.awt.Toolkit;
@@ -61,7 +60,6 @@ public class MainFrame extends JFrame implements Subscriber {
 				}
 			}
 		});
-		initBottomPanel();
 		bottomTab.addChangeListener(new ChangeListener() {
 			@Override
 			public void stateChanged(ChangeEvent e) {
@@ -82,8 +80,8 @@ public class MainFrame extends JFrame implements Subscriber {
 
 	public void initBottomPanel() {
 		if (topTab.getTabCount() != 0) {
-			RightTopPanel topPanel = (RightTopPanel) topTab.getSelectedComponent();
-			Entity entity = (Entity) topPanel.getEntity();
+			RightTopPanel selectedTab = (RightTopPanel) topTab.getSelectedComponent();
+			Entity entity = (Entity) selectedTab.getEntity();
 			for (int i = 0; i < entity.getInRelationWith().size(); i++) {
 				Entity relationEntity = (Entity) ir.getChildByName(entity.getInRelationWith().get(i));
 				RightBottomPanel bottomPanel = new RightBottomPanel(relationEntity);
@@ -103,10 +101,6 @@ public class MainFrame extends JFrame implements Subscriber {
 		return appCore;
 	}
 
-	public void setAppCore(AppCore appCore) {
-		this.appCore = appCore;
-	}
-
 	@Override
 	public void update(Notification notification) {
 		if (notification.getCode() == NotificationCode.RESOURCE_LOADED){
@@ -114,8 +108,31 @@ public class MainFrame extends JFrame implements Subscriber {
 			InformationResource root = (InformationResource)notification.getData();
 			ir = root;
 			dbTree.setModel(new DefaultTreeModel(ir));
-		} else {
-			//jTable.setModel((TableModel) notification.getData());
+		} else if (notification.getCode() == NotificationCode.DATA_UPDATED){
+			Entity entity = (Entity) notification.getData();
+			appCore.readDataFromTable(entity.getName());
+		} else if (notification.getCode() == NotificationCode.NEW_RIGHT_PANEL) {
+			Entity entity = (Entity) notification.getData();
+			int pozicijaIstog = -1;
+			for (int j = 0; j < topTab.getTabCount(); j++) {
+				RightTopPanel rightTopPanel = (RightTopPanel) topTab.getComponentAt(j);
+				String tabTitle = rightTopPanel.getEntity().getName();
+				if (tabTitle.equals(entity.getName())){
+					pozicijaIstog = j;
+					break;
+				}
+			}
+			if (pozicijaIstog == -1) {
+				RightTopPanel topTableView = new RightTopPanel(entity);
+				topTableView.getjTable().setModel(appCore.getTableModel1());
+				appCore.readDataFromTable(entity.getName());
+				topTab.addTab(entity.getName(), topTableView);
+				topTab.setSelectedComponent(topTableView);
+			}
+			else {
+				RightTopPanel topTableView = (RightTopPanel)topTab.getComponentAt(pozicijaIstog);
+				topTab.setSelectedComponent(topTableView);
+			}
 		}
 	}
 }

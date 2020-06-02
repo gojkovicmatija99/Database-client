@@ -1,5 +1,6 @@
 package resource.implementation;
 
+import resource.enums.ConstraintType;
 import resource.tree.DBNode;
 import resource.tree.DBNodeComposite;
 import resource.enums.AttributeType;
@@ -11,6 +12,7 @@ public class Attribute extends DBNodeComposite {
     public AttributeType attributeType;
     private int length;
     private Attribute inRealationWith;
+    private boolean isPrimaryKey;
 
     public Attribute(String name, DBNode parent, AttributeType attributeType, int length) {
         super(name, parent);
@@ -24,6 +26,18 @@ public class Attribute extends DBNodeComposite {
             AttributeConstraint attributeConstraint=(AttributeConstraint) child;
             this.getChildren().add(attributeConstraint);
         }
+    }
+
+    public boolean isPrimaryKey() {
+        for (int i = 0; i < this.getChildCount(); i++) {
+            AttributeConstraint attributeConstraint = (AttributeConstraint) this.getChildAt(i);
+            if (attributeConstraint.getConstraintType() == ConstraintType.PRIMARY_KEY) {
+                isPrimaryKey = true;
+                return isPrimaryKey;
+            }
+        }
+        isPrimaryKey = false;
+        return isPrimaryKey;
     }
 
     public AttributeType getAttributeType() {

@@ -11,9 +11,10 @@ import resource.implementation.Entity;
 import resource.implementation.InformationResource;
 
 import java.lang.reflect.MalformedParameterizedTypeException;
+import java.math.BigDecimal;
 import java.sql.*;
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
-import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
@@ -196,28 +197,45 @@ public class MSSQLrepository implements Repository {
         }
     }
 
-    public void setValue(PreparedStatement preparedStatement,Entity entity, String columnName, String columnValue, int i) throws SQLException {
+    public void setValue(PreparedStatement preparedStatement, Entity entity, String columnName, String columnValue, int i) throws SQLException {
         Attribute attribute = (Attribute) entity.getChildByName(columnName);
         if (attribute.getAttributeType() == AttributeType.CHAR || attribute.getAttributeType() == AttributeType.VARCHAR ||
                 attribute.getAttributeType() == AttributeType.TEXT || attribute.getAttributeType() == AttributeType.NVARCHAR) {
             preparedStatement.setString(i, columnValue);
         }
-        if (attribute.getAttributeType() == AttributeType.BIGINT || attribute.getAttributeType() == AttributeType.INT ||
-                attribute.getAttributeType() == AttributeType.SMALLINT || attribute.getAttributeType() == AttributeType.NUMERIC) {
+        if (attribute.getAttributeType() == AttributeType.BIGINT || attribute.getAttributeType() == AttributeType.INT) {
             preparedStatement.setInt(i, Integer.parseInt(columnValue));
         }
-        if (attribute.getAttributeType() == AttributeType.FLOAT || attribute.getAttributeType() == AttributeType.REAL ||
-                attribute.getAttributeType() == AttributeType.DECIMAL) {
+        if (attribute.getAttributeType() == AttributeType.SMALLINT) {
+            preparedStatement.setShort(i, Short.parseShort(columnValue));
+        }
+        if (attribute.getAttributeType() == AttributeType.FLOAT) {
             preparedStatement.setDouble(i, Double.parseDouble(columnValue));
         }
+        if (attribute.getAttributeType() == AttributeType.REAL) {
+            preparedStatement.setFloat(i, Float.parseFloat(columnValue));
+        }
+        if (attribute.getAttributeType() == AttributeType.DECIMAL || attribute.getAttributeType() == AttributeType.NUMERIC) {
+            preparedStatement.setBigDecimal(i, new BigDecimal(columnValue));
+        }
+        if (attribute.getAttributeType() == AttributeType.BIT) {
+            boolean bool;
+            if (columnValue == "1")
+                bool = true;
+            else bool = false;
+            preparedStatement.setBoolean(i, bool);
+        }
         if (attribute.getAttributeType() == AttributeType.DATE) {
-
+            Date date = Date.valueOf(columnValue);
+            preparedStatement.setDate(i, date);
         }
         if (attribute.getAttributeType() == AttributeType.DATETIME) {
-
+            Timestamp dateTime = Timestamp.valueOf(columnValue);
+            preparedStatement.setTimestamp(i, dateTime);
         }
         if (attribute.getAttributeType() == AttributeType.TIME) {
-
+            Time time = Time.valueOf(columnValue);
+            preparedStatement.setTime(i, time);
         }
    }
 }

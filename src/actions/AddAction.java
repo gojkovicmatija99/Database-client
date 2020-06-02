@@ -1,7 +1,7 @@
 package actions;
 
 import resource.implementation.Entity;
-import view.InsertDialog;
+import view.AddDialog;
 import view.MainFrame;
 import view.RightTopPanel;
 
@@ -19,7 +19,7 @@ public class AddAction extends AbstractAction implements ActionListener {
     @Override
     public void actionPerformed(ActionEvent e) {
         Entity entity= (Entity) ((RightTopPanel) MainFrame.getInstance().getTopTab().getSelectedComponent()).getEntity();
-        InsertDialog addDialog=new InsertDialog(entity);
+        AddDialog addDialog=new AddDialog(entity);
         addDialog.setVisible(true);
     }
 }
