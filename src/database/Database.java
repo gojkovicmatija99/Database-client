@@ -12,4 +12,5 @@ public interface Database {
     DBNode loadResource();
     List<Row> readDataFromTable(String tableName);
     void addRow(Map<String, String> map, Entity entity);
+    void updateRow(Map<String, String> map, Entity entity, String wherePK);
 }

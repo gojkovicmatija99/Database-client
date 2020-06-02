@@ -197,6 +197,53 @@ public class MSSQLrepository implements Repository {
         }
     }
 
+    @Override
+    public void updateQuery(Map<String, String> map, Entity entity, String wherePK) {
+        try {
+            initConnection();
+
+            String query="UPDATE "+entity.getName()+" SET ";
+            String update="";
+
+            for(Map.Entry<String, String> entry : map.entrySet()) {
+                update+=entry.getKey()+" =?,";
+            }
+
+            update=update.substring(0,update.length()-1);
+            String pkColumn=getPrimaryKeyColumn(entity);
+            query+=update+" WHERE "+pkColumn+"=?";
+            PreparedStatement preparedStatement=connection.prepareStatement(query);
+
+            int i=1;
+            for (Map.Entry<String, String> entry : map.entrySet()) {
+                setValue(preparedStatement, entity, entry.getKey(), entry.getValue(), i++);
+            }
+            setValue(preparedStatement, entity, pkColumn, wherePK, i);
+            preparedStatement.execute();
+        }
+        catch (Exception e) {
+            e.printStackTrace();
+        }
+        finally {
+            closeConnection();
+        }
+    }
+
+    private String getPrimaryKeyColumn(Entity entity) {
+        List<DBNode> attributes=entity.getChildren();
+        for(DBNode attributeNode:attributes) {
+            Attribute currAttribute=(Attribute) attributeNode;
+            List<DBNode> constraints=currAttribute.getChildren();
+            for(DBNode constraintNode:constraints) {
+                AttributeConstraint currConstraint=(AttributeConstraint)constraintNode;
+                if(currConstraint.getConstraintType().equals(ConstraintType.PRIMARY_KEY))
+                    return currAttribute.getName();
+            }
+        }
+
+        return null;
+    }
+
     public void setValue(PreparedStatement preparedStatement, Entity entity, String columnName, String columnValue, int i) throws SQLException {
         Attribute attribute = (Attribute) entity.getChildByName(columnName);
         if (attribute.getAttributeType() == AttributeType.CHAR || attribute.getAttributeType() == AttributeType.VARCHAR ||

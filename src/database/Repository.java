@@ -12,4 +12,5 @@ public interface Repository {
     DBNode getSchema();
     List<Row> get(String from);
     void insertIntoQuery(Map<String, String> map, Entity entity);
+    void updateQuery(Map<String, String> map, Entity entity, String wherePK);
 }

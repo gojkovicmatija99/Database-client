@@ -30,6 +30,11 @@ public class DatabaseImplementation implements Database {
         repository.insertIntoQuery(map, entity);
     }
 
+    @Override
+    public void updateRow(Map<String, String> map, Entity entity, String wherePK) {
+        repository.updateQuery(map, entity, wherePK);
+    }
+
     public Repository getRepository() {
         return repository;
     }

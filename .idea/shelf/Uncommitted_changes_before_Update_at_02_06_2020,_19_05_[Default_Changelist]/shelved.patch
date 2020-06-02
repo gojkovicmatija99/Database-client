@@ -1,0 +1,369 @@
+Index: .idea/workspace.xml
+===================================================================
+--- .idea/workspace.xml	(revision 893db03a35e521f20f90591c34a473441619bf9e)
++++ .idea/workspace.xml	(revision 893db03a35e521f20f90591c34a473441619bf9e)
+@@ -1,363 +0,0 @@
+-<?xml version="1.0" encoding="UTF-8"?>
+-<project version="4">
+-  <component name="BranchesTreeState">
+-    <expand>
+-      <path>
+-        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+-        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+-      </path>
+-      <path>
+-        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+-        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+-      </path>
+-      <path>
+-        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+-        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+-        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+-      </path>
+-    </expand>
+-    <select>
+-      <path>
+-        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+-        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+-        <item name="BRANCH:master" type="e8cecc67:BranchNodeDescriptor" />
+-      </path>
+-    </select>
+-  </component>
+-  <component name="ChangeListManager">
+-    <list default="true" id="8e2ebac5-987b-4976-824f-c90b8280c9ef" name="Default Changelist" comment="Zapocet rad sa akcijama.">
+-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/out/production/BazePodatakaProjekat/database/Database.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/BazePodatakaProjekat/database/Database.class" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/out/production/BazePodatakaProjekat/database/DatabaseImplementation.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/BazePodatakaProjekat/database/DatabaseImplementation.class" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/out/production/BazePodatakaProjekat/database/MSSQLrepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/BazePodatakaProjekat/database/MSSQLrepository.class" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/out/production/BazePodatakaProjekat/database/Repository.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/BazePodatakaProjekat/database/Repository.class" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/src/actions/InsertAction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/actions/InsertAction.java" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/src/database/Database.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/database/Database.java" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/src/database/DatabaseImplementation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/database/DatabaseImplementation.java" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/src/database/MSSQLrepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/database/MSSQLrepository.java" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/src/database/Repository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/database/Repository.java" afterDir="false" />
+-    </list>
+-    <option name="SHOW_DIALOG" value="false" />
+-    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+-    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+-    <option name="LAST_RESOLUTION" value="IGNORE" />
+-  </component>
+-  <component name="FileTemplateManagerImpl">
+-    <option name="RECENT_TEMPLATES">
+-      <list>
+-        <option value="Enum" />
+-        <option value="Class" />
+-      </list>
+-    </option>
+-  </component>
+-  <component name="Git.Settings">
+-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+-  </component>
+-  <component name="GithubPullRequestsUISettings">
+-    <option name="hiddenUrls">
+-      <set>
+-        <option value="https://github.com/gojkovicmatija99/BazePodatakaProjekat.git" />
+-      </set>
+-    </option>
+-  </component>
+-  <component name="ProjectId" id="1cPYDlPFUjU04skkfT5ZYKUFW8M" />
+-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+-  <component name="ProjectViewState">
+-    <option name="hideEmptyMiddlePackages" value="true" />
+-    <option name="showLibraryContents" value="true" />
+-  </component>
+-  <component name="PropertiesComponent">
+-    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+-    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+-    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+-    <property name="project.structure.last.edited" value="Libraries" />
+-    <property name="project.structure.proportion" value="0.0" />
+-    <property name="project.structure.side.proportion" value="0.2" />
+-    <property name="restartRequiresConfirmation" value="false" />
+-    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+-  </component>
+-  <component name="RecentsManager">
+-    <key name="MoveFile.RECENT_KEYS">
+-      <recent name="$PROJECT_DIR$" />
+-    </key>
+-    <key name="CopyFile.RECENT_KEYS">
+-      <recent name="$PROJECT_DIR$/src" />
+-      <recent name="$PROJECT_DIR$/src/resource" />
+-      <recent name="$PROJECT_DIR$/src/resource/implementation" />
+-    </key>
+-    <key name="CreateClassDialog.RecentsKey">
+-      <recent name="resource" />
+-      <recent name="view" />
+-      <recent name="database" />
+-    </key>
+-  </component>
+-  <component name="RunManager">
+-    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+-      <option name="MAIN_CLASS_NAME" value="app.Main" />
+-      <module name="BazePodatakaProjekat" />
+-      <method v="2">
+-        <option name="Make" enabled="true" />
+-      </method>
+-    </configuration>
+-    <recent_temporary>
+-      <list>
+-        <item itemvalue="Application.Main" />
+-      </list>
+-    </recent_temporary>
+-  </component>
+-  <component name="SvnConfiguration" cleanupOnStartRun="true">
+-    <configuration>$USER_HOME$/.subversion</configuration>
+-  </component>
+-  <component name="TaskManager">
+-    <task active="true" id="Default" summary="Default task">
+-      <changelist id="8e2ebac5-987b-4976-824f-c90b8280c9ef" name="Default Changelist" comment="" />
+-      <created>1590431577679</created>
+-      <option name="number" value="Default" />
+-      <option name="presentableId" value="Default" />
+-      <updated>1590431577679</updated>
+-    </task>
+-    <task id="LOCAL-00001" summary="Commit test">
+-      <created>1590431862638</created>
+-      <option name="number" value="00001" />
+-      <option name="presentableId" value="LOCAL-00001" />
+-      <option name="project" value="LOCAL" />
+-      <updated>1590431862638</updated>
+-    </task>
+-    <task id="LOCAL-00002" summary="Dodate biblioteke">
+-      <created>1590441072939</created>
+-      <option name="number" value="00002" />
+-      <option name="presentableId" value="LOCAL-00002" />
+-      <option name="project" value="LOCAL" />
+-      <updated>1590441072939</updated>
+-    </task>
+-    <task id="LOCAL-00003" summary="Dodat resources paket">
+-      <created>1590510831301</created>
+-      <option name="number" value="00003" />
+-      <option name="presentableId" value="LOCAL-00003" />
+-      <option name="project" value="LOCAL" />
+-      <updated>1590510831301</updated>
+-    </task>
+-    <task id="LOCAL-00004" summary="Zapocet gui">
+-      <created>1590844909521</created>
+-      <option name="number" value="00004" />
+-      <option name="presentableId" value="LOCAL-00004" />
+-      <option name="project" value="LOCAL" />
+-      <updated>1590844909521</updated>
+-    </task>
+-    <task id="LOCAL-00005" summary="TopTableView">
+-      <created>1590862706021</created>
+-      <option name="number" value="00005" />
+-      <option name="presentableId" value="LOCAL-00005" />
+-      <option name="project" value="LOCAL" />
+-      <updated>1590862706021</updated>
+-    </task>
+-    <task id="LOCAL-00006" summary="Ne radi citanje iz tabele">
+-      <created>1590881374120</created>
+-      <option name="number" value="00006" />
+-      <option name="presentableId" value="LOCAL-00006" />
+-      <option name="project" value="LOCAL" />
+-      <updated>1590881374120</updated>
+-    </task>
+-    <task id="LOCAL-00007" summary="Izmenjeno stablo">
+-      <created>1590936278185</created>
+-      <option name="number" value="00007" />
+-      <option name="presentableId" value="LOCAL-00007" />
+-      <option name="project" value="LOCAL" />
+-      <updated>1590936278185</updated>
+-    </task>
+-    <task id="LOCAL-00008" summary="Izmena seme u MSSQLrepository">
+-      <created>1591023030269</created>
+-      <option name="number" value="00008" />
+-      <option name="presentableId" value="LOCAL-00008" />
+-      <option name="project" value="LOCAL" />
+-      <updated>1591023030269</updated>
+-    </task>
+-    <task id="LOCAL-00009" summary="Zapocet rad sa akcijama.">
+-      <created>1591038027674</created>
+-      <option name="number" value="00009" />
+-      <option name="presentableId" value="LOCAL-00009" />
+-      <option name="project" value="LOCAL" />
+-      <updated>1591038027674</updated>
+-    </task>
+-    <option name="localTasksCounter" value="10" />
+-    <servers />
+-  </component>
+-  <component name="Vcs.Log.Tabs.Properties">
+-    <option name="TAB_STATES">
+-      <map>
+-        <entry key="1">
+-          <value>
+-            <State>
+-              <option name="SHOW_ONLY_AFFECTED_CHANGES" value="true" />
+-              <option name="FILTERS">
+-                <map>
+-                  <entry key="branch">
+-                    <value>
+-                      <list>
+-                        <option value="HEAD" />
+-                      </list>
+-                    </value>
+-                  </entry>
+-                  <entry key="roots">
+-                    <value>
+-                      <list>
+-                        <option value="$PROJECT_DIR$" />
+-                      </list>
+-                    </value>
+-                  </entry>
+-                </map>
+-              </option>
+-            </State>
+-          </value>
+-        </entry>
+-        <entry key="MAIN">
+-          <value>
+-            <State>
+-              <option name="FILTERS">
+-                <map>
+-                  <entry key="branch">
+-                    <value>
+-                      <list>
+-                        <option value="master" />
+-                      </list>
+-                    </value>
+-                  </entry>
+-                </map>
+-              </option>
+-            </State>
+-          </value>
+-        </entry>
+-      </map>
+-    </option>
+-    <option name="OPEN_GENERIC_TABS">
+-      <map>
+-        <entry key="1" value="TOOL_WINDOW" />
+-      </map>
+-    </option>
+-    <option name="oldMeFiltersMigrated" value="true" />
+-  </component>
+-  <component name="VcsManagerConfiguration">
+-    <MESSAGE value="Commit test" />
+-    <MESSAGE value="Dodate biblioteke" />
+-    <MESSAGE value="Dodat resources paket" />
+-    <MESSAGE value="Zapocet gui" />
+-    <MESSAGE value="TopTableView" />
+-    <MESSAGE value="Ne radi citanje iz tabele" />
+-    <MESSAGE value="Izmenjeno stablo" />
+-    <MESSAGE value="Izmena seme u MSSQLrepository" />
+-    <MESSAGE value="Zapocet rad sa akcijama." />
+-    <option name="LAST_COMMIT_MESSAGE" value="Zapocet rad sa akcijama." />
+-  </component>
+-  <component name="WindowStateProjectService">
+-    <state x="741" y="253" width="374" height="592" key="#com.intellij.ide.util.MemberChooser" timestamp="1591034396325">
+-      <screen x="0" y="27" width="1920" height="1053" />
+-    </state>
+-    <state x="494" y="146" width="460" height="394" key="#com.intellij.ide.util.MemberChooser/0.0.1280.680@0.0.1280.680" timestamp="1590932824863" />
+-    <state x="648" y="246" width="374" height="592" key="#com.intellij.ide.util.MemberChooser/0.27.1680.1023/1680.0.1920.1080@0.27.1680.1023" timestamp="1590868971221" />
+-    <state x="741" y="253" width="374" height="592" key="#com.intellij.ide.util.MemberChooser/0.27.1920.1053@0.27.1920.1053" timestamp="1591034396325" />
+-    <state x="713" y="448" width="494" height="226" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes" timestamp="1591036887183">
+-      <screen x="0" y="27" width="1920" height="1053" />
+-    </state>
+-    <state x="713" y="448" width="494" height="226" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes/0.27.1920.1053@0.27.1920.1053" timestamp="1591036887183" />
+-    <state x="437" y="173" width="524" height="509" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1590928890469">
+-      <screen x="0" y="0" width="1280" height="680" />
+-    </state>
+-    <state x="437" y="173" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1280.680@0.0.1280.680" timestamp="1590928890469" />
+-    <state x="573" y="287" width="524" height="509" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.27.1680.1023/1680.0.1920.1080@0.27.1680.1023" timestamp="1590613752114" />
+-    <state x="171" y="0" width="1220" height="894" key="CommitChangelistDialog2" timestamp="1590936277045">
+-      <screen x="0" y="0" width="1280" height="680" />
+-    </state>
+-    <state x="171" y="0" key="CommitChangelistDialog2/0.0.1280.680@0.0.1280.680" timestamp="1590936277045" />
+-    <state x="225" y="95" width="1220" height="894" key="CommitChangelistDialog2/0.27.1680.1023/1680.0.1920.1080@0.27.1680.1023" timestamp="1590510632590" />
+-    <state x="477" y="190" width="745" height="520" key="FileChooserDialogImpl" timestamp="1590827097458">
+-      <screen x="0" y="0" width="1280" height="680" />
+-    </state>
+-    <state x="477" y="190" key="FileChooserDialogImpl/0.0.1280.680@0.0.1280.680" timestamp="1590827097458" />
+-    <state x="626" y="435" width="745" height="520" key="FileChooserDialogImpl/0.27.1680.1023/1680.0.1920.1080@0.27.1680.1023" timestamp="1590609717169" />
+-    <state x="650" y="438" width="379" height="207" key="Github.ShareDialog" timestamp="1590431755390">
+-      <screen x="0" y="27" width="1680" height="1023" />
+-    </state>
+-    <state x="650" y="438" width="379" height="207" key="Github.ShareDialog/0.27.1680.1023/1680.0.1920.1080@0.27.1680.1023" timestamp="1590431755390" />
+-    <state x="550" y="218" width="569" height="647" key="Github.UntrackedFilesDialog" timestamp="1590431762348">
+-      <screen x="0" y="27" width="1680" height="1023" />
+-    </state>
+-    <state x="550" y="218" width="569" height="647" key="Github.UntrackedFilesDialog/0.27.1680.1023/1680.0.1920.1080@0.27.1680.1023" timestamp="1590431762348" />
+-    <state width="1874" height="187" key="GridCell.Tab.0.bottom" timestamp="1591040204335">
+-      <screen x="0" y="27" width="1920" height="1053" />
+-    </state>
+-    <state width="1237" height="98" key="GridCell.Tab.0.bottom/0.0.1280.680/-1366.83.1366.728@0.0.1280.680" timestamp="1590673617779" />
+-    <state width="1237" height="115" key="GridCell.Tab.0.bottom/0.0.1280.680@0.0.1280.680" timestamp="1590942343083" />
+-    <state width="1634" height="180" key="GridCell.Tab.0.bottom/0.27.1680.1023/1680.0.1920.1080@0.27.1680.1023" timestamp="1590869788242" />
+-    <state width="1874" height="187" key="GridCell.Tab.0.bottom/0.27.1920.1053@0.27.1920.1053" timestamp="1591040204335" />
+-    <state width="1874" height="187" key="GridCell.Tab.0.center" timestamp="1591040204334">
+-      <screen x="0" y="27" width="1920" height="1053" />
+-    </state>
+-    <state width="1237" height="98" key="GridCell.Tab.0.center/0.0.1280.680/-1366.83.1366.728@0.0.1280.680" timestamp="1590673617779" />
+-    <state width="1237" height="115" key="GridCell.Tab.0.center/0.0.1280.680@0.0.1280.680" timestamp="1590942343083" />
+-    <state width="1634" height="180" key="GridCell.Tab.0.center/0.27.1680.1023/1680.0.1920.1080@0.27.1680.1023" timestamp="1590869788241" />
+-    <state width="1874" height="187" key="GridCell.Tab.0.center/0.27.1920.1053@0.27.1920.1053" timestamp="1591040204334" />
+-    <state width="1874" height="187" key="GridCell.Tab.0.left" timestamp="1591040204334">
+-      <screen x="0" y="27" width="1920" height="1053" />
+-    </state>
+-    <state width="1237" height="98" key="GridCell.Tab.0.left/0.0.1280.680/-1366.83.1366.728@0.0.1280.680" timestamp="1590673617779" />
+-    <state width="1237" height="115" key="GridCell.Tab.0.left/0.0.1280.680@0.0.1280.680" timestamp="1590942343082" />
+-    <state width="1634" height="180" key="GridCell.Tab.0.left/0.27.1680.1023/1680.0.1920.1080@0.27.1680.1023" timestamp="1590869788241" />
+-    <state width="1874" height="187" key="GridCell.Tab.0.left/0.27.1920.1053@0.27.1920.1053" timestamp="1591040204334" />
+-    <state width="1874" height="187" key="GridCell.Tab.0.right" timestamp="1591040204334">
+-      <screen x="0" y="27" width="1920" height="1053" />
+-    </state>
+-    <state width="1237" height="98" key="GridCell.Tab.0.right/0.0.1280.680/-1366.83.1366.728@0.0.1280.680" timestamp="1590673617779" />
+-    <state width="1237" height="115" key="GridCell.Tab.0.right/0.0.1280.680@0.0.1280.680" timestamp="1590942343083" />
+-    <state width="1634" height="180" key="GridCell.Tab.0.right/0.27.1680.1023/1680.0.1920.1080@0.27.1680.1023" timestamp="1590869788241" />
+-    <state width="1874" height="187" key="GridCell.Tab.0.right/0.27.1920.1053@0.27.1920.1053" timestamp="1591040204334" />
+-    <state x="425" y="285" width="819" height="514" key="NewModule_or_Project.wizard" timestamp="1590508236072">
+-      <screen x="0" y="27" width="1680" height="1023" />
+-    </state>
+-    <state x="425" y="285" width="819" height="514" key="NewModule_or_Project.wizard/0.27.1680.1023/1680.0.1920.1080@0.27.1680.1023" timestamp="1590508236072" />
+-    <state x="251" y="97" width="1022" height="737" key="SettingsEditor" timestamp="1590663753831">
+-      <screen x="0" y="0" width="1280" height="680" />
+-    </state>
+-    <state x="251" y="97" key="SettingsEditor/0.0.1280.680@0.0.1280.680" timestamp="1590663753831" />
+-    <state x="329" y="173" width="1022" height="737" key="SettingsEditor/0.27.1680.1023/1680.0.1920.1080@0.27.1680.1023" timestamp="1590510286041" />
+-    <state x="497" y="251" width="800" height="535" key="Vcs.Push.Dialog.v2" timestamp="1591038032526">
+-      <screen x="0" y="27" width="1920" height="1053" />
+-    </state>
+-    <state x="331" y="146" key="Vcs.Push.Dialog.v2/0.0.1280.680@0.0.1280.680" timestamp="1590936284038" />
+-    <state x="435" y="274" width="800" height="535" key="Vcs.Push.Dialog.v2/0.27.1680.1023/1680.0.1920.1080@0.27.1680.1023" timestamp="1590510839829" />
+-    <state x="497" y="251" width="800" height="535" key="Vcs.Push.Dialog.v2/0.27.1920.1053@0.27.1920.1053" timestamp="1591038032526" />
+-    <state x="100" y="127" width="1480" height="823" key="com.intellij.history.integration.ui.views.DirectoryHistoryDialog" timestamp="1590868971591">
+-      <screen x="0" y="27" width="1680" height="1023" />
+-    </state>
+-    <state x="100" y="127" width="1480" height="823" key="com.intellij.history.integration.ui.views.DirectoryHistoryDialog/0.27.1680.1023/1680.0.1920.1080@0.27.1680.1023" timestamp="1590868971591" />
+-    <state x="100" y="127" width="1480" height="823" key="com.intellij.history.integration.ui.views.FileHistoryDialog" timestamp="1590613920372">
+-      <screen x="0" y="27" width="1680" height="1023" />
+-    </state>
+-    <state x="100" y="127" width="1480" height="823" key="com.intellij.history.integration.ui.views.FileHistoryDialog/0.27.1680.1023/1680.0.1920.1080@0.27.1680.1023" timestamp="1590613920372" />
+-    <state x="699" y="465" width="458" height="177" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1591032553662">
+-      <screen x="0" y="27" width="1920" height="1053" />
+-    </state>
+-    <state x="466" y="283" width="380" height="169" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1280.680@0.0.1280.680" timestamp="1590936177095" />
+-    <state x="611" y="453" width="458" height="177" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.27.1680.1023/1680.0.1920.1080@0.27.1680.1023" timestamp="1590510959906" />
+-    <state x="699" y="465" width="458" height="177" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.27.1920.1053@0.27.1920.1053" timestamp="1591032553662" />
+-    <state x="512" y="335" width="775" height="430" key="git4idea.merge.GitPullDialog" timestamp="1591037999121">
+-      <screen x="0" y="27" width="1920" height="1053" />
+-    </state>
+-    <state x="341" y="199" width="635" height="291" key="git4idea.merge.GitPullDialog/0.0.1280.680@0.0.1280.680" timestamp="1590929080740" />
+-    <state x="447" y="327" width="775" height="437" key="git4idea.merge.GitPullDialog/0.27.1680.1023/1680.0.1920.1080@0.27.1680.1023" timestamp="1590510973272" />
+-    <state x="512" y="335" width="775" height="430" key="git4idea.merge.GitPullDialog/0.27.1920.1053@0.27.1920.1053" timestamp="1591037999121" />
+-    <state x="149" y="140" width="1372" height="803" key="new project wizard" timestamp="1590508220376">
+-      <screen x="0" y="27" width="1680" height="1023" />
+-    </state>
+-    <state x="149" y="140" width="1372" height="803" key="new project wizard/0.27.1680.1023/1680.0.1920.1080@0.27.1680.1023" timestamp="1590508220376" />
+-    <state x="297" y="151" key="run.anything.popup" timestamp="1590842289090">
+-      <screen x="0" y="0" width="1280" height="680" />
+-    </state>
+-    <state x="297" y="151" key="run.anything.popup/0.0.1280.680@0.0.1280.680" timestamp="1590842289090" />
+-    <state x="383" y="149" width="672" height="451" key="search.everywhere.popup" timestamp="1590840348982">
+-      <screen x="0" y="0" width="1280" height="680" />
+-    </state>
+-    <state x="383" y="149" width="672" height="451" key="search.everywhere.popup/0.0.1280.680@0.0.1280.680" timestamp="1590840348982" />
+-    <state x="503" y="251" width="672" height="678" key="search.everywhere.popup/0.27.1680.1023/1680.0.1920.1080@0.27.1680.1023" timestamp="1590503666100" />
+-  </component>
+-</project>
+\ No newline at end of file

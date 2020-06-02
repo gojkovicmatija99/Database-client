@@ -49,6 +49,12 @@ public class AppCore extends PublisherImplementation {
         this.notifySubscribers(new Notification((NotificationCode.DATA_UPDATED), entity));
     }
 
+    public void updateRow(Map<String, String> map, Entity entity, String wherePK)
+    {
+        this.database.updateRow(map, entity, wherePK);
+        this.notifySubscribers(new Notification((NotificationCode.DATA_UPDATED),entity));
+    }
+
     public void addRightPanel(Entity entity) {
         this.notifySubscribers(new Notification((NotificationCode.NEW_RIGHT_PANEL), entity));
     }
