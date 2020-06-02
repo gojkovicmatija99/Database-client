@@ -30,6 +30,7 @@ public class UpdateDialogAction extends AbstractAction implements ActionListener
     @Override
     public void actionPerformed(ActionEvent e) {
         for(int i=0;i<textFields.size();i++) {
+            if(!textFields.get(i).getText().equals(""))
             map.put(textFields.get(i).getName(), textFields.get(i).getText());
         }
         String wherePK=wherePKequalsTextField.getText();
