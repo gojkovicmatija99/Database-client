@@ -99,5 +99,6 @@ public class AppCore extends PublisherImplementation {
 
     public void deleteRow(Map<String, String> map, Entity entity) {
         database.deleteRow(map, entity);
+        this.notifySubscribers(new Notification((NotificationCode.DATA_UPDATED),entity));
     }
 }
