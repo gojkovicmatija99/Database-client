@@ -26,65 +26,14 @@
     </select>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8e2ebac5-987b-4976-824f-c90b8280c9ef" name="Default Changelist" comment="Izmena seme u MSSQLrepository">
-      <change afterPath="$PROJECT_DIR$/src/actions/DeleteDialogAction.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/actions/UpdateDialogAction.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/exception/AttributeTypeException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/exception/ExceptionHandler.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/exception/ExceptionType.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/view/DeleteDialog.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/view/UpdateDialog.java" afterDir="false" />
+    <list default="true" id="8e2ebac5-987b-4976-824f-c90b8280c9ef" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/BazePodatakaProjekat/actions/ActionManager.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/BazePodatakaProjekat/actions/AddAction.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/BazePodatakaProjekat/actions/DeleteAction.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/BazePodatakaProjekat/actions/UpdateAction.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/BazePodatakaProjekat/app/AppCore.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/BazePodatakaProjekat/app/Main.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/BazePodatakaProjekat/database/Database.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/BazePodatakaProjekat/database/DatabaseImplementation.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/BazePodatakaProjekat/database/MSSQLrepository.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/BazePodatakaProjekat/database/Repository.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/BazePodatakaProjekat/database/settings/Settings.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/BazePodatakaProjekat/database/settings/SettingsImplementation.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/BazePodatakaProjekat/model/TableModel.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/BazePodatakaProjekat/observer/Notification.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/BazePodatakaProjekat/observer/Publisher.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/BazePodatakaProjekat/observer/Subscriber.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/BazePodatakaProjekat/observer/enums/NotificationCode.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/BazePodatakaProjekat/observer/implementation/PublisherImplementation.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/BazePodatakaProjekat/resource/data/Row.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/BazePodatakaProjekat/resource/enums/AttributeType.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/BazePodatakaProjekat/resource/enums/ConstraintType.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/BazePodatakaProjekat/resource/implementation/Attribute.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/BazePodatakaProjekat/resource/implementation/AttributeConstraint.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/BazePodatakaProjekat/resource/implementation/Entity.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/BazePodatakaProjekat/resource/implementation/InformationResource.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/BazePodatakaProjekat/resource/tree/DBNode.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/BazePodatakaProjekat/resource/tree/DBNodeComposite.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/BazePodatakaProjekat/resource/tree/DBtree.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/BazePodatakaProjekat/resource/tree/DBtreeCellRenderer.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/BazePodatakaProjekat/resource/tree/images/attribute.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/BazePodatakaProjekat/resource/tree/images/constraint.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/BazePodatakaProjekat/resource/tree/images/database.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/BazePodatakaProjekat/resource/tree/images/entity.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/BazePodatakaProjekat/utils/Constants.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/BazePodatakaProjekat/view/MainFrame$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/BazePodatakaProjekat/view/MainFrame.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/BazePodatakaProjekat/view/MyToolbar.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/BazePodatakaProjekat/view/RightBottomPanel.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/BazePodatakaProjekat/view/RightTopPanel.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/actions/AddAction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/actions/AddAction.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/actions/DeleteAction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/actions/DeleteAction.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/actions/InsertAction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/actions/AddDialogAction.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/actions/UpdateAction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/actions/UpdateAction.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/AppCore.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/AppCore.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/database/MSSQLrepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/database/MSSQLrepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/observer/Notification.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/observer/Notification.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/resource/implementation/Attribute.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/resource/implementation/Attribute.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/resource/tree/DBtree.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/resource/tree/DBtree.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/view/InsertDialog.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/view/AddDialog.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/view/MainFrame.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/view/MainFrame.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/actions/AddDialogAction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/actions/AddDialogAction.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/exception/AttributeTypeException.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/exception/ExceptionHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/exception/ExceptionHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/view/AddDialog.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/view/AddDialog.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/view/DeleteDialog.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/view/DeleteDialog.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/view/UpdateDialog.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/view/UpdateDialog.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -222,7 +171,14 @@
       <option name="project" value="LOCAL" />
       <updated>1591023030269</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="Zapocet exception handler">
+      <created>1591117453034</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1591117453034</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -288,7 +244,8 @@
     <MESSAGE value="Ne radi citanje iz tabele" />
     <MESSAGE value="Izmenjeno stablo" />
     <MESSAGE value="Izmena seme u MSSQLrepository" />
-    <option name="LAST_COMMIT_MESSAGE" value="Izmena seme u MSSQLrepository" />
+    <MESSAGE value="Zapocet exception handler" />
+    <option name="LAST_COMMIT_MESSAGE" value="Zapocet exception handler" />
   </component>
   <component name="WindowStateProjectService">
     <state x="494" y="146" width="460" height="394" key="#com.intellij.ide.util.MemberChooser" timestamp="1590932824863">
@@ -296,15 +253,15 @@
     </state>
     <state x="494" y="146" width="460" height="394" key="#com.intellij.ide.util.MemberChooser/0.0.1280.680@0.0.1280.680" timestamp="1590932824863" />
     <state x="648" y="246" width="374" height="592" key="#com.intellij.ide.util.MemberChooser/0.27.1680.1023/1680.0.1920.1080@0.27.1680.1023" timestamp="1590868971221" />
-    <state x="437" y="173" width="524" height="509" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1590928890469">
+    <state x="437" y="173" width="524" height="509" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1591118629969">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state x="437" y="173" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1280.680@0.0.1280.680" timestamp="1590928890469" />
+    <state x="437" y="173" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1280.680@0.0.1280.680" timestamp="1591118629969" />
     <state x="573" y="287" width="524" height="509" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.27.1680.1023/1680.0.1920.1080@0.27.1680.1023" timestamp="1590613752114" />
-    <state x="171" y="0" width="1220" height="894" key="CommitChangelistDialog2" timestamp="1590936277045">
+    <state x="171" y="0" width="1220" height="894" key="CommitChangelistDialog2" timestamp="1591117450733">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state x="171" y="0" key="CommitChangelistDialog2/0.0.1280.680@0.0.1280.680" timestamp="1590936277045" />
+    <state x="171" y="0" key="CommitChangelistDialog2/0.0.1280.680@0.0.1280.680" timestamp="1591117450733" />
     <state x="225" y="95" width="1220" height="894" key="CommitChangelistDialog2/0.27.1680.1023/1680.0.1920.1080@0.27.1680.1023" timestamp="1590510632590" />
     <state x="477" y="190" width="745" height="520" key="FileChooserDialogImpl" timestamp="1590827097458">
       <screen x="0" y="0" width="1280" height="680" />
@@ -319,32 +276,32 @@
       <screen x="0" y="27" width="1680" height="1023" />
     </state>
     <state x="550" y="218" width="569" height="647" key="Github.UntrackedFilesDialog/0.27.1680.1023/1680.0.1920.1080@0.27.1680.1023" timestamp="1590431762348" />
-    <state width="1237" height="81" key="GridCell.Tab.0.bottom" timestamp="1591112736501">
+    <state width="1237" height="75" key="GridCell.Tab.0.bottom" timestamp="1591120613392">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state width="1237" height="98" key="GridCell.Tab.0.bottom/0.0.1280.680/-1366.83.1366.728@0.0.1280.680" timestamp="1590673617779" />
-    <state width="1237" height="81" key="GridCell.Tab.0.bottom/0.0.1280.680@0.0.1280.680" timestamp="1591112736501" />
+    <state width="1237" height="75" key="GridCell.Tab.0.bottom/0.0.1280.680@0.0.1280.680" timestamp="1591120613392" />
     <state width="1634" height="180" key="GridCell.Tab.0.bottom/0.27.1680.1023/1680.0.1920.1080@0.27.1680.1023" timestamp="1590869788242" />
     <state width="937" height="187" key="GridCell.Tab.0.bottom/0.27.1920.1053@0.27.1920.1053" timestamp="1591022945293" />
-    <state width="1237" height="81" key="GridCell.Tab.0.center" timestamp="1591112736500">
+    <state width="1237" height="75" key="GridCell.Tab.0.center" timestamp="1591120613391">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state width="1237" height="98" key="GridCell.Tab.0.center/0.0.1280.680/-1366.83.1366.728@0.0.1280.680" timestamp="1590673617779" />
-    <state width="1237" height="81" key="GridCell.Tab.0.center/0.0.1280.680@0.0.1280.680" timestamp="1591112736500" />
+    <state width="1237" height="75" key="GridCell.Tab.0.center/0.0.1280.680@0.0.1280.680" timestamp="1591120613391" />
     <state width="1634" height="180" key="GridCell.Tab.0.center/0.27.1680.1023/1680.0.1920.1080@0.27.1680.1023" timestamp="1590869788241" />
     <state width="937" height="187" key="GridCell.Tab.0.center/0.27.1920.1053@0.27.1920.1053" timestamp="1591022945289" />
-    <state width="1237" height="81" key="GridCell.Tab.0.left" timestamp="1591112736500">
+    <state width="1237" height="75" key="GridCell.Tab.0.left" timestamp="1591120613391">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state width="1237" height="98" key="GridCell.Tab.0.left/0.0.1280.680/-1366.83.1366.728@0.0.1280.680" timestamp="1590673617779" />
-    <state width="1237" height="81" key="GridCell.Tab.0.left/0.0.1280.680@0.0.1280.680" timestamp="1591112736500" />
+    <state width="1237" height="75" key="GridCell.Tab.0.left/0.0.1280.680@0.0.1280.680" timestamp="1591120613391" />
     <state width="1634" height="180" key="GridCell.Tab.0.left/0.27.1680.1023/1680.0.1920.1080@0.27.1680.1023" timestamp="1590869788241" />
     <state width="937" height="187" key="GridCell.Tab.0.left/0.27.1920.1053@0.27.1920.1053" timestamp="1591022945288" />
-    <state width="1237" height="81" key="GridCell.Tab.0.right" timestamp="1591112736500">
+    <state width="1237" height="75" key="GridCell.Tab.0.right" timestamp="1591120613392">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state width="1237" height="98" key="GridCell.Tab.0.right/0.0.1280.680/-1366.83.1366.728@0.0.1280.680" timestamp="1590673617779" />
-    <state width="1237" height="81" key="GridCell.Tab.0.right/0.0.1280.680@0.0.1280.680" timestamp="1591112736500" />
+    <state width="1237" height="75" key="GridCell.Tab.0.right/0.0.1280.680@0.0.1280.680" timestamp="1591120613392" />
     <state width="1634" height="180" key="GridCell.Tab.0.right/0.27.1680.1023/1680.0.1920.1080@0.27.1680.1023" timestamp="1590869788241" />
     <state width="937" height="187" key="GridCell.Tab.0.right/0.27.1920.1053@0.27.1920.1053" timestamp="1591022945290" />
     <state x="425" y="285" width="819" height="514" key="NewModule_or_Project.wizard" timestamp="1590508236072">
@@ -356,10 +313,10 @@
     </state>
     <state x="251" y="97" key="SettingsEditor/0.0.1280.680@0.0.1280.680" timestamp="1590663753831" />
     <state x="329" y="173" width="1022" height="737" key="SettingsEditor/0.27.1680.1023/1680.0.1920.1080@0.27.1680.1023" timestamp="1590510286041" />
-    <state x="497" y="251" width="800" height="535" key="Vcs.Push.Dialog.v2" timestamp="1591023035667">
-      <screen x="0" y="27" width="1920" height="1053" />
+    <state x="331" y="146" width="800" height="535" key="Vcs.Push.Dialog.v2" timestamp="1591117459816">
+      <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state x="331" y="146" key="Vcs.Push.Dialog.v2/0.0.1280.680@0.0.1280.680" timestamp="1590936284038" />
+    <state x="331" y="146" key="Vcs.Push.Dialog.v2/0.0.1280.680@0.0.1280.680" timestamp="1591117459816" />
     <state x="435" y="274" width="800" height="535" key="Vcs.Push.Dialog.v2/0.27.1680.1023/1680.0.1920.1080@0.27.1680.1023" timestamp="1590510839829" />
     <state x="497" y="251" width="800" height="535" key="Vcs.Push.Dialog.v2/0.27.1920.1053@0.27.1920.1053" timestamp="1591023035666" />
     <state x="100" y="127" width="1480" height="823" key="com.intellij.history.integration.ui.views.DirectoryHistoryDialog" timestamp="1590868971591">
@@ -370,10 +327,10 @@
       <screen x="0" y="27" width="1680" height="1023" />
     </state>
     <state x="100" y="127" width="1480" height="823" key="com.intellij.history.integration.ui.views.FileHistoryDialog/0.27.1680.1023/1680.0.1920.1080@0.27.1680.1023" timestamp="1590613920372" />
-    <state x="466" y="283" width="380" height="169" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1590936177095">
+    <state x="466" y="283" width="380" height="169" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1591125753847">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state x="466" y="283" width="380" height="169" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1280.680@0.0.1280.680" timestamp="1590936177095" />
+    <state x="466" y="283" width="380" height="169" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1280.680@0.0.1280.680" timestamp="1591125753847" />
     <state x="611" y="453" width="458" height="177" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.27.1680.1023/1680.0.1920.1080@0.27.1680.1023" timestamp="1590510959906" />
     <state x="341" y="199" width="635" height="291" key="git4idea.merge.GitPullDialog" timestamp="1591040791464">
       <screen x="0" y="0" width="1280" height="680" />

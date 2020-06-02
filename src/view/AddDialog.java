@@ -21,7 +21,7 @@ public class AddDialog extends JDialog {
 
         this.setTitle("Insert into "+entity.getName());
         this.setLayout(new GridLayout(0,2));
-        this.setLocationRelativeTo(null);
+        this.setAlwaysOnTop(true);
 
         List<DBNode> attributes=entity.getChildren();
         this.setSize(new Dimension(300, (attributes.size()+1)*50));

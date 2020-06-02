@@ -20,7 +20,7 @@ public class DeleteDialog extends JDialog {
 
         this.setTitle("Delete from "+entity.getName());
         this.setLayout(new GridLayout(0,2));
-        this.setLocationRelativeTo(null);
+        this.setAlwaysOnTop(true);
 
         List<DBNode> primaryKeyAttributes = new ArrayList<>();
         for (int i = 0; i < entity.getChildCount(); i++) {

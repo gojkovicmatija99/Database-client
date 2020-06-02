@@ -6,29 +6,16 @@ import view.MainFrame;
 import javax.swing.*;
 
 public class ExceptionHandler {
-    private static ExceptionHandler instance = null;
-
-    private Attribute attribute;
-
-    public static ExceptionHandler getInstance() {
-        if (instance == null)
-            instance = new ExceptionHandler();
-        return instance;
-    }
-
-    private AttributeTypeException attributeTypeException;
-
-    public ExceptionHandler(Attribute attribute) {
-        this.attribute = attribute;
-        attributeTypeException = new AttributeTypeException(attribute);
-    }
-
-    public void showExceptionDialog(Exception exception)
-    {
-        JOptionPane.showMessageDialog(MainFrame.getInstance(), exception.getMessage(attribute));
-    }
-
-    public AttributeTypeException getAttributeTypeException() {
-        return attributeTypeException;
+    public static void handle(ExceptionType exceptionType, Attribute attribute) {
+        if (exceptionType == ExceptionType.ATTRIBUTE_TYPE_ERROR) {
+            String message = attribute.getName() + " must be a " + attribute.getAttributeType();
+            String title = exceptionType.toString();
+            JOptionPane.showMessageDialog(MainFrame.getInstance(), message, title, JOptionPane.ERROR_MESSAGE);
+        }
+        if (exceptionType == ExceptionType.ATTRIBUTE_LENGTH_ERROR) {
+            String message = "Max length of " + attribute.getName() + " is " + attribute.getLength();
+            String title = exceptionType.toString();
+            JOptionPane.showMessageDialog(MainFrame.getInstance(), message, title, JOptionPane.ERROR_MESSAGE);
+        }
     }
 }
