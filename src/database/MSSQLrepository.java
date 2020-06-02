@@ -229,6 +229,36 @@ public class MSSQLrepository implements Repository {
         }
     }
 
+    @Override
+    public void deleteQuery(Map<String, String> map, Entity entity) {
+        try {
+            initConnection();
+
+            String query="DELETE FROM "+entity.getName()+" WHERE " ;
+            String delete="";
+
+            for(Map.Entry<String, String> entry : map.entrySet()) {
+                delete+=entry.getKey()+" =? AND";
+            }
+
+            delete=delete.substring(0,delete.length()-3);
+            query+=delete;
+            PreparedStatement preparedStatement=connection.prepareStatement(query);
+
+            int i=1;
+            for (Map.Entry<String, String> entry : map.entrySet()) {
+                setValue(preparedStatement, entity, entry.getKey(), entry.getValue(), i++);
+            }
+            preparedStatement.execute();
+        }
+        catch (Exception e) {
+            e.printStackTrace();
+        }
+        finally {
+            closeConnection();
+        }
+    }
+
     private String getPrimaryKeyColumn(Entity entity) {
         List<DBNode> attributes=entity.getChildren();
         for(DBNode attributeNode:attributes) {

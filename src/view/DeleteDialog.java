@@ -1,5 +1,6 @@
 package view;
 
+import actions.DeleteDialogAction;
 import resource.implementation.Attribute;
 import resource.implementation.Entity;
 import resource.tree.DBNode;
@@ -40,7 +41,7 @@ public class DeleteDialog extends JDialog {
         }
 
         deleteButton=new JButton("DELETE");
-        //deleteButton.addActionListener(new DeleteDialogAction(entity, textFieldsList));
+        deleteButton.addActionListener(new DeleteDialogAction(entity, textFieldsList));
         this.add(deleteButton);
     }
 }

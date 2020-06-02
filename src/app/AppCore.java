@@ -14,6 +14,8 @@ import resource.tree.DBNode;
 import resource.implementation.InformationResource;
 import utils.Constants;
 
+import javax.swing.*;
+import java.util.List;
 import java.util.Map;
 
 public class AppCore extends PublisherImplementation {
@@ -93,5 +95,9 @@ public class AppCore extends PublisherImplementation {
 
     public void setDatabase(Database database) {
         this.database = database;
+    }
+
+    public void deleteRow(Map<String, String> map, Entity entity) {
+        database.deleteRow(map, entity);
     }
 }

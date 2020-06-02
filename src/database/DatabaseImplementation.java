@@ -35,6 +35,11 @@ public class DatabaseImplementation implements Database {
         repository.updateQuery(map, entity, wherePK);
     }
 
+    @Override
+    public void deleteRow(Map<String, String> map, Entity entity) {
+        repository.deleteQuery(map, entity);
+    }
+
     public Repository getRepository() {
         return repository;
     }
