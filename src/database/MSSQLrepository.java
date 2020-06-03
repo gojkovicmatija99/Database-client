@@ -299,6 +299,53 @@ public class MSSQLrepository implements Repository {
         return rows;
     }
 
+    @Override
+    public List<Row> countOrAverage(String from, String countOrAverage, String selectAttribute, List<String> groupBy) {
+        List<Row> rows=new ArrayList<>();
+
+        try {
+            this.initConnection();
+
+            String query = "SELECT ";
+            for (int i = 0; i < groupBy.size(); i++) {
+                query += groupBy.get(i) + ", ";
+            }
+            if (countOrAverage.equals("COUNT")) {
+                query += "COUNT(" + selectAttribute + ") AS 'COUNT(" + selectAttribute + ")' ";
+            }
+            else {
+                query += "round(avg(" + selectAttribute + "),2) AS 'round(avg(" + selectAttribute + "),2)' ";
+            }
+            query += "FROM " + from + " GROUP BY ";
+            for (int i = 0; i < groupBy.size()-1; i++) {
+                query += groupBy.get(i) + ", ";
+            }
+            query += groupBy.get(groupBy.size()-1);
+            System.out.println(query);
+            PreparedStatement preparedStatement = connection.prepareStatement(query);
+            ResultSet rs = preparedStatement.executeQuery();
+
+            while(rs.next()) {
+                Row row=new Row();
+                row.setName(from);
+
+                ResultSetMetaData resultSetMetaData=rs.getMetaData();
+                for(int i=1;i<=resultSetMetaData.getColumnCount();i++) {
+                    row.addField(resultSetMetaData.getColumnName(i), rs.getString(i));
+                }
+                rows.add(row);
+            }
+        }
+        catch (Exception e) {
+            e.printStackTrace();
+        }
+        finally {
+            this.closeConnection();
+        }
+
+        return rows;
+    }
+
     private String getPrimaryKeyColumn(Entity entity) {
         List<DBNode> attributes=entity.getChildren();
         for(DBNode attributeNode:attributes) {

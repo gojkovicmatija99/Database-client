@@ -61,9 +61,12 @@ public class AppCore extends PublisherImplementation {
         this.notifySubscribers(new Notification(NotificationCode.DATA_UPDATED, entity));
     }
 
-
     public void filterSortTable(String tableName, List<String> filter, Map<String, String> sort) {
         tableModel1.setRows(this.database.filterSortTable(tableName, filter, sort));
+    }
+
+    public void countOrAverage(String tableName, String countOrAverage, String selectAttribute, List<String> groupBy) {
+        tableModel1.setRows(this.database.countOrAverage(tableName, countOrAverage, selectAttribute, groupBy));
     }
 
     public void addRightPanel(Entity entity) {

@@ -45,6 +45,11 @@ public class DatabaseImplementation implements Database {
         return repository.filterSort(tableName, filterAttributes, map);
     }
 
+    @Override
+    public List<Row> countOrAverage(String tableName, String countOrAverage, String selectAttribute, List<String> groupBy) {
+        return this.repository.countOrAverage(tableName, countOrAverage, selectAttribute, groupBy);
+    }
+
     public Repository getRepository() {
         return repository;
     }

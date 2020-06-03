@@ -34,7 +34,7 @@ public class FilterSortDialog extends JDialog {
         this.add(new JLabel("Order by:"));
 
         List<DBNode> attributes=entity.getChildren();
-        this.setSize(new Dimension(400, (attributes.size()+2)*50));
+        this.setSize(new Dimension(450, (attributes.size()+2)*50));
         for(int i=0;i<attributes.size();i++) {
             Attribute currAttribute= (Attribute) attributes.get(i);
             JCheckBox cbf = new JCheckBox(currAttribute.getName());
