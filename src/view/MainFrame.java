@@ -51,9 +51,9 @@ public class MainFrame extends JFrame implements Subscriber {
 			@Override
 			public void stateChanged(ChangeEvent e) {
 				if (topTab.getTabCount() != 0) {
-					RightTopPanel selectedTab = (RightTopPanel)topTab.getSelectedComponent();
+					RightTopPanel selectedTab = (RightTopPanel) topTab.getSelectedComponent();
 					appCore.readDataFromTable(selectedTab.getEntity().getName());
-					while(bottomTab.getTabCount() > 0) {
+					while (bottomTab.getTabCount() > 0) {
 						bottomTab.removeTabAt(0);
 					}
 					initBottomPanel();
@@ -111,6 +111,8 @@ public class MainFrame extends JFrame implements Subscriber {
 		} else if (notification.getCode() == NotificationCode.DATA_UPDATED){
 			Entity entity = (Entity) notification.getData();
 			appCore.readDataFromTable(entity.getName());
+			RightBottomPanel rbp = (RightBottomPanel) bottomTab.getSelectedComponent();
+			appCore.readDataFromRelationTable(rbp.getEntity().getName());
 		} else if (notification.getCode() == NotificationCode.NEW_RIGHT_PANEL) {
 			Entity entity = (Entity) notification.getData();
 			int pozicijaIstog = -1;
@@ -130,9 +132,13 @@ public class MainFrame extends JFrame implements Subscriber {
 				topTab.setSelectedComponent(topTableView);
 			}
 			else {
-				RightTopPanel topTableView = (RightTopPanel)topTab.getComponentAt(pozicijaIstog);
+				RightTopPanel topTableView = (RightTopPanel) topTab.getComponentAt(pozicijaIstog);
 				topTab.setSelectedComponent(topTableView);
 			}
+		}
+		else if (notification.getCode() == NotificationCode.FILTER_TABLE) {
+			Entity entity = (Entity) notification.getData();
+
 		}
 	}
 }
