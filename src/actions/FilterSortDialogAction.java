@@ -1,5 +1,8 @@
 package actions;
 
+import exception.ExceptionHandler;
+import exception.ExceptionType;
+import resource.implementation.Attribute;
 import resource.implementation.Entity;
 import view.MainFrame;
 
@@ -39,8 +42,15 @@ public class FilterSortDialogAction implements ActionListener {
         for (int i = 0; i < sortCB.size(); i++) {
             if (sortCB.get(i).isSelected()) {
                 sort.put(sortCB.get(i).getName(), (String) sortComboBox.get(i).getSelectedItem());
-                //System.out.println(sortCB.get(i).getName() + " " + sortComboBox.get(i).getSelectedItem());
             }
+        }
+        if (filter.size() == 0){
+            ExceptionHandler.handle(ExceptionType.NO_COlUMN_SELECTED_FOR_FILTER, (Attribute) entity.getChildAt(0));
+            return;
+        }
+        if (sort.size() == 0){
+            ExceptionHandler.handle(ExceptionType.NO_COLUMN_SELECTED_FOR_SORT, (Attribute) entity.getChildAt(0));
+            return;
         }
         MainFrame.getInstance().getAppCore().filterSortTable(entity.getName(), filter, sort);
     }

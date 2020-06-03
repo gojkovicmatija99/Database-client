@@ -2,5 +2,7 @@ package exception;
 
 public enum ExceptionType {
     ATTRIBUTE_TYPE_ERROR,
-    ATTRIBUTE_LENGTH_ERROR
+    ATTRIBUTE_LENGTH_ERROR,
+    NO_COlUMN_SELECTED_FOR_FILTER,
+    NO_COLUMN_SELECTED_FOR_SORT
 }

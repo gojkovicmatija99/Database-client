@@ -275,7 +275,6 @@ public class MSSQLrepository implements Repository {
                 query += entry.getKey() + " " + entry.getValue() + ", ";
             }
             query = query.substring(0, query.length()-2);
-            System.out.println(query);
             PreparedStatement preparedStatement = connection.prepareStatement(query);
             ResultSet rs = preparedStatement.executeQuery();
 

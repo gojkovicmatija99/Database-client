@@ -17,5 +17,15 @@ public class ExceptionHandler {
             String title = exceptionType.toString();
             JOptionPane.showMessageDialog(MainFrame.getInstance(), message, title, JOptionPane.ERROR_MESSAGE);
         }
+        if (exceptionType == ExceptionType.NO_COlUMN_SELECTED_FOR_FILTER) {
+            String message = "Column must be selected for FILTER";
+            String title = exceptionType.toString();
+            JOptionPane.showMessageDialog(MainFrame.getInstance(), message, title, JOptionPane.ERROR_MESSAGE);
+        }
+        if (exceptionType == ExceptionType.NO_COLUMN_SELECTED_FOR_SORT) {
+            String message = "Column must be selected for SORT";
+            String title = exceptionType.toString();
+            JOptionPane.showMessageDialog(MainFrame.getInstance(), message, title, JOptionPane.ERROR_MESSAGE);
+        }
     }
 }
