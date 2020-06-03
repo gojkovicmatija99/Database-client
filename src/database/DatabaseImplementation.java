@@ -50,6 +50,11 @@ public class DatabaseImplementation implements Database {
         return this.repository.countOrAverage(tableName, countOrAverage, selectAttribute, groupBy);
     }
 
+    @Override
+    public void searchRows(String filter, Entity entity) {
+        repository.selectQueryWithFilter(filter,entity);
+    }
+
     public Repository getRepository() {
         return repository;
     }

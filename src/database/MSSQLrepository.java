@@ -346,6 +346,24 @@ public class MSSQLrepository implements Repository {
         return rows;
     }
 
+    @Override
+    public void selectQueryWithFilter(String filter, Entity entity) {
+        try {
+            initConnection();
+
+            String query = "SELECT * FROM " + entity.getName()+" WHERE "+filter;
+            System.out.println(query);
+            PreparedStatement preparedStatement=connection.prepareStatement(query);
+            preparedStatement.execute();
+        }
+        catch (Exception e) {
+            e.printStackTrace();
+        }
+        finally {
+            closeConnection();
+        }
+    }
+
     private String getPrimaryKeyColumn(Entity entity) {
         List<DBNode> attributes=entity.getChildren();
         for(DBNode attributeNode:attributes) {

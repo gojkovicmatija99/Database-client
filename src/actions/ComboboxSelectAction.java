@@ -55,7 +55,7 @@ public class ComboboxSelectAction implements ItemListener {
             otherOpstions.add(btnSearch);
             btnAND.addActionListener(new AddToQueryAction(searchDialog, attribute, cmbOperations, textField, "AND"));
             btnOR.addActionListener(new AddToQueryAction(searchDialog, attribute, cmbOperations, textField, "OR"));
-            btnSearch.addActionListener(new ExecuteSearchFilter(searchDialog.getLbQuery().getText()));
+            btnSearch.addActionListener(new ExecuteSearchFilter(searchDialog.getLbQuery().getText(),searchDialog.getEntity()));
 
             otherOpstions.revalidate();
         }

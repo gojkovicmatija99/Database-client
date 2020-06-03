@@ -4,7 +4,6 @@ import resource.implementation.Entity;
 import resource.tree.DBNode;
 import resource.data.Row;
 
-import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
@@ -16,4 +15,5 @@ public interface Database {
     void deleteRow(Map<String, String> map, Entity entity);
     List<Row> filterSortTable(String tableName, List<String> filterAttributes, Map<String, String> map);
     List<Row> countOrAverage(String tableName, String countOrAverage, String selectAttribute, List<String> groupBy);
+    void searchRows(String filter, Entity entity);
 }

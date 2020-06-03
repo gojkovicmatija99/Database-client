@@ -16,4 +16,5 @@ public interface Repository {
     void deleteQuery(Map<String, String> map, Entity entity);
     List<Row> filterSort(String from, List<String> filterAttributes, Map<String, String> map);
     List<Row> countOrAverage(String from, String countOrAverage, String selectAttribute, List<String> groupBy);
+    void selectQueryWithFilter(String filter, Entity entity);
 }

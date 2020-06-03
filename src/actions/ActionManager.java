@@ -14,12 +14,16 @@ public class ActionManager {
     private DeleteAction deleteAction;
     private UpdateAction updateAction;
     private FilterSortAction filterSortAction;
+    private ReportsAction reportsAction;
+    private SearchAction searchAction;
 
     public ActionManager() {
         addAction = new AddAction();
         deleteAction = new DeleteAction();
         updateAction = new UpdateAction();
         filterSortAction = new FilterSortAction();
+        reportsAction=new ReportsAction();
+        searchAction=new SearchAction();
     }
 
     public AddAction getAddAction() {
@@ -48,6 +52,14 @@ public class ActionManager {
 
     public void setUpdateAction(UpdateAction updateAction) {
         this.updateAction = updateAction;
+    }
+
+    public ReportsAction getReportsAction() {
+        return reportsAction;
+    }
+
+    public SearchAction getSearchAction() {
+        return searchAction;
     }
 }
 

@@ -10,7 +10,6 @@ import observer.Notification;
 import observer.enums.NotificationCode;
 import observer.implementation.PublisherImplementation;
 import resource.implementation.Entity;
-import resource.tree.DBNode;
 import resource.implementation.InformationResource;
 import utils.Constants;
 
@@ -107,5 +106,10 @@ public class AppCore extends PublisherImplementation {
 
     public void setDatabase(Database database) {
         this.database = database;
+    }
+
+    public void searchRows(String filter, Entity entity) {
+        this.database.searchRows(filter, entity);
+        this.notifySubscribers(new Notification(NotificationCode.DATA_UPDATED, entity));
     }
 }
