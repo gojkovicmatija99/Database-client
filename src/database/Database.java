@@ -1,5 +1,6 @@
 package database;
 
+import resource.implementation.Attribute;
 import resource.implementation.Entity;
 import resource.tree.DBNode;
 import resource.data.Row;
@@ -15,5 +16,5 @@ public interface Database {
     void deleteRow(Map<String, String> map, Entity entity);
     List<Row> filterSortTable(String tableName, List<String> filterAttributes, Map<String, String> map);
     List<Row> countOrAverage(String tableName, String countOrAverage, String selectAttribute, List<String> groupBy);
-    void searchRows(String filter, Entity entity);
+    List<Row> searchRows(String filter, Entity entity, List<Attribute> attributes);
 }

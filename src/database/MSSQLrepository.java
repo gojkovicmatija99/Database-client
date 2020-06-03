@@ -347,14 +347,32 @@ public class MSSQLrepository implements Repository {
     }
 
     @Override
-    public void selectQueryWithFilter(String filter, Entity entity) {
+    public List<Row> selectQueryWithFilter(String filter, Entity entity, List<Attribute> attributes) {
+        List<Row> rows=new ArrayList<>();
         try {
             initConnection();
 
-            String query = "SELECT * FROM " + entity.getName()+" WHERE "+filter;
-            System.out.println(query);
+            String query = "SELECT ";
+            for(int i=0;i<attributes.size();i++)
+                query+=attributes.get(i).getName()+",";
+
+            query=query.substring(0, query.length()-1);
+            query+=" FROM "+entity.getName()+" WHERE "+filter;
             PreparedStatement preparedStatement=connection.prepareStatement(query);
-            preparedStatement.execute();
+            System.out.println(query);
+            ResultSet rs = preparedStatement.executeQuery();
+
+            while(rs.next()) {
+                Row row=new Row();
+                row.setName(entity.getName());
+
+                ResultSetMetaData resultSetMetaData=rs.getMetaData();
+                for(int i=1;i<=resultSetMetaData.getColumnCount();i++) {
+                    row.addField(resultSetMetaData.getColumnName(i), rs.getString(i));
+                }
+                rows.add(row);
+            }
+
         }
         catch (Exception e) {
             e.printStackTrace();
@@ -362,6 +380,7 @@ public class MSSQLrepository implements Repository {
         finally {
             closeConnection();
         }
+        return rows;
     }
 
     private String getPrimaryKeyColumn(Entity entity) {

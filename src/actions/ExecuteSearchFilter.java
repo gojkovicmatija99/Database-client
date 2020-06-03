@@ -1,22 +1,28 @@
 package actions;
 
+import resource.implementation.Attribute;
 import resource.implementation.Entity;
+import resource.tree.DBNode;
 import view.MainFrame;
 
 import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.util.List;
 
 public class ExecuteSearchFilter implements ActionListener {
-    private String filter;
+    private JLabel label;
     private Entity entity;
-    public ExecuteSearchFilter(String filter, Entity entity) {
+    private List<Attribute> attributes;
+
+    public ExecuteSearchFilter(JLabel label, Entity entity, List<Attribute> attributes) {
         this.entity=entity;
-        this.filter=filter;
+        this.label=label;
+        this.attributes=attributes;
     }
 
     @Override
     public void actionPerformed(ActionEvent e) {
-        MainFrame.getInstance().getAppCore().getDatabase().searchRows(filter,entity);
+        MainFrame.getInstance().getAppCore().searchRows(label.getText(), entity, attributes);
     }
 }

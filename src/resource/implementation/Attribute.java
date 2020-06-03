@@ -7,6 +7,7 @@ import resource.enums.AttributeType;
 
 import javax.swing.tree.TreeNode;
 import java.util.Enumeration;
+import java.util.Objects;
 
 public class Attribute extends DBNodeComposite {
     public AttributeType attributeType;
@@ -38,6 +39,19 @@ public class Attribute extends DBNodeComposite {
         }
         isPrimaryKey = false;
         return isPrimaryKey;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Attribute attribute = (Attribute) o;
+        return this.getName().equals(attribute.getName());
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(attributeType, length, inRealationWith, isPrimaryKey);
     }
 
     public AttributeType getAttributeType() {

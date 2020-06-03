@@ -25,9 +25,9 @@ public class AddToQueryAction implements ActionListener {
     }
 
     private String getOperationFromString(String string, String criterium) {
-        if(string.equals("Starts with"))
-            return "LIKE '%"+criterium+"'";
         if(string.equals("Ends with"))
+            return "LIKE '%"+criterium+"'";
+        if(string.equals("Starts with"))
             return "LIKE '"+criterium+"%'";
         if(string.equals("Contains"))
             return "LIKE '%"+criterium+"%'";
@@ -39,6 +39,7 @@ public class AddToQueryAction implements ActionListener {
     @Override
     public void actionPerformed(ActionEvent e) {
         String newQuery="";
+        searchDialog.addAttribute(attribute);
         if(!searchDialog.getLbQuery().getText().equals(""))
             newQuery=connector+" ";
         newQuery+= attribute.getName()+" ";
@@ -50,6 +51,7 @@ public class AddToQueryAction implements ActionListener {
             newQuery+=textField.getText()+" ";
         }
 
+        System.out.println(searchDialog.getLbQuery().getText());
         searchDialog.appendQuery(newQuery);
         searchDialog.revalidate();
     }

@@ -1,10 +1,10 @@
 package database;
 
+import resource.implementation.Attribute;
 import resource.implementation.Entity;
 import resource.tree.DBNode;
 import resource.data.Row;
 
-import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
@@ -51,8 +51,8 @@ public class DatabaseImplementation implements Database {
     }
 
     @Override
-    public void searchRows(String filter, Entity entity) {
-        repository.selectQueryWithFilter(filter,entity);
+    public List<Row> searchRows(String filter, Entity entity, List<Attribute> attributes) {
+        return this.repository.selectQueryWithFilter(filter,entity, attributes);
     }
 
     public Repository getRepository() {

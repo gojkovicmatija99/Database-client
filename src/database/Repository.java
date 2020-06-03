@@ -1,5 +1,6 @@
 package database;
 
+import resource.implementation.Attribute;
 import resource.implementation.Entity;
 import resource.tree.DBNode;
 import resource.data.Row;
@@ -16,5 +17,5 @@ public interface Repository {
     void deleteQuery(Map<String, String> map, Entity entity);
     List<Row> filterSort(String from, List<String> filterAttributes, Map<String, String> map);
     List<Row> countOrAverage(String from, String countOrAverage, String selectAttribute, List<String> groupBy);
-    void selectQueryWithFilter(String filter, Entity entity);
+    List<Row> selectQueryWithFilter(String filter, Entity entity, List<Attribute> attributes);
 }

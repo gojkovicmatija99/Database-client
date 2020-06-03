@@ -18,7 +18,6 @@ public class ComboboxSelectAction implements ItemListener {
     private JTextField textField;
     private JButton btnAND;
     private JButton btnOR;
-    private JButton btnSearch;
 
     public ComboboxSelectAction(SearchDialog searchDialog) {
         this.searchDialog = searchDialog;
@@ -32,7 +31,6 @@ public class ComboboxSelectAction implements ItemListener {
             this.textField = new JTextField();
             this.btnAND = new JButton("AND");
             this.btnOR = new JButton("OR");
-            this.btnSearch=new JButton("Search");
 
             Attribute attribute = (Attribute) cmbAttributes.getSelectedItem();
             AttributeType attributeType = attribute.getAttributeType();
@@ -52,10 +50,9 @@ public class ComboboxSelectAction implements ItemListener {
             otherOpstions.add(textField);
             otherOpstions.add(btnAND);
             otherOpstions.add(btnOR);
-            otherOpstions.add(btnSearch);
             btnAND.addActionListener(new AddToQueryAction(searchDialog, attribute, cmbOperations, textField, "AND"));
             btnOR.addActionListener(new AddToQueryAction(searchDialog, attribute, cmbOperations, textField, "OR"));
-            btnSearch.addActionListener(new ExecuteSearchFilter(searchDialog.getLbQuery().getText(),searchDialog.getEntity()));
+
 
             otherOpstions.revalidate();
         }

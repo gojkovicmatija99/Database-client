@@ -9,6 +9,7 @@ import model.TableModel;
 import observer.Notification;
 import observer.enums.NotificationCode;
 import observer.implementation.PublisherImplementation;
+import resource.implementation.Attribute;
 import resource.implementation.Entity;
 import resource.implementation.InformationResource;
 import utils.Constants;
@@ -108,8 +109,7 @@ public class AppCore extends PublisherImplementation {
         this.database = database;
     }
 
-    public void searchRows(String filter, Entity entity) {
-        this.database.searchRows(filter, entity);
-        this.notifySubscribers(new Notification(NotificationCode.DATA_UPDATED, entity));
+    public void searchRows(String filter, Entity entity, List<Attribute> attributes) {
+        tableModel1.setRows(this.database.searchRows(filter,entity, attributes));
     }
 }
