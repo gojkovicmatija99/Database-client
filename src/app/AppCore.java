@@ -14,6 +14,7 @@ import resource.tree.DBNode;
 import resource.implementation.InformationResource;
 import utils.Constants;
 
+import java.util.List;
 import java.util.Map;
 
 public class AppCore extends PublisherImplementation {
@@ -53,6 +54,16 @@ public class AppCore extends PublisherImplementation {
     {
         this.database.updateRow(map, entity, wherePK);
         this.notifySubscribers(new Notification((NotificationCode.DATA_UPDATED),entity));
+    }
+
+    public void deleteRow(Map<String, String> map, Entity entity) {
+        this.database.deleteRow(map, entity);
+        this.notifySubscribers(new Notification(NotificationCode.DATA_UPDATED, entity));
+    }
+
+
+    public void filterSortTable(String tableName, List<String> filter, Map<String, String> sort) {
+        tableModel1.setRows(this.database.filterSortTable(tableName, filter, sort));
     }
 
     public void addRightPanel(Entity entity) {
