@@ -18,4 +18,9 @@ public abstract class DBNode implements TreeNode {
     public DBNode getDBNodeParent() {
         return parent;
     }
+
+    @Override
+    public String toString() {
+        return name;
+    }
 }

@@ -29,6 +29,8 @@ public class MyToolbar extends JToolBar {
 
         addSeparator();
 
+        add(ActionManager.getInstance().getSearchAction());
+
         setFloatable(false);
 
     }
