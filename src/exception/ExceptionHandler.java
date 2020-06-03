@@ -27,5 +27,15 @@ public class ExceptionHandler {
             String title = exceptionType.toString();
             JOptionPane.showMessageDialog(MainFrame.getInstance(), message, title, JOptionPane.ERROR_MESSAGE);
         }
+        if (exceptionType == ExceptionType.NO_COLUMN_SELECTED_FOR_REPORTS) {
+            String message = "Column must be selected for REPORT";
+            String title = exceptionType.toString();
+            JOptionPane.showMessageDialog(MainFrame.getInstance(), message, title, JOptionPane.ERROR_MESSAGE);
+        }
+        if (exceptionType == ExceptionType.COLUMN_NO_NUMERIC_FOR_AVERAGE) {
+            String message = attribute.getName() + " is not a NUMERIC";
+            String title = exceptionType.toString();
+            JOptionPane.showMessageDialog(MainFrame.getInstance(), message, title, JOptionPane.ERROR_MESSAGE);
+        }
     }
 }

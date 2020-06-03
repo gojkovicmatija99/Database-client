@@ -8,6 +8,8 @@ import resource.tree.DBNode;
 
 import javax.swing.*;
 import java.awt.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 import java.awt.event.ItemEvent;
 import java.awt.event.ItemListener;
 import java.util.ArrayList;
@@ -62,9 +64,7 @@ public class ReportsDialog extends JDialog {
             this.add(new JLabel());
 
         okButton = new JButton("OK");
-        String selectedFromCountOrAverage = (String) countOrAverageComboBox.getSelectedItem();
-        String selectedFromColumn = (String) columnComboBox.getSelectedItem();
-        okButton.addActionListener(new OkCountAverageDialogAction(entity, selectedFromCountOrAverage, selectedFromColumn, columnCheckBox));
+        okButton.addActionListener(new OkCountAverageDialogAction(entity, countOrAverageComboBox, columnComboBox, columnCheckBox));
         this.add(okButton);
 
         countOrAverageComboBox.addItemListener(new ItemListener() {

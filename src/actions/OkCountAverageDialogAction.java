@@ -2,6 +2,7 @@ package actions;
 
 import exception.ExceptionHandler;
 import exception.ExceptionType;
+import resource.enums.AttributeType;
 import resource.implementation.Attribute;
 import resource.implementation.Entity;
 import view.MainFrame;
@@ -17,15 +18,17 @@ import java.util.Map;
 public class OkCountAverageDialogAction implements ActionListener {
     private Entity entity;
     private List<JCheckBox> columnCheckBox;
-    private String countOrAverage;
-    private String selectedColumn;
+    private JComboBox countOrAverage;
+    private JComboBox selectedColumn;
     private List<String> groupBy;
 
-    public OkCountAverageDialogAction(Entity entity, String countOrAverage, String selectedColumn, List<JCheckBox> columnCheckBox) {
+    public OkCountAverageDialogAction(Entity entity, JComboBox countOrAverage, JComboBox selectedColumn, List<JCheckBox> columnCheckBox) {
         this.entity = entity;
         this.countOrAverage = countOrAverage;
         this.selectedColumn = selectedColumn;
         this.columnCheckBox = columnCheckBox;
+        this.countOrAverage = countOrAverage;
+        this.selectedColumn = selectedColumn;
     }
 
     @Override
@@ -35,6 +38,18 @@ public class OkCountAverageDialogAction implements ActionListener {
             if (columnCheckBox.get(i).isSelected())
                 groupBy.add(columnCheckBox.get(i).getName());
         }
-        MainFrame.getInstance().getAppCore().countOrAverage(entity.getName(), countOrAverage, selectedColumn, groupBy);
+        Attribute attribute = (Attribute) entity.getChildByName((String)selectedColumn.getSelectedItem());
+        if (attribute.getAttributeType() == AttributeType.CHAR || attribute.getAttributeType() == AttributeType.VARCHAR ||
+                attribute.getAttributeType() == AttributeType.NVARCHAR || attribute.getAttributeType() == AttributeType.TEXT ||
+                attribute.getAttributeType() == AttributeType.DATE || attribute.getAttributeType() == AttributeType.DATETIME ||
+                attribute.getAttributeType() == AttributeType.BIT || attribute.getAttributeType() == AttributeType.IMAGE) {
+            ExceptionHandler.handle(ExceptionType.COLUMN_NO_NUMERIC_FOR_AVERAGE, attribute);
+            return;
+        }
+        if (groupBy.size() == 0) {
+            ExceptionHandler.handle(ExceptionType.NO_COLUMN_SELECTED_FOR_REPORTS, (Attribute) entity.getChildAt(0));
+            return;
+        }
+        MainFrame.getInstance().getAppCore().countOrAverage(entity.getName(), (String)countOrAverage.getSelectedItem(), (String)selectedColumn.getSelectedItem(), groupBy);
     }
 }
