@@ -37,5 +37,10 @@ public class ExceptionHandler {
             String title = exceptionType.toString();
             JOptionPane.showMessageDialog(MainFrame.getInstance(), message, title, JOptionPane.ERROR_MESSAGE);
         }
+        if (exceptionType == ExceptionType.EMPTY_QUERY) {
+            String message = "There is no search filter";
+            String title = exceptionType.toString();
+            JOptionPane.showMessageDialog(MainFrame.getInstance(), message, title, JOptionPane.ERROR_MESSAGE);
+        }
     }
 }

@@ -1,5 +1,7 @@
 package actions;
 
+import exception.ExceptionHandler;
+import exception.ExceptionType;
 import resource.enums.AttributeType;
 import resource.implementation.Attribute;
 import view.SearchDialog;
@@ -36,6 +38,16 @@ public class AddToQueryAction implements ActionListener {
         return null;
     }
 
+    Boolean isNumber(String number) {
+        try{
+            Integer.parseInt(number);
+        }
+        catch (NumberFormatException nfe) {
+            return false;
+        }
+        return true;
+    }
+
     @Override
     public void actionPerformed(ActionEvent e) {
         String newQuery="";
@@ -48,10 +60,14 @@ public class AddToQueryAction implements ActionListener {
             newQuery+=getOperationFromString(cmbOperations.getSelectedItem().toString(), textField.getText())+" ";
         } else {
             newQuery+=cmbOperations.getSelectedItem().toString()+" ";
-            newQuery+=textField.getText()+" ";
+            if(isNumber(textField.getText()))
+                newQuery+=textField.getText()+" ";
+            else {
+                ExceptionHandler.handle(ExceptionType.ATTRIBUTE_TYPE_ERROR, attribute);
+                return;
+            }
         }
 
-        System.out.println(searchDialog.getLbQuery().getText());
         searchDialog.appendQuery(newQuery);
         searchDialog.revalidate();
     }

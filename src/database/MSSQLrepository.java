@@ -359,7 +359,6 @@ public class MSSQLrepository implements Repository {
             query=query.substring(0, query.length()-1);
             query+=" FROM "+entity.getName()+" WHERE "+filter;
             PreparedStatement preparedStatement=connection.prepareStatement(query);
-            System.out.println(query);
             ResultSet rs = preparedStatement.executeQuery();
 
             while(rs.next()) {

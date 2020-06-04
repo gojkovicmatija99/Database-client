@@ -1,5 +1,7 @@
 package actions;
 
+import exception.ExceptionHandler;
+import exception.ExceptionType;
 import resource.implementation.Attribute;
 import resource.implementation.Entity;
 import resource.tree.DBNode;
@@ -23,6 +25,10 @@ public class ExecuteSearchFilter implements ActionListener {
 
     @Override
     public void actionPerformed(ActionEvent e) {
+        if(label.getText().equals("")) {
+            ExceptionHandler.handle(ExceptionType.EMPTY_QUERY,null);
+            return;
+        }
         MainFrame.getInstance().getAppCore().searchRows(label.getText(), entity, attributes);
     }
 }
