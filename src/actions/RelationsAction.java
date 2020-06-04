@@ -40,8 +40,10 @@ public class RelationsAction extends AbstractAction implements ActionListener {
         Map<String, String> map = new HashMap<>();
         for(Map.Entry<String, Object> entry : fields.entrySet()) {
             Attribute attribute = (Attribute) entity.getChildByName(entry.getKey());
-            if (attribute.isForeignKey()) {
-                map.put(attribute.getName(), (String)entry.getValue());
+            if (attribute != null) {
+                if (attribute.isForeignKey()) {
+                    map.put(attribute.getName(), (String) entry.getValue());
+                }
             }
         }
         RightBottomPanel bottomPanel = (RightBottomPanel)MainFrame.getInstance().getBottomTab().getSelectedComponent();
