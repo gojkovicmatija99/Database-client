@@ -50,6 +50,9 @@ public class AddToQueryAction implements ActionListener {
 
     @Override
     public void actionPerformed(ActionEvent e) {
+        if(textField.getText().equals(""))
+            return;
+
         String newQuery="";
         searchDialog.addAttribute(attribute);
         if(!searchDialog.getLbQuery().getText().equals(""))
