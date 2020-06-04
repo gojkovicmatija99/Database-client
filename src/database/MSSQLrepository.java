@@ -105,22 +105,6 @@ public class MSSQLrepository implements Repository {
                 }
             }
 
-            tables=metaData.getTables(connection.getCatalog(), null, null, tableType);
-            while(tables.next()) {
-                String tableName=tables.getString("TABLE_NAME");
-                ResultSet columns= metaData.getColumns(connection.getCatalog(), null, tableName, null);
-                while(columns.next()) {
-                    String columnsName=columns.getString("COLUMN_NAME");
-                    ResultSet foreignKeys=metaData.getImportedKeys(connection.getCatalog(), null, tableName);
-                    while(foreignKeys.next()) {
-                        if(columnsName.equals(foreignKeys.getString("FKCOLUMN_NAME"))) {
-                            Entity entity=(Entity) ir.getChildByName(foreignKeys.getString("PKTABLE_NAME"));
-                            entity.addRelationTable(tableName);
-                        }
-                    }
-                }
-            }
-
             return ir;
         } catch (Exception e) {
             e.printStackTrace();
@@ -300,6 +284,53 @@ public class MSSQLrepository implements Repository {
     }
 
     @Override
+    public List<Row> relationRows(Entity entity, Map<String, String> map) {
+        List<Row> rows=new ArrayList<>();
+
+        try {
+            this.initConnection();
+
+            String query = "SELECT * FROM " + entity.getName() + " WHERE ";
+            for(Map.Entry<String, String> entry : map.entrySet()) {
+                Attribute attribute = (Attribute) entity.getChildByName(entry.getKey());
+                if (attribute != null) {
+                    if (attribute.getAttributeType() == AttributeType.CHAR ||
+                            attribute.getAttributeType() == AttributeType.VARCHAR ||
+                            attribute.getAttributeType() == AttributeType.NVARCHAR ||
+                            attribute.getAttributeType() == AttributeType.TEXT) {
+                        query += attribute.getName() + " LIKE '" + entry.getValue() + "' AND ";
+                    }
+                    else {
+                        query += attribute.getName() + " = " + entry.getValue() + " AND ";
+                    }
+                }
+            }
+            query = query.substring(0, query.length()-4);
+            PreparedStatement preparedStatement = connection.prepareStatement(query);
+            ResultSet rs = preparedStatement.executeQuery();
+
+            while(rs.next()) {
+                Row row=new Row();
+                row.setName(entity.getName());
+
+                ResultSetMetaData resultSetMetaData=rs.getMetaData();
+                for(int i=1;i<=resultSetMetaData.getColumnCount();i++) {
+                    row.addField(resultSetMetaData.getColumnName(i), rs.getString(i));
+                }
+                rows.add(row);
+            }
+        }
+        catch (Exception e) {
+            e.printStackTrace();
+        }
+        finally {
+            this.closeConnection();
+        }
+
+        return rows;
+    }
+
+    @Override
     public List<Row> countOrAverage(String from, String countOrAverage, String selectAttribute, List<String> groupBy) {
         List<Row> rows=new ArrayList<>();
 
@@ -437,5 +468,6 @@ public class MSSQLrepository implements Repository {
             Time time = Time.valueOf(columnValue);
             preparedStatement.setTime(i, time);
         }
-   }
+    }
+
 }

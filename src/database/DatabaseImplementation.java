@@ -46,6 +46,11 @@ public class DatabaseImplementation implements Database {
     }
 
     @Override
+    public List<Row> relationRows(Entity entity, Map<String, String> map) {
+        return this.repository.relationRows(entity, map);
+    }
+
+    @Override
     public List<Row> countOrAverage(String tableName, String countOrAverage, String selectAttribute, List<String> groupBy) {
         return this.repository.countOrAverage(tableName, countOrAverage, selectAttribute, groupBy);
     }

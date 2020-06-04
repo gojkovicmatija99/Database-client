@@ -14,6 +14,7 @@ public class ActionManager {
     private DeleteAction deleteAction;
     private UpdateAction updateAction;
     private FilterSortAction filterSortAction;
+    private RelationsAction relationsAction;
     private ReportsAction reportsAction;
     private SearchAction searchAction;
 
@@ -22,6 +23,7 @@ public class ActionManager {
         deleteAction = new DeleteAction();
         updateAction = new UpdateAction();
         filterSortAction = new FilterSortAction();
+        relationsAction = new RelationsAction();
         reportsAction=new ReportsAction();
         searchAction=new SearchAction();
     }
@@ -40,6 +42,10 @@ public class ActionManager {
 
     public FilterSortAction getFilterSortAction() {
         return filterSortAction;
+    }
+
+    public RelationsAction getRelationsAction() {
+        return relationsAction;
     }
 
     public void setAddAction(AddAction addAction) {

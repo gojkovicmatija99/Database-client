@@ -35,4 +35,5 @@ public class Row {
     public void setFields(Map<String, Object> fields) {
         this.fields = fields;
     }
+
 }

@@ -25,6 +25,10 @@ public class MyToolbar extends JToolBar {
 
         addSeparator();
 
+        add(ActionManager.getInstance().getRelationsAction());
+
+        addSeparator();
+
         add(ActionManager.getInstance().getReportsAction());
 
         addSeparator();

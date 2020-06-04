@@ -136,9 +136,13 @@ public class MainFrame extends JFrame implements Subscriber {
 				topTab.setSelectedComponent(topTableView);
 			}
 		}
-		else if (notification.getCode() == NotificationCode.FILTER_TABLE) {
-			Entity entity = (Entity) notification.getData();
+	}
 
-		}
+	public InformationResource getIr() {
+		return ir;
+	}
+
+	public JTabbedPane getBottomTab() {
+		return bottomTab;
 	}
 }

@@ -4,5 +4,5 @@ public enum NotificationCode {
     DATA_UPDATED,
     RESOURCE_LOADED,
     NEW_RIGHT_PANEL,
-    FILTER_TABLE
+    RELATIONS_TABLE
 }

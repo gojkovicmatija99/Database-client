@@ -14,6 +14,7 @@ public class Attribute extends DBNodeComposite {
     private int length;
     private Attribute inRealationWith;
     private boolean isPrimaryKey;
+    private boolean isForeignKey;
 
     public Attribute(String name, DBNode parent, AttributeType attributeType, int length) {
         super(name, parent);
@@ -39,6 +40,18 @@ public class Attribute extends DBNodeComposite {
         }
         isPrimaryKey = false;
         return isPrimaryKey;
+    }
+
+    public boolean isForeignKey() {
+        for (int i = 0; i < this.getChildCount(); i++) {
+            AttributeConstraint attributeConstraint = (AttributeConstraint) this.getChildAt(i);
+            if (attributeConstraint.getConstraintType() == ConstraintType.FOREIGN_KEY) {
+                isForeignKey = true;
+                return isForeignKey;
+            }
+        }
+        isForeignKey = false;
+        return isForeignKey;
     }
 
     @Override
