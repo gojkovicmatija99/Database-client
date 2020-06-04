@@ -104,19 +104,4 @@ public class ReportsDialog extends JDialog {
             }
         });
     }
-
-    public List<String> getNumericAttribute(Entity entity) {
-        List<String> toReturn = new ArrayList<>();
-        for (int i = 0; i < entity.getChildCount(); i++) {
-            Attribute attribute = (Attribute) entity.getChildAt(i);
-            if (attribute.getAttributeType() == AttributeType.BIGINT || attribute.getAttributeType() == AttributeType.INT ||
-                    attribute.getAttributeType() == AttributeType.NUMERIC || attribute.getAttributeType() == AttributeType.SMALLINT ||
-                    attribute.getAttributeType() == AttributeType.FLOAT || attribute.getAttributeType() == AttributeType.REAL ||
-                    attribute.getAttributeType() == AttributeType.DECIMAL) {
-                toReturn.add(attribute.getName());
-            }
-        }
-        return toReturn;
-    }
-
 }

@@ -38,11 +38,14 @@ public class OkCountAverageDialogAction implements ActionListener {
             if (columnCheckBox.get(i).isSelected())
                 groupBy.add(columnCheckBox.get(i).getName());
         }
+        String countOrAverageStr = (String) countOrAverage.getSelectedItem();
         Attribute attribute = (Attribute) entity.getChildByName((String)selectedColumn.getSelectedItem());
-        if (attribute.getAttributeType() == AttributeType.CHAR || attribute.getAttributeType() == AttributeType.VARCHAR ||
+        if ((attribute.getAttributeType() == AttributeType.CHAR || attribute.getAttributeType() == AttributeType.VARCHAR ||
                 attribute.getAttributeType() == AttributeType.NVARCHAR || attribute.getAttributeType() == AttributeType.TEXT ||
                 attribute.getAttributeType() == AttributeType.DATE || attribute.getAttributeType() == AttributeType.DATETIME ||
-                attribute.getAttributeType() == AttributeType.BIT || attribute.getAttributeType() == AttributeType.IMAGE) {
+                attribute.getAttributeType() == AttributeType.BIT || attribute.getAttributeType() == AttributeType.IMAGE) &&
+                countOrAverageStr.equals("AVERAGE"))
+        {
             ExceptionHandler.handle(ExceptionType.COLUMN_NO_NUMERIC_FOR_AVERAGE, attribute);
             return;
         }

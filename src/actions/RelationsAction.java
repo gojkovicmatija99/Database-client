@@ -1,6 +1,8 @@
 package actions;
 
 import app.Main;
+import exception.ExceptionHandler;
+import exception.ExceptionType;
 import model.TableModel;
 import resource.data.Row;
 import resource.implementation.Attribute;
@@ -28,6 +30,10 @@ public class RelationsAction extends AbstractAction implements ActionListener {
         Entity entity = (Entity) topPanel.getEntity();
         JTable table = topPanel.getjTable();
         TableModel tableModel = (TableModel) table.getModel();
+        if (table.getSelectedRow() == -1) {
+            ExceptionHandler.handle(ExceptionType.NO_SELECTED_ROW, null);
+            return;
+        }
         int rowInt = table.getSelectedRow();
         Row row = tableModel.getRows().get(rowInt);
         Map<String, Object> fields = row.getFields();
