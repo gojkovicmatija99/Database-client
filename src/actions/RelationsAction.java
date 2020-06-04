@@ -46,6 +46,8 @@ public class RelationsAction extends AbstractAction implements ActionListener {
                 }
             }
         }
+        if (MainFrame.getInstance().getBottomTab().getSelectedComponent() == null)
+            return;
         RightBottomPanel bottomPanel = (RightBottomPanel)MainFrame.getInstance().getBottomTab().getSelectedComponent();
         Entity relationEntity = (Entity)bottomPanel.getEntity();
         MainFrame.getInstance().getAppCore().readRelationRows(relationEntity, map);
