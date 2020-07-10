@@ -27,7 +27,7 @@ Implement a report generation method, which allows the user to select a column w
 
 # Implementation
 
-Implementation based on JDBC concepts and Java SWING library. Mandatory use of MVC, Observer and Bridge templates.
+Implementation based on JDBC concepts and Java SWING library. Mandatory use of MVC, Observer and Bridge design patterns.
 
 
 
