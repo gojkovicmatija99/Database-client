@@ -31,4 +31,4 @@ Implementation based on JDBC concepts and Java SWING library. Mandatory use of M
 
 
 
-![alt text](https://github.com/gojkovicmatija99/Sliding-puzzle-solver/blob/master/SlidingPuzzleSolver/src/view/images/Demo.png)
+![alt text](https://github.com/gojkovicmatija99/Database-project/blob/master/demo.png)
