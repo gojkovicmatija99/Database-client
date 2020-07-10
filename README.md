@@ -1,4 +1,4 @@
-# Database-project
+# Database project
 
 The application is designed so that it can communicate with any database and creates a tree dynamically, depending on which tables are located on the server. The tree hierarchy is as follows:
 
