@@ -1,6 +1,6 @@
 # Database-project
 
-The application is designed so that it can communicate with any database and create a tree dynamically, depending on which tables are located on the server. The tree hierarchy is as follows:
+The application is designed so that it can communicate with any database and creates a tree dynamically, depending on which tables are located on the server. The tree hierarchy is as follows:
 
 *Information resource - Entity (Table) - Attribute - Constraint*
 
@@ -14,12 +14,12 @@ Enable support for selecting columns to be displayed in the selected table and s
 
 # Relations
 
-Display data in the tables at the bottom right - relations. It is necessary to filter the data by relations, and for the selected row from the main table to display only the relevant data from the linked tables.
+Display data in the table at the bottom right - relations. It is necessary to filter the data by relations, and for the selected row from the main table to display only the relevant data from the linked tables.
 
 # Search
 
 Implement the method for searching the table according to the given search parameters.
-The search by the given criterion gives the possibility to use the special characters% i _ for VARCHAR and CHAR fields, as well as the operator =,>, <for NUMERIC and INTEGER fields. The user can connect the constructs created in this way with AND and OR operators, which results in a complex database search.
+The search by the given criteria gives the possibility to use the special characters % and _ for VARCHAR and CHAR fields, as well as the operator =, >, < for NUMERIC and INTEGER fields. The user can connect the constructs created in this way with AND and OR operators, which results in a complex database search.
 
 # Reports
 
