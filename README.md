@@ -1,6 +1,6 @@
 # Database client
 
-The application is designed so that it can communicate with any microsoft database and creates a tree dynamically, depending on which tables are located on the server. The tree hierarchy is as follows:
+The application is designed so that it can communicate with any **MSSQL** server and creates a tree dynamically, depending on which tables are located on the server. The tree hierarchy is as follows:
 
 *Information resource - Entity (Table) - Attribute - Constraint*
 
